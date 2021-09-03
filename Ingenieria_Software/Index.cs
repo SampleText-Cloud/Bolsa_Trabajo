@@ -17,12 +17,13 @@ namespace Ingenieria_Software
             InitializeComponent();
         }
 
-        private void buttonTestBD_Click(object sender, EventArgs e)
+        private void ButtonTestBD_Click(object sender, EventArgs e)
         {
-            if (ODB.TestConnection())
-            {
-                Mensajes.MsgBox sox = new Mensajes.MsgBox();
-            }
+            string msg;
+            if (ODB.Connection())
+            {msg = "Funciono la conexion";}else{ msg = "No funciono la conexion"; }
+
+            new Mensajes.Tipos.MsgBoxOK(msg).ShowDialog();
         }
     }
 }

@@ -40,7 +40,7 @@ namespace Ingenieria_Software
             this.buttonTestBD.TabIndex = 0;
             this.buttonTestBD.Text = "PROBAR BASE DE DATOS";
             this.buttonTestBD.UseVisualStyleBackColor = true;
-            this.buttonTestBD.Click += new System.EventHandler(this.buttonTestBD_Click);
+            this.buttonTestBD.Click += new System.EventHandler(this.ButtonTestBD_Click);
             // 
             // Index
             // 

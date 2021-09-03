@@ -12,37 +12,37 @@ namespace Ingenieria_Software
 
         #region A VEEEEER
 
-        public static string connectionString;
-        public static MySqlConnection databaseConnection;
+        
         public static MySqlCommand commandDatabase;
         public static MySqlDataReader reader;
-        private static string user,password;
+        //private static string user,password;
         private static readonly string root = "bgmcssughpkynluy1abp-mysql.services.clever-cloud.com";
         private static readonly string db = "bgmcssughpkynluy1abp";
         private static readonly string usr = "ub3kxcxyalxsyiwk";
         private static readonly string pass = "GXvokCJC5qXgHmrJHQ2P";
-        private static readonly string connectionStringTEST = String.Format("datasource={0};port=3306;username={1};password={2};database={3};", root, usr, pass, db);
-
-        public static string GetUser()
+        private static readonly string connectionString = String.Format("datasource={0};port=3306;username={1};password={2};database={3};", root, usr, pass, db);
+        public static MySqlConnection databaseConnection = new MySqlConnection(connectionString);
+        
+        /*public static string GetUser()
         {
             return user;
         }
-
+        */
 
         
 
-        public static bool TestConnection()
+        public static bool Connection()
         {
-            MySqlConnection databaseConnectionTEST = new MySqlConnection(connectionStringTEST);
+            
             try
             {
-                databaseConnectionTEST.Open();
-                databaseConnectionTEST.Close();
+                databaseConnection.Open();
+                databaseConnection.Close();
                 return true;
             }
             catch (Exception)
             {
-                databaseConnectionTEST.Close();
+                databaseConnection.Close();
                 return false;
             }
         }
