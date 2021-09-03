@@ -16,5 +16,13 @@ namespace Ingenieria_Software
         {
             InitializeComponent();
         }
+
+        private void buttonTestBD_Click(object sender, EventArgs e)
+        {
+            if (ODB.TestConnection())
+            {
+                Mensajes.MsgBox sox = new Mensajes.MsgBox();
+            }
+        }
     }
 }

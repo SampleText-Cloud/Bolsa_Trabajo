@@ -59,17 +59,23 @@
     <Compile Include="Mensajes\Tipos\MsgBoxOK.Designer.cs">
       <DependentUpon>MsgBoxOK.cs</DependentUpon>
     </Compile>
-    <Compile Include="MsgBox.cs">
+    <Compile Include="Mensajes\MsgBox.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MsgBox.Designer.cs">
+    <Compile Include="Mensajes\MsgBox.Designer.cs">
       <DependentUpon>MsgBox.cs</DependentUpon>
     </Compile>
     <Compile Include="ODB.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Index.resx">
+      <DependentUpon>Index.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Mensajes\Tipos\MsgBoxOK.resx">
       <DependentUpon>MsgBoxOK.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mensajes\MsgBox.resx">
+      <DependentUpon>MsgBox.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

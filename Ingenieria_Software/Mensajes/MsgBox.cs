@@ -14,7 +14,15 @@ namespace Ingenieria_Software.Mensajes
     {
         public MsgBox()
         {
-            InitializeComponent();
         }
+
+        public MsgBox(Component tipoDeMensaje)
+        {
+            InitializeComponent();
+            this.components.Add(tipoDeMensaje);
+        }
+
+        
+        
     }
 }

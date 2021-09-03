@@ -16,5 +16,11 @@ namespace Ingenieria_Software.Mensajes
         {
             InitializeComponent();
         }
+
+      
+        private DialogResult button_ok_Click(object sender, EventArgs e)
+        {
+            return DialogResult.OK;
+        }
     }
 }
