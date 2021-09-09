@@ -47,12 +47,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FormularioDePRUEBA.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormularioDePRUEBA.Designer.cs">
-      <DependentUpon>FormularioDePRUEBA.cs</DependentUpon>
-    </Compile>
     <Compile Include="Index.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -74,16 +68,13 @@
     <Compile Include="ODB.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Secciones\Reclutadores\AdministracionDeReclutador.cs">
-      <SubType>UserControl</SubType>
+    <Compile Include="Secciones\Reclutadores\Administrador.cs">
+      <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Secciones\Reclutadores\AdministracionDeReclutador.Designer.cs">
-      <DependentUpon>AdministracionDeReclutador.cs</DependentUpon>
+    <Compile Include="Secciones\Reclutadores\Administrador.Designer.cs">
+      <DependentUpon>Administrador.cs</DependentUpon>
     </Compile>
     <Compile Include="Secciones\Reclutadores\reclutador.cs" />
-    <EmbeddedResource Include="FormularioDePRUEBA.resx">
-      <DependentUpon>FormularioDePRUEBA.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Index.resx">
       <DependentUpon>Index.cs</DependentUpon>
     </EmbeddedResource>
@@ -102,8 +93,8 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Secciones\Reclutadores\AdministracionDeReclutador.resx">
-      <DependentUpon>AdministracionDeReclutador.cs</DependentUpon>
+    <EmbeddedResource Include="Secciones\Reclutadores\Administrador.resx">
+      <DependentUpon>Administrador.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="..\.editorconfig">
       <Link>.editorconfig</Link>

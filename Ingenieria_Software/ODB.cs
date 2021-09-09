@@ -71,15 +71,27 @@ namespace Ingenieria_Software
         public static string GetId()
         {
             string row = "";
-            reader = commandDatabase.ExecuteReader();
-            if (reader.HasRows)
+            try
             {
-                while (reader.Read())
+                OpenConexion();
+                
+                reader = commandDatabase.ExecuteReader();
+                if (reader.HasRows)
                 {
-                    row = reader.GetString(0);
+                    while (reader.Read())
+                    {
+                        row = reader.GetString(0);
+                    }
                 }
+                CloseConection();
+            }
+            catch (Exception ex)
+            {
+                new Mensajes.Tipos.MsgBoxOK(ex.ToString()).ShowDialog();
+                
             }
             return row;
+
         }
         public static string[] GetMultiId()
         {
@@ -119,6 +131,7 @@ namespace Ingenieria_Software
 
         public static string[] GetMultiCampos(int rows)
         {
+            OpenConexion();
             string[] row = new string[rows];
             reader = commandDatabase.ExecuteReader();
             if (reader.HasRows)
@@ -131,6 +144,7 @@ namespace Ingenieria_Software
                     }
                 }
             }
+            CloseConection();
             return row;
         }
 
@@ -152,6 +166,7 @@ namespace Ingenieria_Software
                 return true;
             }catch(Exception ex)
             {
+                new Mensajes.Tipos.MsgBoxOK(ex.ToString());
                 return false;
             }
 

@@ -22,9 +22,11 @@ namespace Ingenieria_Software
 
             string msg;
             if (ODB.Connection())
-            {msg = "Funciono la conexion";}else{ msg = "No funciono la conexion"; }
+            {msg = "CONEXION EXISTOSA";}else{ msg = "FALLO EN CONEXION"; }
 
             new Mensajes.Tipos.MsgBoxOK(msg).ShowDialog();
+
+            new Secciones.Reclutadores.Administrador().ShowDialog();
         }
     }
 }

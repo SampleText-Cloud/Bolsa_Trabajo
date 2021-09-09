@@ -17,7 +17,7 @@ namespace Ingenieria_Software.Secciones.Reclutadores
         private string curp;
         private string rfc;
 
-        private int telefono;
+        private string telefono;
         private string correo;
 
         private string direccion_colonia;
@@ -35,130 +35,179 @@ namespace Ingenieria_Software.Secciones.Reclutadores
 
         #region GET & SET
 
-        public void setIdReclutador(string idReclutador)
+        public void SetIdReclutador(string idReclutador)
         {
             this.idReclutador = idReclutador;
         }
-        public void setSql(string sql)
+        public void SetSql(string sql)
         {
             this.sql = sql;
         }
-        public void setNombre(string nombre)
+        public void SetNombre(string nombre)
         {
             this.nombre = nombre;
         }
-        public void setApellidoPaterno(string apellido_paterno)
+        public void SetApellidoPaterno(string apellido_paterno)
         {
             this.apellido_paterno = apellido_paterno;
         }
-        public void setApellidoMaterno(string apellido_materno)
+        public void SetApellidoMaterno(string apellido_materno)
         {
             this.apellido_materno = apellido_materno;
         }
-        public void setCuro(string curp)
+        public void SetCurp(string curp)
         {
             this.curp = curp;
         }
-        public void setRfc(string rfc)
+        public void SetRfc(string rfc)
         {
             this.rfc = rfc;
         }
-        public void setCorreo(string correo)
+        public void SetCorreo(string correo)
         {
             this.correo = correo;
         }
-        public void setDireccionColonia(string direccion_colonia)
+        public void setTelefono(string telefono)
+        {
+            this.telefono = telefono;
+        }
+        public void SetDireccionColonia(string direccion_colonia)
         {
             this.direccion_colonia = direccion_colonia;
         }
-        public void setDireccionCalle(string direccion_calle)
+        public void SetDireccionCalle(string direccion_calle)
         {
             this.direccion_calle = direccion_calle;
         }
-        public void setDireccionNoInt(string direccion_no_int)
+        public void SetDireccionNoInt(string direccion_no_int)
         {
             this.direccion_no_int = direccion_no_int;
         }
-        public void setDireccionNoExt(string direccion_no_ext)
+        public void SetDireccionNoExt(string direccion_no_ext)
         {
             this.direccion_no_ext = direccion_no_ext;
         }
-        public void setDireccionCp(string direccion_cp)
+        public void SetDireccionCp(string direccion_cp)
         {
             this.direccion_cp = direccion_cp;
         }
-
-        public string getId()
+    
+        public string GetId()
         {
             return idReclutador;
         }
-        public string getStatus()
+        public string GetStatus()
         {
             return statusName;
         }
-        public string getNombre()
+        public string GetNombre()
         {
             return nombre;
         }
-        public string getApellidoPaterno()
+        public string GetApellidoPaterno()
         {
             return apellido_paterno;
         }
-        public string getApellidoMaterno()
+        public string GetApellidoMaterno()
         {
             return apellido_materno;
         }
-        public string getCuro()
+        public string GetCurp()
         {
             return curp;
         }
-        public string getRfc()
+        public string GetRfc()
         {
             return rfc;
         }
-        public string getCorreo()
+        public string GetCorreo()
         {
             return correo;
         }
-        public string getDireccionColonia()
+        public string GetTelefono()
+        {
+            return telefono;
+        }
+        public string GetDireccionColonia()
         {
             return direccion_colonia;
         }
-        public string getDireccionCalle()
+        public string GetDireccionCalle()
         {
             return direccion_calle;
         }
-        public string getDireccionNoInt()
+        public string GetDireccionNoInt()
         {
             return direccion_no_int;
         }
-        public string getDireccionNoExt()
+        public string GetDireccionNoExt()
         {
             return direccion_no_ext;
         }
-        public string getDireccionCp()
+        public string GetDireccionCp()
         {
             return direccion_cp;
         }
-
+    
         #endregion
 
 
-        #region SUBIDA DE DATOS
+        #region MODIFICACION DE DATOS
 
-        public bool actualizarRecluta()
+        public void Clear()
+        {
+            idReclutador = null; 
+            nombre = null;
+            apellido_materno = null;
+            apellido_paterno = null;
+            curp = null;
+            rfc = null;
+            telefono = null;
+            correo = null;
+            direccion_colonia = null;
+            direccion_calle = null;
+            direccion_no_int = null;
+            direccion_no_ext = null;
+            direccion_cp = null;
+        }
+        public bool ActualizarRecluta(string idReclutador)
         {
             try
             {
-               
+                sql = String.Format("UPDATE `Trabajadores_Bolsa` SET `nombre` = '{0}', " +
+                                                                      "`a_paterno` = '{1}', " +
+                                                                      "`a_materno`= '{2}', " +
+                                                                      "`curp` = '{3}', " +
+                                                                      "`rfc` = '{4}', " +
+                                                                      "`telefono` = {5}, " +
+                                                                      "`correo` = '{6}', " +
+                                                                      "`dir_colonia` = '{7}', " +
+                                                                      "`dir_calle` = '{8}', " +
+                                                                      "`dir_no_int` = '{9}', " +
+                                                                      "`dir_no_ext` = '{10}', " +
+                                                                      "`dir_cp` = {11} WHERE `idTrabajadorBolsa` = {12}",
+                                                                      nombre,
+                                                                      apellido_paterno,
+                                                                      apellido_materno,
+                                                                      curp,
+                                                                      rfc,
+                                                                      telefono,
+                                                                      correo,
+                                                                      direccion_colonia,
+                                                                      direccion_calle,
+                                                                      direccion_no_int,
+                                                                      direccion_no_ext,
+                                                                      direccion_cp,
+                                                                      idReclutador);
                 if (ODB.NonQuery(sql)) return true; else return false;
             }catch(Exception ex)
             {
+                new Mensajes.Tipos.MsgBoxOK(ex.ToString());
                 return false;
             }
         }
 
-        public bool insertarRecluta()
+        public bool InsertarRecluta()
         {
             try
             {
@@ -186,18 +235,76 @@ namespace Ingenieria_Software.Secciones.Reclutadores
                                                                      direccion_no_int,
                                                                      direccion_no_ext,
                                                                      direccion_cp);
-                if (ODB.NonQuery(sql)) return true; else return false;
+
+                if (ODB.NonQuery(sql))
+                {
+                    try
+                    {
+                        sql = "SELECT `idTrabajadorBolsa` FROM `Trabajadores_Bolsa` ORDER BY `idTrabajadorBolsa` DESC LIMIT 1";
+                        ODB.SetCommand(sql);
+                        SetIdReclutador(ODB.GetId());
+                        sql = null;
+                    }
+                    catch(Exception ex) { new Mensajes.Tipos.MsgBoxOK("Se agrego el registro pero ocurrio un error que impidio recuperar el ID presionar boton de busqueda para intentar recuperar ID").ShowDialog(); }
+                    return true;
+                }
+                else return false;
             }catch(Exception ex)
             {
+                new Mensajes.Tipos.MsgBoxOK(ex.ToString());
                 return false;
             }
         }
 
-        public bool eliminarRecluta()
+        public bool EliminarRecluta(string id)
         {
+            try
+            {
+                sql = String.Format("DELETE FROM `Trabajadores_Bolsa` WHERE `idTrabajadorBolsa` = {0}", id);
+                if (ODB.NonQuery(sql)) return true; else return false;
+                Clear();
+            }
+            catch(Exception ex)
+            {
+                new Mensajes.Tipos.MsgBoxOK(ex.ToString()).ShowDialog();
+            }
             return false;
         }
 
+        public bool BuscarRecluta(string id)
+        {
+            try
+            {
+                sql =String.Format("SELECT * FROM `Trabajadores_Bolsa` WHERE `idTrabajadorBolsa` = {0}",id);
+                ODB.SetCommand(sql);
+                SetCampos(ODB.GetMultiCampos(17));
+                return true;
+            }catch(Exception ex)
+            {
+                new Mensajes.Tipos.MsgBoxOK(ex.ToString()).ShowDialog();
+                return false;
+            }
+        }
+
+        private void SetCampos(string[] campos)
+        {
+            Clear();
+            SetIdReclutador(campos[0]);
+            SetNombre(campos[1]);
+            SetApellidoPaterno(campos[2]);
+            SetApellidoMaterno(campos[3]);
+            SetCurp(campos[4]);
+            SetRfc(campos[5]);
+            setTelefono(campos[6]);
+            SetCorreo(campos[7]);
+
+            SetDireccionColonia(campos[8]);
+            SetDireccionCalle(campos[9]);
+            SetDireccionNoInt(campos[10]);
+            SetDireccionNoExt(campos[11]);
+            SetDireccionCp(campos[12]);
+            
+        }
         #endregion
     }
 }
