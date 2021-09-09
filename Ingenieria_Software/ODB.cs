@@ -140,6 +140,24 @@ namespace Ingenieria_Software
         {
             commandDatabase.ExecuteNonQuery();
         }
+
+        public static bool NonQuery(string sql)
+        {
+            try
+            {
+                OpenConexion();
+                SetCommand(sql);
+                NonQuery();
+                CloseConection();
+                return true;
+            }catch(Exception ex)
+            {
+                return false;
+            }
+
+            
+
+        }
     }
 
     #endregion

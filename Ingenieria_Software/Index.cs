@@ -19,6 +19,7 @@ namespace Ingenieria_Software
 
         private void ButtonTestBD_Click(object sender, EventArgs e)
         {
+
             string msg;
             if (ODB.Connection())
             {msg = "Funciono la conexion";}else{ msg = "No funciono la conexion"; }
