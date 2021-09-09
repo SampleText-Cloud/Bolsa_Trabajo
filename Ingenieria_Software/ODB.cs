@@ -10,7 +10,8 @@ namespace Ingenieria_Software
     class ODB
     {
 
-        #region A VEEEEER
+        #region ODB DATOS
+
 
         
         public static MySqlCommand commandDatabase;
@@ -22,14 +23,18 @@ namespace Ingenieria_Software
         private static readonly string pass = "GXvokCJC5qXgHmrJHQ2P";
         private static readonly string connectionString = String.Format("datasource={0};port=3306;username={1};password={2};database={3};", root, usr, pass, db);
         public static MySqlConnection databaseConnection = new MySqlConnection(connectionString);
-        
+
+
+        #endregion
+
+        #region METODOS AUXILIARES
         /*public static string GetUser()
         {
             return user;
         }
         */
 
-        
+
 
         public static bool Connection()
         {
