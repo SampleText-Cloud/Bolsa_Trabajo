@@ -15,6 +15,7 @@ namespace Ingenieria_Software.Secciones.Reclutadores
         public Administrador()
         {
             InitializeComponent();
+            CenterToScreen();
         }
         Secciones.Reclutadores.reclutador trabajador = new Secciones.Reclutadores.reclutador();
 
@@ -78,8 +79,9 @@ namespace Ingenieria_Software.Secciones.Reclutadores
 
         private void Button_buscar_Click(object sender, EventArgs e)
         {
+            
+            trabajador.BuscarRecluta(textBox_id.Text.ToString()) ;
             clear();
-            trabajador.BuscarRecluta(textBox_id.Text);
             GetAllValues();
             
         }

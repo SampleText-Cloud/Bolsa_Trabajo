@@ -1,7 +1,7 @@
 ﻿
-namespace Ingenieria_Software.Secciones.Reclutadores
+namespace Ingenieria_Software.Secciones.Empresa
 {
-    partial class Administrador
+    partial class Trabajadores
     {
         /// <summary>
         /// Required designer variable.
@@ -66,8 +66,6 @@ namespace Ingenieria_Software.Secciones.Reclutadores
             this.textBox_cp = new System.Windows.Forms.TextBox();
             this.textBox_id = new System.Windows.Forms.TextBox();
             this.lbl_id = new System.Windows.Forms.Label();
-            this.lbl_documentos = new System.Windows.Forms.Label();
-            this.button_documentos = new System.Windows.Forms.Button();
             this.layout_principal.SuspendLayout();
             this.layout_botones.SuspendLayout();
             this.layout_datos.SuspendLayout();
@@ -78,7 +76,7 @@ namespace Ingenieria_Software.Secciones.Reclutadores
             this.layout_principal.ColumnCount = 2;
             this.layout_principal.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 75F));
             this.layout_principal.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.layout_principal.Controls.Add(this.layout_botones, 0, 0);
+            this.layout_principal.Controls.Add(this.layout_botones, 1, 0);
             this.layout_principal.Controls.Add(this.layout_datos, 0, 0);
             this.layout_principal.Dock = System.Windows.Forms.DockStyle.Fill;
             this.layout_principal.Location = new System.Drawing.Point(0, 0);
@@ -86,7 +84,7 @@ namespace Ingenieria_Software.Secciones.Reclutadores
             this.layout_principal.RowCount = 1;
             this.layout_principal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.layout_principal.Size = new System.Drawing.Size(800, 450);
-            this.layout_principal.TabIndex = 1;
+            this.layout_principal.TabIndex = 3;
             // 
             // layout_botones
             // 
@@ -107,7 +105,7 @@ namespace Ingenieria_Software.Secciones.Reclutadores
             this.layout_botones.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.layout_botones.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.layout_botones.Size = new System.Drawing.Size(194, 444);
-            this.layout_botones.TabIndex = 2;
+            this.layout_botones.TabIndex = 0;
             // 
             // button1
             // 
@@ -117,8 +115,9 @@ namespace Ingenieria_Software.Secciones.Reclutadores
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(194, 92);
             this.button1.TabIndex = 4;
-            this.button1.Text = "Convertir";
+            this.button1.Text = "Convertir a";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.Button1_Click);
             // 
             // button_buscar
             // 
@@ -130,6 +129,7 @@ namespace Ingenieria_Software.Secciones.Reclutadores
             this.button_buscar.TabIndex = 3;
             this.button_buscar.Text = "Buscar";
             this.button_buscar.UseVisualStyleBackColor = true;
+            this.button_buscar.Click += new System.EventHandler(this.Button_buscar_Click);
             // 
             // button_actualizar
             // 
@@ -141,6 +141,7 @@ namespace Ingenieria_Software.Secciones.Reclutadores
             this.button_actualizar.TabIndex = 2;
             this.button_actualizar.Text = "Actualizar";
             this.button_actualizar.UseVisualStyleBackColor = true;
+            this.button_actualizar.Click += new System.EventHandler(this.Button_actualizar_Click);
             // 
             // button_eliminar
             // 
@@ -152,6 +153,7 @@ namespace Ingenieria_Software.Secciones.Reclutadores
             this.button_eliminar.TabIndex = 1;
             this.button_eliminar.Text = "Eliminar";
             this.button_eliminar.UseVisualStyleBackColor = true;
+            this.button_eliminar.Click += new System.EventHandler(this.Button_eliminar_Click);
             // 
             // button_agregar
             // 
@@ -163,6 +165,7 @@ namespace Ingenieria_Software.Secciones.Reclutadores
             this.button_agregar.TabIndex = 0;
             this.button_agregar.Text = "Insertar";
             this.button_agregar.UseVisualStyleBackColor = true;
+            this.button_agregar.Click += new System.EventHandler(this.Button_agregar_Click);
             // 
             // layout_datos
             // 
@@ -199,8 +202,6 @@ namespace Ingenieria_Software.Secciones.Reclutadores
             this.layout_datos.Controls.Add(this.textBox_cp, 1, 10);
             this.layout_datos.Controls.Add(this.textBox_id, 2, 10);
             this.layout_datos.Controls.Add(this.lbl_id, 2, 9);
-            this.layout_datos.Controls.Add(this.lbl_documentos, 2, 5);
-            this.layout_datos.Controls.Add(this.button_documentos, 2, 6);
             this.layout_datos.Dock = System.Windows.Forms.DockStyle.Fill;
             this.layout_datos.Location = new System.Drawing.Point(3, 3);
             this.layout_datos.Name = "layout_datos";
@@ -261,9 +262,9 @@ namespace Ingenieria_Software.Secciones.Reclutadores
             this.lbl_datos.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_datos.Location = new System.Drawing.Point(3, 0);
             this.lbl_datos.Name = "lbl_datos";
-            this.lbl_datos.Size = new System.Drawing.Size(180, 24);
+            this.lbl_datos.Size = new System.Drawing.Size(101, 24);
             this.lbl_datos.TabIndex = 15;
-            this.lbl_datos.Text = "Datos del Postulante";
+            this.lbl_datos.Text = "Trabajador";
             // 
             // lbl_nombre
             // 
@@ -471,34 +472,14 @@ namespace Ingenieria_Software.Secciones.Reclutadores
             this.lbl_id.TabIndex = 3;
             this.lbl_id.Text = "ID";
             // 
-            // lbl_documentos
-            // 
-            this.lbl_documentos.AutoSize = true;
-            this.lbl_documentos.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_documentos.Location = new System.Drawing.Point(399, 185);
-            this.lbl_documentos.Name = "lbl_documentos";
-            this.lbl_documentos.Size = new System.Drawing.Size(117, 24);
-            this.lbl_documentos.TabIndex = 32;
-            this.lbl_documentos.Text = "Documentos";
-            // 
-            // button_documentos
-            // 
-            this.button_documentos.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button_documentos.Location = new System.Drawing.Point(399, 225);
-            this.button_documentos.Name = "button_documentos";
-            this.button_documentos.Size = new System.Drawing.Size(192, 31);
-            this.button_documentos.TabIndex = 33;
-            this.button_documentos.Text = "Seleccionar documentos";
-            this.button_documentos.UseVisualStyleBackColor = true;
-            // 
-            // Administrador
+            // Trabajadores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.layout_principal);
-            this.Name = "Administrador";
-            this.Text = "Administrador";
+            this.Name = "Trabajadores";
+            this.Text = "Trabajadores";
             this.layout_principal.ResumeLayout(false);
             this.layout_botones.ResumeLayout(false);
             this.layout_datos.ResumeLayout(false);
@@ -510,15 +491,19 @@ namespace Ingenieria_Software.Secciones.Reclutadores
         #endregion
 
         private System.Windows.Forms.TableLayoutPanel layout_principal;
+        private System.Windows.Forms.TableLayoutPanel layout_botones;
+        private System.Windows.Forms.Button button_buscar;
+        private System.Windows.Forms.Button button_actualizar;
+        private System.Windows.Forms.Button button_eliminar;
+        private System.Windows.Forms.Button button_agregar;
         private System.Windows.Forms.TableLayoutPanel layout_datos;
-        private System.Windows.Forms.Label lbl_id;
-        private System.Windows.Forms.Label lbl_nombre;
         private System.Windows.Forms.TextBox textBox_correo;
         private System.Windows.Forms.TextBox textBox_calle;
         private System.Windows.Forms.TextBox textBox_apellido_paterno;
         private System.Windows.Forms.TextBox textBox_telefono;
         private System.Windows.Forms.TextBox textBox_colonia;
         private System.Windows.Forms.Label lbl_datos;
+        private System.Windows.Forms.Label lbl_nombre;
         private System.Windows.Forms.Label lbl_apellido_p;
         private System.Windows.Forms.Label lbl_apellido_m;
         private System.Windows.Forms.Label lbl_curp;
@@ -540,13 +525,7 @@ namespace Ingenieria_Software.Secciones.Reclutadores
         private System.Windows.Forms.TextBox textBox_rfc;
         private System.Windows.Forms.TextBox textBox_cp;
         private System.Windows.Forms.TextBox textBox_id;
-        private System.Windows.Forms.Label lbl_documentos;
-        private System.Windows.Forms.Button button_documentos;
-        private System.Windows.Forms.TableLayoutPanel layout_botones;
+        private System.Windows.Forms.Label lbl_id;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button_buscar;
-        private System.Windows.Forms.Button button_actualizar;
-        private System.Windows.Forms.Button button_eliminar;
-        private System.Windows.Forms.Button button_agregar;
     }
 }

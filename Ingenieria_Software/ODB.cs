@@ -140,7 +140,10 @@ namespace Ingenieria_Software
                 {
                     for (int i = 0; i < rows; i++)
                     {
-                        row[i] = reader.GetString(i);
+                        if (reader.GetString(i) != null)
+                        {
+                            row[i] = reader.GetString(i);
+                        }
                     }
                 }
             }
@@ -162,12 +165,16 @@ namespace Ingenieria_Software
                 OpenConexion();
                 SetCommand(sql);
                 NonQuery();
-                CloseConection();
+                
                 return true;
             }catch(Exception ex)
             {
                 new Mensajes.Tipos.MsgBoxOK(ex.ToString());
                 return false;
+            }
+            finally
+            {
+                CloseConection();
             }
 
             

@@ -261,8 +261,8 @@ namespace Ingenieria_Software.Secciones.Reclutadores
             try
             {
                 sql = String.Format("DELETE FROM `Trabajadores_Bolsa` WHERE `idTrabajadorBolsa` = {0}", id);
-                if (ODB.NonQuery(sql)) return true; else return false;
-                Clear();
+                if (ODB.NonQuery(sql)) { Clear(); return true; } else { return false; }
+                
             }
             catch(Exception ex)
             {
@@ -275,12 +275,16 @@ namespace Ingenieria_Software.Secciones.Reclutadores
         {
             try
             {
-                sql =String.Format("SELECT * FROM `Trabajadores_Bolsa` WHERE `idTrabajadorBolsa` = {0}",id);
+                new Mensajes.Tipos.MsgBoxOK(id).ShowDialog();
+                Clear();
+                sql =String.Format("SELECT * FROM `Trabajadores_Bolsa` WHERE `idTrabajadorBolsa` = '{0}'",id);
                 ODB.SetCommand(sql);
+                new Mensajes.Tipos.MsgBoxOK(sql).ShowDialog(); ;
                 SetCampos(ODB.GetMultiCampos(17));
                 return true;
             }catch(Exception ex)
             {
+                ODB.CloseConection();
                 new Mensajes.Tipos.MsgBoxOK(ex.ToString()).ShowDialog();
                 return false;
             }

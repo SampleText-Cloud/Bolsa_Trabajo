@@ -15,18 +15,152 @@ namespace Ingenieria_Software
         public Index()
         {
             InitializeComponent();
+            CenterToScreen();
         }
 
         private void ButtonTestBD_Click(object sender, EventArgs e)
         {
 
-            string msg;
-            if (ODB.Connection())
-            {msg = "CONEXION EXISTOSA";}else{ msg = "FALLO EN CONEXION"; }
+        }
 
-            new Mensajes.Tipos.MsgBoxOK(msg).ShowDialog();
+        private void PostulantesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            
+        }
 
-            new Secciones.Reclutadores.Administrador().ShowDialog();
+        private void PostulantesToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                new Secciones.Reclutadores.Administrador().ShowDialog();
+            }
+            catch (Exception msg)
+            {
+                new Mensajes.Tipos.MsgBoxOK(msg.ToString()).ShowDialog();
+            }
+        }
+
+        private void Index_Load(object sender, EventArgs e)
+        {
+            timer1.Start();
+        }
+
+        private void Timer1_Tick(object sender, EventArgs e)
+        {
+            lbl_date.Text = DateTime.Now.ToString();
+        }
+
+        private void PerfilToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                new Secciones.Postulantes.Perfiles().ShowDialog();
+            }
+            catch (Exception msg)
+            {
+                new Mensajes.Tipos.MsgBoxOK(msg.ToString()).ShowDialog();
+            }
+        }
+
+        private void PerfilesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                new Secciones.Empresa.Perfiles().ShowDialog();
+            }
+            catch (Exception msg)
+            {
+                new Mensajes.Tipos.MsgBoxOK(msg.ToString()).ShowDialog();
+            }
+        }
+
+        private void HorariosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                new Secciones.Empresa.Horarios().ShowDialog();
+            }
+            catch (Exception msg)
+            {
+                new Mensajes.Tipos.MsgBoxOK(msg.ToString()).ShowDialog();
+            }
+        }
+
+        private void ArchivoMuertoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                new Secciones.Empresa.ArchivoMuerto().ShowDialog();
+            }
+            catch (Exception msg)
+            {
+                new Mensajes.Tipos.MsgBoxOK(msg.ToString()).ShowDialog();
+            }
+        }
+
+        private void TrabajadoresToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                new Secciones.Empresa.Trabajadores().ShowDialog();
+            }
+            catch (Exception msg)
+            {
+                new Mensajes.Tipos.MsgBoxOK(msg.ToString()).ShowDialog();
+            }
+        }
+
+        private void InformacionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                new Secciones.Empresa.Informacion().ShowDialog();
+            }
+            catch (Exception msg)
+            {
+                new Mensajes.Tipos.MsgBoxOK(msg.ToString()).ShowDialog();
+            }
+        }
+
+        private void HabilidadesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void IdiomasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                new Secciones.Empresa.Idiomas().ShowDialog();
+            }
+            catch (Exception msg)
+            {
+                new Mensajes.Tipos.MsgBoxOK(msg.ToString()).ShowDialog();
+            }
+        }
+
+        private void NacionalidadesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                new Secciones.Empresa.Nacionalidades().ShowDialog();
+            }
+            catch (Exception msg)
+            {
+                new Mensajes.Tipos.MsgBoxOK(msg.ToString()).ShowDialog();
+            }
+        }
+
+        private void ÁcercaDeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                new Secciones.Empresa.Informacion().ShowDialog();
+            }
+            catch (Exception msg)
+            {
+                new Mensajes.Tipos.MsgBoxOK(msg.ToString()).ShowDialog();
+            }
         }
     }
 }
