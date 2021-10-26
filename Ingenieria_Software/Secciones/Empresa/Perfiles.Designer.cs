@@ -42,19 +42,19 @@ namespace Ingenieria_Software.Secciones.Empresa
             this.checkedListBox_idiomas = new System.Windows.Forms.CheckedListBox();
             this.label2 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.button_agregar = new System.Windows.Forms.Button();
+            this.button_eliminar = new System.Windows.Forms.Button();
+            this.button_actualizar = new System.Windows.Forms.Button();
+            this.container = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.label3 = new System.Windows.Forms.Label();
             this.listView1 = new System.Windows.Forms.ListView();
-            this.container = new System.Windows.Forms.TableLayoutPanel();
-            this.button_actualizar = new System.Windows.Forms.Button();
-            this.button_eliminar = new System.Windows.Forms.Button();
-            this.button_agregar = new System.Windows.Forms.Button();
-            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.LayoutPrincipal.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
-            this.tableLayoutPanel3.SuspendLayout();
-            this.container.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
+            this.container.SuspendLayout();
+            this.tableLayoutPanel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // LayoutPrincipal
@@ -253,6 +253,73 @@ namespace Ingenieria_Software.Secciones.Empresa
             this.tableLayoutPanel1.Size = new System.Drawing.Size(800, 450);
             this.tableLayoutPanel1.TabIndex = 1;
             // 
+            // tableLayoutPanel2
+            // 
+            this.tableLayoutPanel2.ColumnCount = 1;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel2.Controls.Add(this.button_agregar, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.button_eliminar, 0, 1);
+            this.tableLayoutPanel2.Controls.Add(this.button_actualizar, 0, 2);
+            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(643, 3);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.RowCount = 3;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(154, 444);
+            this.tableLayoutPanel2.TabIndex = 1;
+            // 
+            // button_agregar
+            // 
+            this.button_agregar.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button_agregar.Location = new System.Drawing.Point(0, 0);
+            this.button_agregar.Margin = new System.Windows.Forms.Padding(0);
+            this.button_agregar.Name = "button_agregar";
+            this.button_agregar.Size = new System.Drawing.Size(154, 148);
+            this.button_agregar.TabIndex = 1;
+            this.button_agregar.Text = "Insertar";
+            this.button_agregar.UseVisualStyleBackColor = true;
+            this.button_agregar.Click += new System.EventHandler(this.Button_agregar_Click);
+            // 
+            // button_eliminar
+            // 
+            this.button_eliminar.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button_eliminar.Location = new System.Drawing.Point(0, 148);
+            this.button_eliminar.Margin = new System.Windows.Forms.Padding(0);
+            this.button_eliminar.Name = "button_eliminar";
+            this.button_eliminar.Size = new System.Drawing.Size(154, 148);
+            this.button_eliminar.TabIndex = 2;
+            this.button_eliminar.Text = "Eliminar";
+            this.button_eliminar.UseVisualStyleBackColor = true;
+            // 
+            // button_actualizar
+            // 
+            this.button_actualizar.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button_actualizar.Location = new System.Drawing.Point(0, 296);
+            this.button_actualizar.Margin = new System.Windows.Forms.Padding(0);
+            this.button_actualizar.Name = "button_actualizar";
+            this.button_actualizar.Size = new System.Drawing.Size(154, 148);
+            this.button_actualizar.TabIndex = 3;
+            this.button_actualizar.Text = "Actualizar";
+            this.button_actualizar.UseVisualStyleBackColor = true;
+            // 
+            // container
+            // 
+            this.container.ColumnCount = 1;
+            this.container.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.container.Controls.Add(this.LayoutPrincipal, 0, 0);
+            this.container.Controls.Add(this.tableLayoutPanel3, 0, 1);
+            this.container.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.container.Location = new System.Drawing.Point(3, 3);
+            this.container.Name = "container";
+            this.container.RowCount = 2;
+            this.container.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 70F));
+            this.container.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
+            this.container.Size = new System.Drawing.Size(634, 444);
+            this.container.TabIndex = 3;
+            // 
             // tableLayoutPanel3
             // 
             this.tableLayoutPanel3.ColumnCount = 1;
@@ -290,73 +357,6 @@ namespace Ingenieria_Software.Secciones.Empresa
             this.listView1.TabIndex = 1;
             this.listView1.UseCompatibleStateImageBehavior = false;
             // 
-            // container
-            // 
-            this.container.ColumnCount = 1;
-            this.container.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.container.Controls.Add(this.LayoutPrincipal, 0, 0);
-            this.container.Controls.Add(this.tableLayoutPanel3, 0, 1);
-            this.container.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.container.Location = new System.Drawing.Point(3, 3);
-            this.container.Name = "container";
-            this.container.RowCount = 2;
-            this.container.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 70F));
-            this.container.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
-            this.container.Size = new System.Drawing.Size(634, 444);
-            this.container.TabIndex = 3;
-            // 
-            // button_actualizar
-            // 
-            this.button_actualizar.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button_actualizar.Location = new System.Drawing.Point(0, 294);
-            this.button_actualizar.Margin = new System.Windows.Forms.Padding(0);
-            this.button_actualizar.Name = "button_actualizar";
-            this.button_actualizar.Size = new System.Drawing.Size(154, 150);
-            this.button_actualizar.TabIndex = 3;
-            this.button_actualizar.Text = "Actualizar";
-            this.button_actualizar.UseVisualStyleBackColor = true;
-            // 
-            // button_eliminar
-            // 
-            this.button_eliminar.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button_eliminar.Location = new System.Drawing.Point(0, 147);
-            this.button_eliminar.Margin = new System.Windows.Forms.Padding(0);
-            this.button_eliminar.Name = "button_eliminar";
-            this.button_eliminar.Size = new System.Drawing.Size(154, 147);
-            this.button_eliminar.TabIndex = 2;
-            this.button_eliminar.Text = "Eliminar";
-            this.button_eliminar.UseVisualStyleBackColor = true;
-            // 
-            // button_agregar
-            // 
-            this.button_agregar.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button_agregar.Location = new System.Drawing.Point(0, 0);
-            this.button_agregar.Margin = new System.Windows.Forms.Padding(0);
-            this.button_agregar.Name = "button_agregar";
-            this.button_agregar.Size = new System.Drawing.Size(154, 147);
-            this.button_agregar.TabIndex = 1;
-            this.button_agregar.Text = "Insertar";
-            this.button_agregar.UseVisualStyleBackColor = true;
-            this.button_agregar.Click += new System.EventHandler(this.Button_agregar_Click);
-            // 
-            // tableLayoutPanel2
-            // 
-            this.tableLayoutPanel2.ColumnCount = 1;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Controls.Add(this.button_agregar, 0, 0);
-            this.tableLayoutPanel2.Controls.Add(this.button_eliminar, 0, 1);
-            this.tableLayoutPanel2.Controls.Add(this.button_actualizar, 0, 2);
-            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(643, 3);
-            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 3;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(154, 444);
-            this.tableLayoutPanel2.TabIndex = 1;
-            // 
             // Perfiles
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -364,14 +364,16 @@ namespace Ingenieria_Software.Secciones.Empresa
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "Perfiles";
+            this.ShowIcon = false;
+            this.ShowInTaskbar = false;
             this.Text = "Perfiles";
             this.LayoutPrincipal.ResumeLayout(false);
             this.LayoutPrincipal.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel2.ResumeLayout(false);
+            this.container.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel3.PerformLayout();
-            this.container.ResumeLayout(false);
-            this.tableLayoutPanel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

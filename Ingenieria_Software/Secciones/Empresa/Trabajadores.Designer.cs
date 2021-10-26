@@ -66,6 +66,8 @@ namespace Ingenieria_Software.Secciones.Empresa
             this.textBox_cp = new System.Windows.Forms.TextBox();
             this.textBox_id = new System.Windows.Forms.TextBox();
             this.lbl_id = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.layout_principal.SuspendLayout();
             this.layout_botones.SuspendLayout();
             this.layout_datos.SuspendLayout();
@@ -202,6 +204,8 @@ namespace Ingenieria_Software.Secciones.Empresa
             this.layout_datos.Controls.Add(this.textBox_cp, 1, 10);
             this.layout_datos.Controls.Add(this.textBox_id, 2, 10);
             this.layout_datos.Controls.Add(this.lbl_id, 2, 9);
+            this.layout_datos.Controls.Add(this.label1, 2, 5);
+            this.layout_datos.Controls.Add(this.dateTimePicker1, 2, 6);
             this.layout_datos.Dock = System.Windows.Forms.DockStyle.Fill;
             this.layout_datos.Location = new System.Drawing.Point(3, 3);
             this.layout_datos.Name = "layout_datos";
@@ -472,6 +476,24 @@ namespace Ingenieria_Software.Secciones.Empresa
             this.lbl_id.TabIndex = 3;
             this.lbl_id.Text = "ID";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(399, 185);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(159, 24);
+            this.label1.TabIndex = 36;
+            this.label1.Text = "Fecha de ingreso";
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Enabled = false;
+            this.dateTimePicker1.Location = new System.Drawing.Point(399, 225);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(192, 20);
+            this.dateTimePicker1.TabIndex = 37;
+            // 
             // Trabajadores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -479,6 +501,8 @@ namespace Ingenieria_Software.Secciones.Empresa
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.layout_principal);
             this.Name = "Trabajadores";
+            this.ShowIcon = false;
+            this.ShowInTaskbar = false;
             this.Text = "Trabajadores";
             this.layout_principal.ResumeLayout(false);
             this.layout_botones.ResumeLayout(false);
@@ -527,5 +551,7 @@ namespace Ingenieria_Software.Secciones.Empresa
         private System.Windows.Forms.TextBox textBox_id;
         private System.Windows.Forms.Label lbl_id;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
     }
 }

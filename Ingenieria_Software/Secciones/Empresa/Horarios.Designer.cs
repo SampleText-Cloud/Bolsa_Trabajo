@@ -363,6 +363,8 @@ namespace Ingenieria_Software.Secciones.Empresa
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "Horarios";
+            this.ShowIcon = false;
+            this.ShowInTaskbar = false;
             this.Text = "Horarios";
             this.Load += new System.EventHandler(this.Horarios_Load);
             this.tableLayoutPanel1.ResumeLayout(false);

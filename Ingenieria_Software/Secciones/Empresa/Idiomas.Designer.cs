@@ -198,6 +198,8 @@ namespace Ingenieria_Software.Secciones.Empresa
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "Idiomas";
+            this.ShowIcon = false;
+            this.ShowInTaskbar = false;
             this.Text = "Idiomas";
             this.tableLayoutPanel1.ResumeLayout(false);
             this.LayoutPrincipal.ResumeLayout(false);

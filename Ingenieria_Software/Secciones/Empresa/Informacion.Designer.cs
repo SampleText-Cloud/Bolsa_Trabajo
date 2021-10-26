@@ -108,6 +108,8 @@ namespace Ingenieria_Software.Secciones.Empresa
             this.Controls.Add(this.contenedor);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Informacion";
+            this.ShowIcon = false;
+            this.ShowInTaskbar = false;
             this.Text = "Informacion";
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();

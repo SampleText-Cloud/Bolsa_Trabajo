@@ -68,6 +68,8 @@ namespace Ingenieria_Software.Secciones.Reclutadores
             this.lbl_id = new System.Windows.Forms.Label();
             this.lbl_documentos = new System.Windows.Forms.Label();
             this.button_documentos = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.layout_principal.SuspendLayout();
             this.layout_botones.SuspendLayout();
             this.layout_datos.SuspendLayout();
@@ -201,6 +203,8 @@ namespace Ingenieria_Software.Secciones.Reclutadores
             this.layout_datos.Controls.Add(this.lbl_id, 2, 9);
             this.layout_datos.Controls.Add(this.lbl_documentos, 2, 5);
             this.layout_datos.Controls.Add(this.button_documentos, 2, 6);
+            this.layout_datos.Controls.Add(this.label1, 2, 7);
+            this.layout_datos.Controls.Add(this.dateTimePicker1, 2, 8);
             this.layout_datos.Dock = System.Windows.Forms.DockStyle.Fill;
             this.layout_datos.Location = new System.Drawing.Point(3, 3);
             this.layout_datos.Name = "layout_datos";
@@ -490,6 +494,24 @@ namespace Ingenieria_Software.Secciones.Reclutadores
             this.button_documentos.TabIndex = 33;
             this.button_documentos.Text = "Seleccionar documentos";
             this.button_documentos.UseVisualStyleBackColor = true;
+            this.button_documentos.Click += new System.EventHandler(this.Button_documentos_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(399, 259);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(159, 24);
+            this.label1.TabIndex = 34;
+            this.label1.Text = "Fecha de ingreso";
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(399, 299);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(192, 20);
+            this.dateTimePicker1.TabIndex = 35;
             // 
             // Administrador
             // 
@@ -498,6 +520,8 @@ namespace Ingenieria_Software.Secciones.Reclutadores
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.layout_principal);
             this.Name = "Administrador";
+            this.ShowIcon = false;
+            this.ShowInTaskbar = false;
             this.Text = "Administrador";
             this.layout_principal.ResumeLayout(false);
             this.layout_botones.ResumeLayout(false);
@@ -548,5 +572,7 @@ namespace Ingenieria_Software.Secciones.Reclutadores
         private System.Windows.Forms.Button button_actualizar;
         private System.Windows.Forms.Button button_eliminar;
         private System.Windows.Forms.Button button_agregar;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
     }
 }
