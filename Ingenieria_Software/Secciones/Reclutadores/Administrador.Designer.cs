@@ -38,8 +38,8 @@ namespace Ingenieria_Software.Secciones.Reclutadores
             this.button_agregar = new System.Windows.Forms.Button();
             this.layout_datos = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.button_solicitudcheck = new System.Windows.Forms.Button();
+            this.button_solicitud = new System.Windows.Forms.Button();
             this.textBox_correo = new System.Windows.Forms.TextBox();
             this.textBox_apellido_paterno = new System.Windows.Forms.TextBox();
             this.textBox_telefono = new System.Windows.Forms.TextBox();
@@ -84,14 +84,14 @@ namespace Ingenieria_Software.Secciones.Reclutadores
             this.label8 = new System.Windows.Forms.Label();
             this.textBox_idPerfil = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
-            this.button6 = new System.Windows.Forms.Button();
+            this.button_fotocheck = new System.Windows.Forms.Button();
             this.button_foto = new System.Windows.Forms.Button();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.button_identificacioncheck = new System.Windows.Forms.Button();
+            this.button_identificacion = new System.Windows.Forms.Button();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
+            this.button_antecedentescheck = new System.Windows.Forms.Button();
+            this.button_antecedentes = new System.Windows.Forms.Button();
             this.layout_principal.SuspendLayout();
             this.layout_botones.SuspendLayout();
             this.layout_datos.SuspendLayout();
@@ -147,6 +147,7 @@ namespace Ingenieria_Software.Secciones.Reclutadores
             this.button1.TabIndex = 4;
             this.button1.Text = "Convertir";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.Button1_Click);
             // 
             // button_buscar
             // 
@@ -158,6 +159,7 @@ namespace Ingenieria_Software.Secciones.Reclutadores
             this.button_buscar.TabIndex = 3;
             this.button_buscar.Text = "Buscar";
             this.button_buscar.UseVisualStyleBackColor = true;
+            this.button_buscar.Click += new System.EventHandler(this.Button_buscar_Click);
             // 
             // button_actualizar
             // 
@@ -169,6 +171,7 @@ namespace Ingenieria_Software.Secciones.Reclutadores
             this.button_actualizar.TabIndex = 2;
             this.button_actualizar.Text = "Actualizar";
             this.button_actualizar.UseVisualStyleBackColor = true;
+            this.button_actualizar.Click += new System.EventHandler(this.Button_actualizar_Click);
             // 
             // button_eliminar
             // 
@@ -180,6 +183,7 @@ namespace Ingenieria_Software.Secciones.Reclutadores
             this.button_eliminar.TabIndex = 1;
             this.button_eliminar.Text = "Eliminar";
             this.button_eliminar.UseVisualStyleBackColor = true;
+            this.button_eliminar.Click += new System.EventHandler(this.Button_eliminar_Click);
             // 
             // button_agregar
             // 
@@ -277,8 +281,8 @@ namespace Ingenieria_Software.Secciones.Reclutadores
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
-            this.tableLayoutPanel1.Controls.Add(this.button2, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.button3, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.button_solicitudcheck, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.button_solicitud, 0, 0);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(229, 350);
             this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -288,28 +292,29 @@ namespace Ingenieria_Software.Secciones.Reclutadores
             this.tableLayoutPanel1.Size = new System.Drawing.Size(225, 25);
             this.tableLayoutPanel1.TabIndex = 54;
             // 
-            // button2
+            // button_solicitudcheck
             // 
-            this.button2.BackColor = System.Drawing.Color.Red;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.ForeColor = System.Drawing.Color.Black;
-            this.button2.Location = new System.Drawing.Point(157, 0);
-            this.button2.Margin = new System.Windows.Forms.Padding(0);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(68, 22);
-            this.button2.TabIndex = 49;
-            this.button2.UseVisualStyleBackColor = false;
+            this.button_solicitudcheck.BackColor = System.Drawing.Color.Red;
+            this.button_solicitudcheck.FlatAppearance.BorderSize = 0;
+            this.button_solicitudcheck.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_solicitudcheck.ForeColor = System.Drawing.Color.Black;
+            this.button_solicitudcheck.Location = new System.Drawing.Point(157, 0);
+            this.button_solicitudcheck.Margin = new System.Windows.Forms.Padding(0);
+            this.button_solicitudcheck.Name = "button_solicitudcheck";
+            this.button_solicitudcheck.Size = new System.Drawing.Size(68, 22);
+            this.button_solicitudcheck.TabIndex = 49;
+            this.button_solicitudcheck.UseVisualStyleBackColor = false;
             // 
-            // button3
+            // button_solicitud
             // 
-            this.button3.Location = new System.Drawing.Point(0, 0);
-            this.button3.Margin = new System.Windows.Forms.Padding(0);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(157, 22);
-            this.button3.TabIndex = 48;
-            this.button3.Text = "Seleccionar documentos";
-            this.button3.UseVisualStyleBackColor = true;
+            this.button_solicitud.Location = new System.Drawing.Point(0, 0);
+            this.button_solicitud.Margin = new System.Windows.Forms.Padding(0);
+            this.button_solicitud.Name = "button_solicitud";
+            this.button_solicitud.Size = new System.Drawing.Size(157, 22);
+            this.button_solicitud.TabIndex = 48;
+            this.button_solicitud.Text = "Seleccionar documentos";
+            this.button_solicitud.UseVisualStyleBackColor = true;
+            this.button_solicitud.Click += new System.EventHandler(this.Button_solicitud_Click);
             // 
             // textBox_correo
             // 
@@ -455,8 +460,6 @@ namespace Ingenieria_Software.Secciones.Reclutadores
             this.comboBox_nacionalidad.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox_nacionalidad.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.comboBox_nacionalidad.FormattingEnabled = true;
-            this.comboBox_nacionalidad.Items.AddRange(new object[] {
-            "Mexicano"});
             this.comboBox_nacionalidad.Location = new System.Drawing.Point(3, 303);
             this.comboBox_nacionalidad.Name = "comboBox_nacionalidad";
             this.comboBox_nacionalidad.Size = new System.Drawing.Size(223, 21);
@@ -510,6 +513,8 @@ namespace Ingenieria_Software.Secciones.Reclutadores
             // 
             // dateTimePicker_nacimiento
             // 
+            this.dateTimePicker_nacimiento.CustomFormat = "yyyy-MM-dd";
+            this.dateTimePicker_nacimiento.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateTimePicker_nacimiento.Location = new System.Drawing.Point(3, 353);
             this.dateTimePicker_nacimiento.Name = "dateTimePicker_nacimiento";
             this.dateTimePicker_nacimiento.Size = new System.Drawing.Size(192, 20);
@@ -679,6 +684,8 @@ namespace Ingenieria_Software.Secciones.Reclutadores
             // 
             // dateTimePicker_ingreso
             // 
+            this.dateTimePicker_ingreso.CustomFormat = "yyyy-MM-dd";
+            this.dateTimePicker_ingreso.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateTimePicker_ingreso.Location = new System.Drawing.Point(461, 178);
             this.dateTimePicker_ingreso.Name = "dateTimePicker_ingreso";
             this.dateTimePicker_ingreso.Size = new System.Drawing.Size(192, 20);
@@ -707,7 +714,7 @@ namespace Ingenieria_Software.Secciones.Reclutadores
             this.tableLayoutPanel4.ColumnCount = 2;
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70F));
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
-            this.tableLayoutPanel4.Controls.Add(this.button6, 0, 0);
+            this.tableLayoutPanel4.Controls.Add(this.button_fotocheck, 0, 0);
             this.tableLayoutPanel4.Controls.Add(this.button_foto, 0, 0);
             this.tableLayoutPanel4.Location = new System.Drawing.Point(229, 300);
             this.tableLayoutPanel4.Margin = new System.Windows.Forms.Padding(0);
@@ -718,18 +725,19 @@ namespace Ingenieria_Software.Secciones.Reclutadores
             this.tableLayoutPanel4.Size = new System.Drawing.Size(225, 25);
             this.tableLayoutPanel4.TabIndex = 54;
             // 
-            // button6
+            // button_fotocheck
             // 
-            this.button6.BackColor = System.Drawing.Color.Red;
-            this.button6.FlatAppearance.BorderSize = 0;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.ForeColor = System.Drawing.Color.Black;
-            this.button6.Location = new System.Drawing.Point(157, 0);
-            this.button6.Margin = new System.Windows.Forms.Padding(0);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(68, 22);
-            this.button6.TabIndex = 49;
-            this.button6.UseVisualStyleBackColor = false;
+            this.button_fotocheck.BackColor = System.Drawing.Color.Red;
+            this.button_fotocheck.Cursor = System.Windows.Forms.Cursors.Default;
+            this.button_fotocheck.FlatAppearance.BorderSize = 0;
+            this.button_fotocheck.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_fotocheck.ForeColor = System.Drawing.Color.Black;
+            this.button_fotocheck.Location = new System.Drawing.Point(157, 0);
+            this.button_fotocheck.Margin = new System.Windows.Forms.Padding(0);
+            this.button_fotocheck.Name = "button_fotocheck";
+            this.button_fotocheck.Size = new System.Drawing.Size(68, 22);
+            this.button_fotocheck.TabIndex = 49;
+            this.button_fotocheck.UseVisualStyleBackColor = false;
             // 
             // button_foto
             // 
@@ -747,8 +755,8 @@ namespace Ingenieria_Software.Secciones.Reclutadores
             this.tableLayoutPanel2.ColumnCount = 2;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
-            this.tableLayoutPanel2.Controls.Add(this.button4, 0, 0);
-            this.tableLayoutPanel2.Controls.Add(this.button5, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.button_identificacioncheck, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.button_identificacion, 0, 0);
             this.tableLayoutPanel2.Location = new System.Drawing.Point(229, 400);
             this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
@@ -758,36 +766,37 @@ namespace Ingenieria_Software.Secciones.Reclutadores
             this.tableLayoutPanel2.Size = new System.Drawing.Size(225, 25);
             this.tableLayoutPanel2.TabIndex = 55;
             // 
-            // button4
+            // button_identificacioncheck
             // 
-            this.button4.BackColor = System.Drawing.Color.Red;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.ForeColor = System.Drawing.Color.Black;
-            this.button4.Location = new System.Drawing.Point(157, 0);
-            this.button4.Margin = new System.Windows.Forms.Padding(0);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(68, 22);
-            this.button4.TabIndex = 49;
-            this.button4.UseVisualStyleBackColor = false;
+            this.button_identificacioncheck.BackColor = System.Drawing.Color.Red;
+            this.button_identificacioncheck.FlatAppearance.BorderSize = 0;
+            this.button_identificacioncheck.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_identificacioncheck.ForeColor = System.Drawing.Color.Black;
+            this.button_identificacioncheck.Location = new System.Drawing.Point(157, 0);
+            this.button_identificacioncheck.Margin = new System.Windows.Forms.Padding(0);
+            this.button_identificacioncheck.Name = "button_identificacioncheck";
+            this.button_identificacioncheck.Size = new System.Drawing.Size(68, 22);
+            this.button_identificacioncheck.TabIndex = 49;
+            this.button_identificacioncheck.UseVisualStyleBackColor = false;
             // 
-            // button5
+            // button_identificacion
             // 
-            this.button5.Location = new System.Drawing.Point(0, 0);
-            this.button5.Margin = new System.Windows.Forms.Padding(0);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(157, 22);
-            this.button5.TabIndex = 48;
-            this.button5.Text = "Seleccionar documentos";
-            this.button5.UseVisualStyleBackColor = true;
+            this.button_identificacion.Location = new System.Drawing.Point(0, 0);
+            this.button_identificacion.Margin = new System.Windows.Forms.Padding(0);
+            this.button_identificacion.Name = "button_identificacion";
+            this.button_identificacion.Size = new System.Drawing.Size(157, 22);
+            this.button_identificacion.TabIndex = 48;
+            this.button_identificacion.Text = "Seleccionar documentos";
+            this.button_identificacion.UseVisualStyleBackColor = true;
+            this.button_identificacion.Click += new System.EventHandler(this.Button_identificacion_Click);
             // 
             // tableLayoutPanel3
             // 
             this.tableLayoutPanel3.ColumnCount = 2;
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
-            this.tableLayoutPanel3.Controls.Add(this.button7, 0, 0);
-            this.tableLayoutPanel3.Controls.Add(this.button8, 0, 0);
+            this.tableLayoutPanel3.Controls.Add(this.button_antecedentescheck, 0, 0);
+            this.tableLayoutPanel3.Controls.Add(this.button_antecedentes, 0, 0);
             this.tableLayoutPanel3.Location = new System.Drawing.Point(229, 450);
             this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
@@ -796,28 +805,29 @@ namespace Ingenieria_Software.Secciones.Reclutadores
             this.tableLayoutPanel3.Size = new System.Drawing.Size(225, 25);
             this.tableLayoutPanel3.TabIndex = 56;
             // 
-            // button7
+            // button_antecedentescheck
             // 
-            this.button7.BackColor = System.Drawing.Color.Red;
-            this.button7.FlatAppearance.BorderSize = 0;
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.ForeColor = System.Drawing.Color.Black;
-            this.button7.Location = new System.Drawing.Point(157, 0);
-            this.button7.Margin = new System.Windows.Forms.Padding(0);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(68, 22);
-            this.button7.TabIndex = 49;
-            this.button7.UseVisualStyleBackColor = false;
+            this.button_antecedentescheck.BackColor = System.Drawing.Color.Red;
+            this.button_antecedentescheck.FlatAppearance.BorderSize = 0;
+            this.button_antecedentescheck.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_antecedentescheck.ForeColor = System.Drawing.Color.Black;
+            this.button_antecedentescheck.Location = new System.Drawing.Point(157, 0);
+            this.button_antecedentescheck.Margin = new System.Windows.Forms.Padding(0);
+            this.button_antecedentescheck.Name = "button_antecedentescheck";
+            this.button_antecedentescheck.Size = new System.Drawing.Size(68, 22);
+            this.button_antecedentescheck.TabIndex = 49;
+            this.button_antecedentescheck.UseVisualStyleBackColor = false;
             // 
-            // button8
+            // button_antecedentes
             // 
-            this.button8.Location = new System.Drawing.Point(0, 0);
-            this.button8.Margin = new System.Windows.Forms.Padding(0);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(157, 22);
-            this.button8.TabIndex = 48;
-            this.button8.Text = "Seleccionar documentos";
-            this.button8.UseVisualStyleBackColor = true;
+            this.button_antecedentes.Location = new System.Drawing.Point(0, 0);
+            this.button_antecedentes.Margin = new System.Windows.Forms.Padding(0);
+            this.button_antecedentes.Name = "button_antecedentes";
+            this.button_antecedentes.Size = new System.Drawing.Size(157, 22);
+            this.button_antecedentes.TabIndex = 48;
+            this.button_antecedentes.Text = "Seleccionar documentos";
+            this.button_antecedentes.UseVisualStyleBackColor = true;
+            this.button_antecedentes.Click += new System.EventHandler(this.Button_antecedentes_Click);
             // 
             // Administrador
             // 
@@ -829,6 +839,7 @@ namespace Ingenieria_Software.Secciones.Reclutadores
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.Text = "Administrador";
+            this.Load += new System.EventHandler(this.Administrador_Load);
             this.layout_principal.ResumeLayout(false);
             this.layout_botones.ResumeLayout(false);
             this.layout_datos.ResumeLayout(false);
@@ -895,16 +906,16 @@ namespace Ingenieria_Software.Secciones.Reclutadores
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button_solicitudcheck;
+        private System.Windows.Forms.Button button_solicitud;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button button_fotocheck;
         private System.Windows.Forms.Button button_foto;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button_identificacioncheck;
+        private System.Windows.Forms.Button button_identificacion;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button button_antecedentescheck;
+        private System.Windows.Forms.Button button_antecedentes;
     }
 }

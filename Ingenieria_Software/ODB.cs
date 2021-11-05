@@ -96,20 +96,33 @@ namespace Ingenieria_Software
         public static string[] GetMultiId()
         {
             string[] row = new string[500];
-            reader = commandDatabase.ExecuteReader();
-            if (reader.HasRows)
+            try
             {
-                int i = 0;
-                while (reader.Read())
+                OpenConexion();
+                reader = commandDatabase.ExecuteReader();
+                if (reader.HasRows)
                 {
-                    row[i] = reader.GetString(1) + " : " + reader.GetString(0);
-                    i++;
+                    int i = 0;
+                    while (reader.Read())
+                    {
+                        row[i] = reader.GetString(1);
+                        i++;
+                    }
+
+
                 }
-
-
+            }
+            catch(Exception ex)
+            {
+                new Mensajes.Tipos.MsgBoxOK(ex.ToString()).ShowDialog();
+            }
+            finally
+            {
+                CloseConection();
             }
             return row;
         }
+        
 
         public static string[] GetMultiIdType()
         {
@@ -131,23 +144,35 @@ namespace Ingenieria_Software
 
         public static string[] GetMultiCampos(int rows)
         {
-            OpenConexion();
             string[] row = new string[rows];
-            reader = commandDatabase.ExecuteReader();
-            if (reader.HasRows)
+            try
             {
-                while (reader.Read())
+                OpenConexion();
+                
+                reader = commandDatabase.ExecuteReader();
+                if (reader.HasRows)
                 {
-                    for (int i = 0; i < rows; i++)
+                    while (reader.Read())
                     {
-                        if (reader.GetString(i) != null)
+                        for (int i = 0; i < rows; i++)
                         {
-                            row[i] = reader.GetString(i);
+                            if (reader.GetString(i) != null)
+                            {
+                                row[i] = reader.GetString(i);
+                            }
                         }
                     }
                 }
+                new Mensajes.Tipos.MsgBoxOK("SE LOGRO").ShowDialog();
             }
-            CloseConection();
+            catch (Exception ex)
+            {
+                new Mensajes.Tipos.MsgBoxOK(ex.ToString()).ShowDialog();
+            }
+            finally
+            {
+                CloseConection();
+            }
             return row;
         }
 
@@ -159,7 +184,7 @@ namespace Ingenieria_Software
         }
 
         public static void NonQuery(string sql)
-        {
+        {   
             try
             {
                 OpenConexion();

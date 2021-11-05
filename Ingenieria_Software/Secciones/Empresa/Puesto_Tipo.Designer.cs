@@ -32,18 +32,18 @@ namespace Ingenieria_Software.Secciones.Empresa
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.LayoutPrincipal = new System.Windows.Forms.TableLayoutPanel();
             this.label_idioma = new System.Windows.Forms.Label();
-            this.textBox_idioma = new System.Windows.Forms.TextBox();
+            this.textBox_puest = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.listView1 = new System.Windows.Forms.ListView();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox_id = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.comboBox_Tipo = new System.Windows.Forms.ComboBox();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.button_agregar = new System.Windows.Forms.Button();
             this.button_eliminar = new System.Windows.Forms.Button();
             this.button_actualizar = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
-            this.comboBox_Experiencia = new System.Windows.Forms.ComboBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.LayoutPrincipal.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -71,14 +71,14 @@ namespace Ingenieria_Software.Secciones.Empresa
             this.LayoutPrincipal.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 90F));
             this.LayoutPrincipal.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5F));
             this.LayoutPrincipal.Controls.Add(this.label_idioma, 1, 5);
-            this.LayoutPrincipal.Controls.Add(this.textBox_idioma, 1, 6);
+            this.LayoutPrincipal.Controls.Add(this.textBox_puest, 1, 6);
             this.LayoutPrincipal.Controls.Add(this.label1, 1, 0);
             this.LayoutPrincipal.Controls.Add(this.listView1, 1, 9);
             this.LayoutPrincipal.Controls.Add(this.label2, 1, 8);
             this.LayoutPrincipal.Controls.Add(this.label3, 1, 1);
-            this.LayoutPrincipal.Controls.Add(this.textBox1, 1, 2);
+            this.LayoutPrincipal.Controls.Add(this.textBox_id, 1, 2);
             this.LayoutPrincipal.Controls.Add(this.label4, 1, 3);
-            this.LayoutPrincipal.Controls.Add(this.comboBox_Experiencia, 1, 4);
+            this.LayoutPrincipal.Controls.Add(this.comboBox_Tipo, 1, 4);
             this.LayoutPrincipal.Dock = System.Windows.Forms.DockStyle.Fill;
             this.LayoutPrincipal.Location = new System.Drawing.Point(3, 3);
             this.LayoutPrincipal.Name = "LayoutPrincipal";
@@ -108,13 +108,13 @@ namespace Ingenieria_Software.Secciones.Empresa
             this.label_idioma.Text = "Puesto";
             this.label_idioma.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // textBox_idioma
+            // textBox_puest
             // 
-            this.textBox_idioma.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox_idioma.Location = new System.Drawing.Point(34, 211);
-            this.textBox_idioma.Name = "textBox_idioma";
-            this.textBox_idioma.Size = new System.Drawing.Size(564, 20);
-            this.textBox_idioma.TabIndex = 4;
+            this.textBox_puest.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.textBox_puest.Location = new System.Drawing.Point(34, 211);
+            this.textBox_puest.Name = "textBox_puest";
+            this.textBox_puest.Size = new System.Drawing.Size(564, 20);
+            this.textBox_puest.TabIndex = 4;
             // 
             // label1
             // 
@@ -138,6 +138,8 @@ namespace Ingenieria_Software.Secciones.Empresa
             this.listView1.Size = new System.Drawing.Size(564, 152);
             this.listView1.TabIndex = 6;
             this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listView1.View = System.Windows.Forms.View.SmallIcon;
+            this.listView1.Click += new System.EventHandler(this.ListView1_Click);
             // 
             // label2
             // 
@@ -163,13 +165,36 @@ namespace Ingenieria_Software.Secciones.Empresa
             this.label3.Text = "Identificador";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // textBox1
+            // textBox_id
             // 
-            this.textBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox1.Location = new System.Drawing.Point(34, 107);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(564, 20);
-            this.textBox1.TabIndex = 9;
+            this.textBox_id.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.textBox_id.Location = new System.Drawing.Point(34, 107);
+            this.textBox_id.Name = "textBox_id";
+            this.textBox_id.Size = new System.Drawing.Size(564, 20);
+            this.textBox_id.TabIndex = 9;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
+            this.label4.Location = new System.Drawing.Point(34, 130);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(564, 26);
+            this.label4.TabIndex = 10;
+            this.label4.Text = "Tipo";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // comboBox_Tipo
+            // 
+            this.comboBox_Tipo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.comboBox_Tipo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox_Tipo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboBox_Tipo.FormattingEnabled = true;
+            this.comboBox_Tipo.Location = new System.Drawing.Point(34, 159);
+            this.comboBox_Tipo.Name = "comboBox_Tipo";
+            this.comboBox_Tipo.Size = new System.Drawing.Size(564, 21);
+            this.comboBox_Tipo.TabIndex = 11;
             // 
             // tableLayoutPanel2
             // 
@@ -199,6 +224,7 @@ namespace Ingenieria_Software.Secciones.Empresa
             this.button_agregar.TabIndex = 1;
             this.button_agregar.Text = "Insertar";
             this.button_agregar.UseVisualStyleBackColor = true;
+            this.button_agregar.Click += new System.EventHandler(this.Button_agregar_Click);
             // 
             // button_eliminar
             // 
@@ -210,6 +236,7 @@ namespace Ingenieria_Software.Secciones.Empresa
             this.button_eliminar.TabIndex = 2;
             this.button_eliminar.Text = "Eliminar";
             this.button_eliminar.UseVisualStyleBackColor = true;
+            this.button_eliminar.Click += new System.EventHandler(this.Button_eliminar_Click);
             // 
             // button_actualizar
             // 
@@ -221,50 +248,7 @@ namespace Ingenieria_Software.Secciones.Empresa
             this.button_actualizar.TabIndex = 3;
             this.button_actualizar.Text = "Actualizar";
             this.button_actualizar.UseVisualStyleBackColor = true;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
-            this.label4.Location = new System.Drawing.Point(34, 130);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(564, 26);
-            this.label4.TabIndex = 10;
-            this.label4.Text = "Tipo";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // comboBox_Experiencia
-            // 
-            this.comboBox_Experiencia.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.comboBox_Experiencia.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox_Experiencia.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox_Experiencia.FormattingEnabled = true;
-            this.comboBox_Experiencia.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7",
-            "8",
-            "9",
-            "10",
-            "11",
-            "12",
-            "13",
-            "14",
-            "15",
-            "16",
-            "17",
-            "18",
-            "19",
-            "20+"});
-            this.comboBox_Experiencia.Location = new System.Drawing.Point(34, 159);
-            this.comboBox_Experiencia.Name = "comboBox_Experiencia";
-            this.comboBox_Experiencia.Size = new System.Drawing.Size(564, 21);
-            this.comboBox_Experiencia.TabIndex = 11;
+            this.button_actualizar.Click += new System.EventHandler(this.Button_actualizar_Click);
             // 
             // Puesto_Tipo
             // 
@@ -287,17 +271,17 @@ namespace Ingenieria_Software.Secciones.Empresa
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.TableLayoutPanel LayoutPrincipal;
         private System.Windows.Forms.Label label_idioma;
-        private System.Windows.Forms.TextBox textBox_idioma;
+        private System.Windows.Forms.TextBox textBox_puest;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ListView listView1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBox_id;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.Button button_agregar;
         private System.Windows.Forms.Button button_eliminar;
         private System.Windows.Forms.Button button_actualizar;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ComboBox comboBox_Experiencia;
+        private System.Windows.Forms.ComboBox comboBox_Tipo;
     }
 }

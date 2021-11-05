@@ -53,6 +53,18 @@
     <Compile Include="Index.Designer.cs">
       <DependentUpon>Index.cs</DependentUpon>
     </Compile>
+    <Compile Include="Mensajes\Tipos\Conversion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mensajes\Tipos\Conversion.Designer.cs">
+      <DependentUpon>Conversion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mensajes\Tipos\MotivoDeArchivoMuerto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mensajes\Tipos\MotivoDeArchivoMuerto.Designer.cs">
+      <DependentUpon>MotivoDeArchivoMuerto.cs</DependentUpon>
+    </Compile>
     <Compile Include="Mensajes\Tipos\MsgBoxOK.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -143,6 +155,12 @@
     <Compile Include="Secciones\Reclutadores\reclutador.cs" />
     <EmbeddedResource Include="Index.resx">
       <DependentUpon>Index.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mensajes\Tipos\Conversion.resx">
+      <DependentUpon>Conversion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mensajes\Tipos\MotivoDeArchivoMuerto.resx">
+      <DependentUpon>MotivoDeArchivoMuerto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Mensajes\Tipos\MsgBoxOK.resx">
       <DependentUpon>MsgBoxOK.cs</DependentUpon>

@@ -36,12 +36,12 @@ namespace Ingenieria_Software.Secciones.Empresa
             this.label1 = new System.Windows.Forms.Label();
             this.listView1 = new System.Windows.Forms.ListView();
             this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.textBox_id = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.button_agregar = new System.Windows.Forms.Button();
             this.button_eliminar = new System.Windows.Forms.Button();
             this.button_actualizar = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.LayoutPrincipal.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -74,7 +74,7 @@ namespace Ingenieria_Software.Secciones.Empresa
             this.LayoutPrincipal.Controls.Add(this.listView1, 1, 7);
             this.LayoutPrincipal.Controls.Add(this.label2, 1, 6);
             this.LayoutPrincipal.Controls.Add(this.label3, 1, 1);
-            this.LayoutPrincipal.Controls.Add(this.textBox1, 1, 2);
+            this.LayoutPrincipal.Controls.Add(this.textBox_id, 1, 2);
             this.LayoutPrincipal.Dock = System.Windows.Forms.DockStyle.Fill;
             this.LayoutPrincipal.Location = new System.Drawing.Point(3, 3);
             this.LayoutPrincipal.Name = "LayoutPrincipal";
@@ -132,6 +132,8 @@ namespace Ingenieria_Software.Secciones.Empresa
             this.listView1.Size = new System.Drawing.Size(564, 176);
             this.listView1.TabIndex = 6;
             this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listView1.View = System.Windows.Forms.View.SmallIcon;
+            this.listView1.Click += new System.EventHandler(this.ListView1_Click);
             // 
             // label2
             // 
@@ -144,6 +146,26 @@ namespace Ingenieria_Software.Secciones.Empresa
             this.label2.TabIndex = 7;
             this.label2.Text = "Idiomas Disponibles";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
+            this.label3.Location = new System.Drawing.Point(34, 88);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(564, 29);
+            this.label3.TabIndex = 8;
+            this.label3.Text = "Identificador";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // textBox_id
+            // 
+            this.textBox_id.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.textBox_id.Location = new System.Drawing.Point(34, 120);
+            this.textBox_id.Name = "textBox_id";
+            this.textBox_id.Size = new System.Drawing.Size(564, 20);
+            this.textBox_id.TabIndex = 9;
             // 
             // tableLayoutPanel2
             // 
@@ -185,6 +207,7 @@ namespace Ingenieria_Software.Secciones.Empresa
             this.button_eliminar.TabIndex = 2;
             this.button_eliminar.Text = "Eliminar";
             this.button_eliminar.UseVisualStyleBackColor = true;
+            this.button_eliminar.Click += new System.EventHandler(this.Button_eliminar_Click);
             // 
             // button_actualizar
             // 
@@ -196,26 +219,7 @@ namespace Ingenieria_Software.Secciones.Empresa
             this.button_actualizar.TabIndex = 3;
             this.button_actualizar.Text = "Actualizar";
             this.button_actualizar.UseVisualStyleBackColor = true;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
-            this.label3.Location = new System.Drawing.Point(34, 88);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(564, 29);
-            this.label3.TabIndex = 8;
-            this.label3.Text = "Identificador";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox1.Location = new System.Drawing.Point(34, 120);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(564, 20);
-            this.textBox1.TabIndex = 9;
+            this.button_actualizar.Click += new System.EventHandler(this.Button_actualizar_Click);
             // 
             // Idiomas
             // 
@@ -249,6 +253,6 @@ namespace Ingenieria_Software.Secciones.Empresa
         private System.Windows.Forms.ListView listView1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBox_id;
     }
 }
