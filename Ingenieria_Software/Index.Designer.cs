@@ -33,22 +33,26 @@ namespace Ingenieria_Software
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Index));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.postulantesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.postulantesToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.perfilToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.empresaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.horariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.perfilesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.postulantesToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.archivoMuertoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.perfilToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.trabajadoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.habilidadesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.idiomasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nacionalidadesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.lbl_date = new System.Windows.Forms.Label();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.lbl_empresa = new System.Windows.Forms.Label();
             this.acercaDeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ácercaDeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.lbl_date = new System.Windows.Forms.Label();
+            this.lbl_empresa = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.puestoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tipoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.puestoToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.experienciaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -69,11 +73,26 @@ namespace Ingenieria_Software
             // 
             this.postulantesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.postulantesToolStripMenuItem1,
-            this.perfilToolStripMenuItem});
+            this.perfilToolStripMenuItem,
+            this.experienciaToolStripMenuItem});
             this.postulantesToolStripMenuItem.Name = "postulantesToolStripMenuItem";
             this.postulantesToolStripMenuItem.Size = new System.Drawing.Size(80, 20);
             this.postulantesToolStripMenuItem.Text = "Postulantes";
             this.postulantesToolStripMenuItem.Click += new System.EventHandler(this.PostulantesToolStripMenuItem_Click);
+            // 
+            // postulantesToolStripMenuItem1
+            // 
+            this.postulantesToolStripMenuItem1.Name = "postulantesToolStripMenuItem1";
+            this.postulantesToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.postulantesToolStripMenuItem1.Text = "Postulantes";
+            this.postulantesToolStripMenuItem1.Click += new System.EventHandler(this.PostulantesToolStripMenuItem1_Click);
+            // 
+            // perfilToolStripMenuItem
+            // 
+            this.perfilToolStripMenuItem.Name = "perfilToolStripMenuItem";
+            this.perfilToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.perfilToolStripMenuItem.Text = "Perfil";
+            this.perfilToolStripMenuItem.Click += new System.EventHandler(this.PerfilToolStripMenuItem_Click);
             // 
             // empresaToolStripMenuItem
             // 
@@ -83,7 +102,8 @@ namespace Ingenieria_Software
             this.archivoMuertoToolStripMenuItem,
             this.trabajadoresToolStripMenuItem,
             this.habilidadesToolStripMenuItem,
-            this.nacionalidadesToolStripMenuItem});
+            this.nacionalidadesToolStripMenuItem,
+            this.puestoToolStripMenuItem});
             this.empresaToolStripMenuItem.Name = "empresaToolStripMenuItem";
             this.empresaToolStripMenuItem.Size = new System.Drawing.Size(64, 20);
             this.empresaToolStripMenuItem.Text = "Empresa";
@@ -102,26 +122,12 @@ namespace Ingenieria_Software
             this.perfilesToolStripMenuItem.Text = "Perfiles";
             this.perfilesToolStripMenuItem.Click += new System.EventHandler(this.PerfilesToolStripMenuItem_Click);
             // 
-            // postulantesToolStripMenuItem1
-            // 
-            this.postulantesToolStripMenuItem1.Name = "postulantesToolStripMenuItem1";
-            this.postulantesToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
-            this.postulantesToolStripMenuItem1.Text = "Postulantes";
-            this.postulantesToolStripMenuItem1.Click += new System.EventHandler(this.PostulantesToolStripMenuItem1_Click);
-            // 
             // archivoMuertoToolStripMenuItem
             // 
             this.archivoMuertoToolStripMenuItem.Name = "archivoMuertoToolStripMenuItem";
             this.archivoMuertoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.archivoMuertoToolStripMenuItem.Text = "Archivo Muerto";
             this.archivoMuertoToolStripMenuItem.Click += new System.EventHandler(this.ArchivoMuertoToolStripMenuItem_Click);
-            // 
-            // perfilToolStripMenuItem
-            // 
-            this.perfilToolStripMenuItem.Name = "perfilToolStripMenuItem";
-            this.perfilToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.perfilToolStripMenuItem.Text = "Perfil";
-            this.perfilToolStripMenuItem.Click += new System.EventHandler(this.PerfilToolStripMenuItem_Click);
             // 
             // trabajadoresToolStripMenuItem
             // 
@@ -142,7 +148,7 @@ namespace Ingenieria_Software
             // idiomasToolStripMenuItem
             // 
             this.idiomasToolStripMenuItem.Name = "idiomasToolStripMenuItem";
-            this.idiomasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.idiomasToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
             this.idiomasToolStripMenuItem.Text = "Idiomas";
             this.idiomasToolStripMenuItem.Click += new System.EventHandler(this.IdiomasToolStripMenuItem_Click);
             // 
@@ -152,6 +158,21 @@ namespace Ingenieria_Software
             this.nacionalidadesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.nacionalidadesToolStripMenuItem.Text = "Nacionalidades";
             this.nacionalidadesToolStripMenuItem.Click += new System.EventHandler(this.NacionalidadesToolStripMenuItem_Click);
+            // 
+            // acercaDeToolStripMenuItem
+            // 
+            this.acercaDeToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ácercaDeToolStripMenuItem});
+            this.acercaDeToolStripMenuItem.Name = "acercaDeToolStripMenuItem";
+            this.acercaDeToolStripMenuItem.Size = new System.Drawing.Size(53, 20);
+            this.acercaDeToolStripMenuItem.Text = "Ayuda";
+            // 
+            // ácercaDeToolStripMenuItem
+            // 
+            this.ácercaDeToolStripMenuItem.Name = "ácercaDeToolStripMenuItem";
+            this.ácercaDeToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
+            this.ácercaDeToolStripMenuItem.Text = "Acerca de Saucar";
+            this.ácercaDeToolStripMenuItem.Click += new System.EventHandler(this.ÁcercaDeToolStripMenuItem_Click);
             // 
             // tableLayoutPanel1
             // 
@@ -177,16 +198,12 @@ namespace Ingenieria_Software
             this.lbl_date.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lbl_date.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_date.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lbl_date.Location = new System.Drawing.Point(3, 282);
+            this.lbl_date.Location = new System.Drawing.Point(3, 284);
             this.lbl_date.Name = "lbl_date";
-            this.lbl_date.Size = new System.Drawing.Size(794, 144);
+            this.lbl_date.Size = new System.Drawing.Size(794, 142);
             this.lbl_date.TabIndex = 0;
             this.lbl_date.Text = "00/00/0000";
             this.lbl_date.TextAlign = System.Drawing.ContentAlignment.BottomRight;
-            // 
-            // timer1
-            // 
-            this.timer1.Tick += new System.EventHandler(this.Timer1_Tick);
             // 
             // lbl_empresa
             // 
@@ -195,28 +212,47 @@ namespace Ingenieria_Software
             this.lbl_empresa.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lbl_empresa.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_empresa.ForeColor = System.Drawing.Color.White;
-            this.lbl_empresa.Location = new System.Drawing.Point(0, 141);
+            this.lbl_empresa.Location = new System.Drawing.Point(0, 142);
             this.lbl_empresa.Margin = new System.Windows.Forms.Padding(0);
             this.lbl_empresa.Name = "lbl_empresa";
-            this.lbl_empresa.Size = new System.Drawing.Size(800, 141);
+            this.lbl_empresa.Size = new System.Drawing.Size(800, 142);
             this.lbl_empresa.TabIndex = 1;
             this.lbl_empresa.Text = "Bolsa de Trabajo - Saucar";
             this.lbl_empresa.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // acercaDeToolStripMenuItem
+            // timer1
             // 
-            this.acercaDeToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.ácercaDeToolStripMenuItem});
-            this.acercaDeToolStripMenuItem.Name = "acercaDeToolStripMenuItem";
-            this.acercaDeToolStripMenuItem.Size = new System.Drawing.Size(53, 20);
-            this.acercaDeToolStripMenuItem.Text = "Ayuda";
+            this.timer1.Tick += new System.EventHandler(this.Timer1_Tick);
             // 
-            // ácercaDeToolStripMenuItem
+            // puestoToolStripMenuItem
             // 
-            this.ácercaDeToolStripMenuItem.Name = "ácercaDeToolStripMenuItem";
-            this.ácercaDeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.ácercaDeToolStripMenuItem.Text = "Acerca de Saucar";
-            this.ácercaDeToolStripMenuItem.Click += new System.EventHandler(this.ÁcercaDeToolStripMenuItem_Click);
+            this.puestoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tipoToolStripMenuItem,
+            this.puestoToolStripMenuItem1});
+            this.puestoToolStripMenuItem.Name = "puestoToolStripMenuItem";
+            this.puestoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.puestoToolStripMenuItem.Text = "Puesto";
+            // 
+            // tipoToolStripMenuItem
+            // 
+            this.tipoToolStripMenuItem.Name = "tipoToolStripMenuItem";
+            this.tipoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.tipoToolStripMenuItem.Text = "Tipo";
+            this.tipoToolStripMenuItem.Click += new System.EventHandler(this.TipoToolStripMenuItem_Click);
+            // 
+            // puestoToolStripMenuItem1
+            // 
+            this.puestoToolStripMenuItem1.Name = "puestoToolStripMenuItem1";
+            this.puestoToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.puestoToolStripMenuItem1.Text = "Puesto";
+            this.puestoToolStripMenuItem1.Click += new System.EventHandler(this.PuestoToolStripMenuItem1_Click);
+            // 
+            // experienciaToolStripMenuItem
+            // 
+            this.experienciaToolStripMenuItem.Name = "experienciaToolStripMenuItem";
+            this.experienciaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.experienciaToolStripMenuItem.Text = "Experiencia";
+            this.experienciaToolStripMenuItem.Click += new System.EventHandler(this.ExperienciaToolStripMenuItem_Click);
             // 
             // Index
             // 
@@ -259,5 +295,9 @@ namespace Ingenieria_Software
         private System.Windows.Forms.Label lbl_empresa;
         private System.Windows.Forms.ToolStripMenuItem acercaDeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ácercaDeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem puestoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem tipoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem puestoToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem experienciaToolStripMenuItem;
     }
 }

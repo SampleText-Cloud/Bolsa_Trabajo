@@ -158,19 +158,18 @@ namespace Ingenieria_Software
             commandDatabase.ExecuteNonQuery();
         }
 
-        public static bool NonQuery(string sql)
+        public static void NonQuery(string sql)
         {
             try
             {
                 OpenConexion();
                 SetCommand(sql);
                 NonQuery();
-                
-                return true;
+                new Mensajes.Tipos.MsgBoxOK("Se supone que funciono").ShowDialog();
+
             }catch(Exception ex)
             {
-                new Mensajes.Tipos.MsgBoxOK(ex.ToString());
-                return false;
+                new Mensajes.Tipos.MsgBoxOK(ex.ToString()).ShowDialog();
             }
             finally
             {

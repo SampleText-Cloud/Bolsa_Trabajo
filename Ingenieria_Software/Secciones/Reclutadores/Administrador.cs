@@ -13,6 +13,29 @@ namespace Ingenieria_Software.Secciones.Reclutadores
 {
     public partial class Administrador : Form
     {
+        string antecedentes=" ";
+        string identificacion=" ";
+        string solicitud=" ";
+        string foto=" ";
+
+        string id,
+               nombre,
+               ap_p,
+               ap_m,
+               curp,
+               rfc,
+               nacionalidad,
+               fechaNac,
+               sexo,
+               fechaIngreso,
+               idPerfil,
+               telefono,
+               correo,
+               colonia,
+               calle,
+               interior,
+               exterior,
+               cp;
         public Administrador()
         {
             InitializeComponent();
@@ -27,71 +50,7 @@ namespace Ingenieria_Software.Secciones.Reclutadores
                 var.Text = "";
             }
         }
-        private void SetAllValues()
-        {
-            trabajador.SetNombre(textBox_nombre.Text);
-            trabajador.SetApellidoPaterno(textBox_apellido_paterno.Text);
-            trabajador.SetApellidoMaterno(textBox_apellido_materno.Text);
-            trabajador.SetCurp(textBox_curp.Text);
-            trabajador.SetRfc(textBox_rfc.Text);
 
-            trabajador.SetDireccionColonia(textBox_colonia.Text);
-            trabajador.SetDireccionCalle(textBox_calle.Text);
-            trabajador.SetDireccionNoInt(textBox_no_int.Text);
-            trabajador.SetDireccionNoExt(textBox_no_ext.Text);
-            trabajador.SetDireccionCp(textBox_cp.Text);
-
-            trabajador.setTelefono(textBox_telefono.Text);
-            trabajador.SetCorreo(textBox_correo.Text);
-        }
-        private void GetAllValues()
-        {
-            trabajador.GetNombre();
-            trabajador.GetApellidoPaterno();
-            trabajador.GetApellidoMaterno();
-            trabajador.GetCurp();
-            trabajador.GetRfc();
-
-            trabajador.GetDireccionColonia();
-            trabajador.GetDireccionCalle();
-            trabajador.GetDireccionNoInt();
-            trabajador.GetDireccionNoExt();
-            trabajador.GetDireccionCp();
-
-            trabajador.GetTelefono();
-            trabajador.GetCorreo();
-        }
-
-        private void Button_agregar_Click(object sender, EventArgs e)
-        {
-            SetAllValues();
-            trabajador.InsertarRecluta();
-            textBox_id.Text = trabajador.GetId();
-
-            button_eliminar.Enabled = true;
-            button_actualizar.Enabled = true;
-        }
-
-        private void Button_eliminar_Click(object sender, EventArgs e)
-        {
-            trabajador.EliminarRecluta(textBox_id.Text);
-            clear();
-        }
-
-        private void Button_buscar_Click(object sender, EventArgs e)
-        {
-            
-            trabajador.BuscarRecluta(textBox_id.Text.ToString()) ;
-            clear();
-            GetAllValues();
-            
-        }
-
-        private void Button_actualizar_Click(object sender, EventArgs e)
-        {
-            SetAllValues();
-            trabajador.ActualizarRecluta(textBox_id.Text);
-        }
 
         private void Button_documentos_Click(object sender, EventArgs e)
         {
@@ -121,6 +80,117 @@ namespace Ingenieria_Software.Secciones.Reclutadores
                 }
             }
             new Mensajes.Tipos.MsgBoxOK(filePath).ShowDialog();
+        }
+
+        private void DateTimePicker_ingreso_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Button_foto_Click(object sender, EventArgs e)
+        {
+            var fileContent = string.Empty;
+            var filePath = string.Empty;
+
+            using (OpenFileDialog openFileDialog = new OpenFileDialog())
+            {
+                openFileDialog.InitialDirectory = "c:\\";
+                openFileDialog.Filter = "txt files (*.pdf)|*.pdf|All files (*.*)|*.*";
+                openFileDialog.FilterIndex = 2;
+                openFileDialog.RestoreDirectory = true;
+
+                if (openFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    //Get the path of specified file
+                    filePath = openFileDialog.FileName;
+
+                    //Read the contents of the file into a stream
+                    var fileStream = openFileDialog.OpenFile();
+
+                    using (StreamReader reader = new StreamReader(fileStream))
+                    {
+                        fileContent = reader.ReadToEnd();
+                    }
+                }
+            }
+            new Mensajes.Tipos.MsgBoxOK(filePath).ShowDialog();
+        }
+
+        private void Button_agregar_Click_1(object sender, EventArgs e)
+        {
+            id = textBox_idCandidato.Text.ToString();
+            nombre = textBox_nombre.Text.ToString();
+            ap_p = textBox_apellido_paterno.Text.ToString();
+            ap_m = textBox_apellido_materno.Text.ToString();
+            curp = textBox_curp.Text.ToString();
+            rfc = textBox_rfc.Text.ToString();
+            nacionalidad = comboBox_nacionalidad.Text.ToString();
+            fechaNac = dateTimePicker_nacimiento.Text.ToString();
+            sexo = comboBox_sexo.Text.ToString();
+            fechaIngreso = dateTimePicker_ingreso.Text.ToString();
+            idPerfil = textBox_idPerfil.Text.ToString();
+            telefono = textBox_telefono.Text.ToString();
+            correo = textBox_correo.Text.ToString();
+            colonia = textBox_colonia.Text.ToString();
+            calle = textBox_calle.Text.ToString();
+            interior = textBox_no_int.Text.ToString();
+            exterior = textBox_no_ext.Text.ToString();
+            cp = textBox_cp.Text.ToString();
+
+            string SQL = String.Format("INSERT INTO `Candidato`(`idCandidato`, " +
+                                                                     "`nombres`, " +
+                                                                     "`a_paterno`, " +
+                                                                     "`a_materno`, " +
+                                                                     "`curp`, " +
+                                                                     "`rfc`, " +
+                                                                     "`nacionalidad`, " +
+                                                                     "`fechaNac`, " +
+                                                                     "`sexo`, " +
+                                                                     "`fechaIngreso`, " +
+                                                                     "`idPerfil`, " +
+                                                                     "`telefono`, " +
+                                                                     "`correo`, " +
+                                                                     "`dir_colonia`, " +
+                                                                     "`dir_calle`, " +
+                                                                     "`dir_no_int`, " +
+                                                                     "`dir_no_ext`, " +
+                                                                     "`dir_cp`, " +
+                                                                     "`cartaAntecedentes`, " +
+                                                                     "`solicitud`, " +
+                                                                     "`foto`, " +
+                                                                     "`ine`) VALUES ('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}','{11}','{12}','{13}','{14}','{15}','{16}','{17}','{18}','{19}','{20}','{21}')",
+                                                                     id,
+                                                                     nombre,
+                                                                     ap_p,
+                                                                     ap_m,
+                                                                     curp,
+                                                                     rfc,
+                                                                     nacionalidad,
+                                                                     fechaNac,
+                                                                     sexo,
+                                                                     fechaIngreso,
+                                                                     idPerfil,
+                                                                     telefono,
+                                                                     correo,
+                                                                     colonia,
+                                                                     calle,
+                                                                     interior,
+                                                                     exterior,
+                                                                     cp,
+                                                                     antecedentes,
+                                                                     solicitud,
+                                                                     foto,
+                                                                     identificacion);
+
+
+
+            ODB.NonQuery(SQL);
+            Clipboard.SetText(SQL);
+
+
+
+
+
         }
     }
 }

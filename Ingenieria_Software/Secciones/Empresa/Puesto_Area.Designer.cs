@@ -1,7 +1,7 @@
 ﻿
 namespace Ingenieria_Software.Secciones.Empresa
 {
-    partial class Idiomas
+    partial class Puesto_Area
     {
         /// <summary>
         /// Required designer variable.
@@ -36,12 +36,12 @@ namespace Ingenieria_Software.Secciones.Empresa
             this.label1 = new System.Windows.Forms.Label();
             this.listView1 = new System.Windows.Forms.ListView();
             this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.button_agregar = new System.Windows.Forms.Button();
             this.button_eliminar = new System.Windows.Forms.Button();
             this.button_actualizar = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.LayoutPrincipal.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -60,7 +60,7 @@ namespace Ingenieria_Software.Secciones.Empresa
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(800, 450);
-            this.tableLayoutPanel1.TabIndex = 3;
+            this.tableLayoutPanel1.TabIndex = 5;
             // 
             // LayoutPrincipal
             // 
@@ -99,7 +99,7 @@ namespace Ingenieria_Software.Secciones.Empresa
             this.label_idioma.Name = "label_idioma";
             this.label_idioma.Size = new System.Drawing.Size(564, 29);
             this.label_idioma.TabIndex = 3;
-            this.label_idioma.Text = "Idioma";
+            this.label_idioma.Text = "Tipo";
             this.label_idioma.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // textBox_idioma
@@ -119,7 +119,7 @@ namespace Ingenieria_Software.Secciones.Empresa
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(564, 88);
             this.label1.TabIndex = 5;
-            this.label1.Text = "Administrador de Idiomas";
+            this.label1.Text = "Administrador de Tipos de puestos";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // listView1
@@ -142,8 +142,28 @@ namespace Ingenieria_Software.Secciones.Empresa
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(564, 29);
             this.label2.TabIndex = 7;
-            this.label2.Text = "Idiomas Disponibles";
+            this.label2.Text = "Tipos Disponibles";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
+            this.label3.Location = new System.Drawing.Point(34, 88);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(564, 29);
+            this.label3.TabIndex = 8;
+            this.label3.Text = "Identificador";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.textBox1.Location = new System.Drawing.Point(34, 120);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(564, 20);
+            this.textBox1.TabIndex = 9;
             // 
             // tableLayoutPanel2
             // 
@@ -173,7 +193,6 @@ namespace Ingenieria_Software.Secciones.Empresa
             this.button_agregar.TabIndex = 1;
             this.button_agregar.Text = "Insertar";
             this.button_agregar.UseVisualStyleBackColor = true;
-            this.button_agregar.Click += new System.EventHandler(this.Button_agregar_Click);
             // 
             // button_eliminar
             // 
@@ -197,36 +216,14 @@ namespace Ingenieria_Software.Secciones.Empresa
             this.button_actualizar.Text = "Actualizar";
             this.button_actualizar.UseVisualStyleBackColor = true;
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
-            this.label3.Location = new System.Drawing.Point(34, 88);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(564, 29);
-            this.label3.TabIndex = 8;
-            this.label3.Text = "Identificador";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox1.Location = new System.Drawing.Point(34, 120);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(564, 20);
-            this.textBox1.TabIndex = 9;
-            // 
-            // Idiomas
+            // Puesto_Area
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.tableLayoutPanel1);
-            this.Name = "Idiomas";
-            this.ShowIcon = false;
-            this.ShowInTaskbar = false;
-            this.Text = "Idiomas";
+            this.Name = "Puesto_Area";
+            this.Text = "Puesto_Area";
             this.tableLayoutPanel1.ResumeLayout(false);
             this.LayoutPrincipal.ResumeLayout(false);
             this.LayoutPrincipal.PerformLayout();
@@ -242,13 +239,13 @@ namespace Ingenieria_Software.Secciones.Empresa
         private System.Windows.Forms.Label label_idioma;
         private System.Windows.Forms.TextBox textBox_idioma;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
-        private System.Windows.Forms.Button button_agregar;
-        private System.Windows.Forms.Button button_eliminar;
-        private System.Windows.Forms.Button button_actualizar;
         private System.Windows.Forms.ListView listView1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
+        private System.Windows.Forms.Button button_agregar;
+        private System.Windows.Forms.Button button_eliminar;
+        private System.Windows.Forms.Button button_actualizar;
     }
 }

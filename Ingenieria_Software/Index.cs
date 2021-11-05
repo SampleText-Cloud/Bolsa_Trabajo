@@ -162,5 +162,41 @@ namespace Ingenieria_Software
                 new Mensajes.Tipos.MsgBoxOK(msg.ToString()).ShowDialog();
             }
         }
+
+        private void TipoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                new Secciones.Empresa.Puesto_Area().ShowDialog();
+            }
+            catch (Exception msg)
+            {
+                new Mensajes.Tipos.MsgBoxOK(msg.ToString()).ShowDialog();
+            }
+        }
+
+        private void PuestoToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                new Secciones.Empresa.Puesto_Tipo().ShowDialog();
+            }
+            catch (Exception msg)
+            {
+                new Mensajes.Tipos.MsgBoxOK(msg.ToString()).ShowDialog();
+            }
+        }
+
+        private void ExperienciaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                new Secciones.Postulantes.Experiencia().ShowDialog();
+            }
+            catch (Exception msg)
+            {
+                new Mensajes.Tipos.MsgBoxOK(msg.ToString()).ShowDialog();
+            }
+        }
     }
 }
