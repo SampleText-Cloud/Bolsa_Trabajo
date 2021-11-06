@@ -95,7 +95,7 @@ namespace Ingenieria_Software.Secciones.Reclutadores
 
         private void Button1_Click(object sender, EventArgs e)
         {
-            DialogResult result = new Mensajes.Tipos.Conversion().ShowDialog();
+            DialogResult result = new Mensajes.Tipos.Conversion("TRABAJADOR", "ARCHIVO MUERTO").ShowDialog();
             switch (result)
             {
                 case DialogResult.Yes:
@@ -248,7 +248,7 @@ namespace Ingenieria_Software.Secciones.Reclutadores
         }
         private void Administrador_Load(object sender, EventArgs e)
         {
-            ODB.SetCommand("SELECT * FROM `Idiomas`");
+            ODB.SetCommand("SELECT * FROM `Nacionalidad`");
             string[] nacionalidadesDisponibles = ODB.GetMultiId();
             
             foreach(string nac in nacionalidadesDisponibles)

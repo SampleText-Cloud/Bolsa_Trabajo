@@ -163,7 +163,7 @@ namespace Ingenieria_Software
                         }
                     }
                 }
-                new Mensajes.Tipos.MsgBoxOK("SE LOGRO").ShowDialog();
+                new Mensajes.Tipos.MsgBoxOK("OPERACION EXITOSA").ShowDialog();
             }
             catch (Exception ex)
             {
@@ -190,7 +190,7 @@ namespace Ingenieria_Software
                 OpenConexion();
                 SetCommand(sql);
                 NonQuery();
-                new Mensajes.Tipos.MsgBoxOK("Se supone que funciono").ShowDialog();
+                new Mensajes.Tipos.MsgBoxOK("OPERACION EXITOSA").ShowDialog();
 
             }catch(Exception ex)
             {

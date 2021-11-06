@@ -15,6 +15,7 @@ namespace Ingenieria_Software.Mensajes.Tipos
         public MsgBoxYesOrNo()
         {
             InitializeComponent();
+            CenterToScreen();
         }
 
         private void Button_yes_Click(object sender, EventArgs e)

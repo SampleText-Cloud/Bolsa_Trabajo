@@ -16,6 +16,7 @@ namespace Ingenieria_Software.Mensajes.Tipos
         public MotivoDeArchivoMuerto()
         {
             InitializeComponent();
+            CenterToScreen();
         }
 
         private void Button_ok_Click(object sender, EventArgs e)

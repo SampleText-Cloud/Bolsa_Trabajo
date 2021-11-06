@@ -15,6 +15,7 @@ namespace Ingenieria_Software.Secciones.Empresa
         public Puesto_Area()
         {
             InitializeComponent();
+            CenterToScreen();
         }
 
         private void Puesto_Area_Load(object sender, EventArgs e)

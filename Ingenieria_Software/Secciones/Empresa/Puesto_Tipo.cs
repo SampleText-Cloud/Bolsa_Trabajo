@@ -17,6 +17,7 @@ namespace Ingenieria_Software.Secciones.Empresa
             InitializeComponent();
             updateLista();
             checkAreas();
+            CenterToScreen();
             
         }
 

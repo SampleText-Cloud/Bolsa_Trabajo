@@ -37,13 +37,13 @@ namespace Ingenieria_Software.Mensajes.Tipos
             // 
             // layout_main
             // 
+            this.layout_main.BackColor = System.Drawing.Color.White;
             this.layout_main.ColumnCount = 1;
             this.layout_main.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.layout_main.Controls.Add(this.button_ok, 0, 1);
             this.layout_main.Controls.Add(this.msg, 0, 0);
             this.layout_main.Dock = System.Windows.Forms.DockStyle.Fill;
             this.layout_main.Location = new System.Drawing.Point(0, 0);
-            this.layout_main.Margin = new System.Windows.Forms.Padding(0);
             this.layout_main.Name = "layout_main";
             this.layout_main.RowCount = 2;
             this.layout_main.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 64F));
@@ -54,6 +54,10 @@ namespace Ingenieria_Software.Mensajes.Tipos
             // button_ok
             // 
             this.button_ok.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button_ok.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
+            this.button_ok.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.button_ok.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_ok.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
             this.button_ok.Location = new System.Drawing.Point(3, 291);
             this.button_ok.Name = "button_ok";
             this.button_ok.Size = new System.Drawing.Size(794, 156);
@@ -66,6 +70,7 @@ namespace Ingenieria_Software.Mensajes.Tipos
             // 
             this.msg.AutoSize = true;
             this.msg.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.msg.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
             this.msg.Location = new System.Drawing.Point(0, 0);
             this.msg.Margin = new System.Windows.Forms.Padding(0);
             this.msg.Name = "msg";
@@ -74,13 +79,17 @@ namespace Ingenieria_Software.Mensajes.Tipos
             this.msg.Text = "Error";
             this.msg.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // Form1
+            // MsgBoxOK
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.layout_main);
-            this.Name = "Form1";
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Name = "MsgBoxOK";
+            this.ShowIcon = false;
+            this.ShowInTaskbar = false;
             this.Text = "Form1";
             this.layout_main.ResumeLayout(false);
             this.layout_main.PerformLayout();

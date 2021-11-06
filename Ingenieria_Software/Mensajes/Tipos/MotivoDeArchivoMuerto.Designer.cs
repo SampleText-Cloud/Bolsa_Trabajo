@@ -38,6 +38,7 @@ namespace Ingenieria_Software.Mensajes.Tipos
             // 
             // tableLayoutPanel1
             // 
+            this.tableLayoutPanel1.BackColor = System.Drawing.Color.White;
             this.tableLayoutPanel1.ColumnCount = 1;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.Controls.Add(this.button_ok, 0, 2);
@@ -55,9 +56,15 @@ namespace Ingenieria_Software.Mensajes.Tipos
             // 
             // button_ok
             // 
+            this.button_ok.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button_ok.FlatAppearance.BorderSize = 0;
+            this.button_ok.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
+            this.button_ok.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.button_ok.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_ok.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
             this.button_ok.Location = new System.Drawing.Point(3, 318);
             this.button_ok.Name = "button_ok";
-            this.button_ok.Size = new System.Drawing.Size(480, 97);
+            this.button_ok.Size = new System.Drawing.Size(794, 129);
             this.button_ok.TabIndex = 0;
             this.button_ok.Text = "Aceptar";
             this.button_ok.UseVisualStyleBackColor = true;
@@ -67,6 +74,7 @@ namespace Ingenieria_Software.Mensajes.Tipos
             // 
             this.label1.AutoSize = true;
             this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
             this.label1.Location = new System.Drawing.Point(3, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(794, 90);
@@ -76,9 +84,13 @@ namespace Ingenieria_Software.Mensajes.Tipos
             // 
             // richTextBox_motivo
             // 
-            this.richTextBox_motivo.Location = new System.Drawing.Point(3, 93);
+            this.richTextBox_motivo.BackColor = System.Drawing.SystemColors.Menu;
+            this.richTextBox_motivo.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBox_motivo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
+            this.richTextBox_motivo.Location = new System.Drawing.Point(15, 90);
+            this.richTextBox_motivo.Margin = new System.Windows.Forms.Padding(15, 0, 15, 0);
             this.richTextBox_motivo.Name = "richTextBox_motivo";
-            this.richTextBox_motivo.Size = new System.Drawing.Size(785, 219);
+            this.richTextBox_motivo.Size = new System.Drawing.Size(770, 219);
             this.richTextBox_motivo.TabIndex = 2;
             this.richTextBox_motivo.Text = "";
             // 
@@ -88,7 +100,10 @@ namespace Ingenieria_Software.Mensajes.Tipos
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.tableLayoutPanel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "MotivoDeArchivoMuerto";
+            this.ShowIcon = false;
+            this.ShowInTaskbar = false;
             this.Text = "MotivoDeArchivoMuerto";
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();

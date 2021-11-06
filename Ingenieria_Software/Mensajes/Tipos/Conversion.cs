@@ -12,9 +12,13 @@ namespace Ingenieria_Software.Mensajes.Tipos
 {
     public partial class Conversion : Form
     {
-        public Conversion()
+        public Conversion(string yes, string no)
         {
             InitializeComponent();
+            button_si.Text = yes;
+            button_no.Text = no;
+            CenterToScreen();
+
         }
 
         private void Button_si_Click(object sender, EventArgs e)
@@ -24,7 +28,8 @@ namespace Ingenieria_Software.Mensajes.Tipos
 
         private void Button_no_Click(object sender, EventArgs e)
         {
-            new Mensajes.Tipos.MotivoDeArchivoMuerto().ShowDialog();
+            if(button_no.Text == "ARCHIVO MUERTO") { new Mensajes.Tipos.MotivoDeArchivoMuerto().ShowDialog(); }
+            
             this.DialogResult = DialogResult.No;
         }
 

@@ -229,6 +229,8 @@ namespace Ingenieria_Software.Secciones.Empresa
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "Puesto_Area";
+            this.ShowIcon = false;
+            this.ShowInTaskbar = false;
             this.Text = "Puesto_Area";
             this.Load += new System.EventHandler(this.Puesto_Area_Load);
             this.tableLayoutPanel1.ResumeLayout(false);

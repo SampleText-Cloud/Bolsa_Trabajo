@@ -363,6 +363,8 @@ namespace Ingenieria_Software.Secciones.Postulantes
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "Experiencia";
+            this.ShowIcon = false;
+            this.ShowInTaskbar = false;
             this.Text = "Experiencia";
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);

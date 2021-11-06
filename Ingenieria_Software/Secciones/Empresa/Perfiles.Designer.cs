@@ -30,16 +30,19 @@ namespace Ingenieria_Software.Secciones.Empresa
         private void InitializeComponent()
         {
             this.LayoutPrincipal = new System.Windows.Forms.TableLayoutPanel();
-            this.lbl_tipo = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.lbl_descripcion = new System.Windows.Forms.Label();
             this.lbl_experiencia = new System.Windows.Forms.Label();
             this.comboBox_puesto = new System.Windows.Forms.ComboBox();
             this.richTextBox_descripcion = new System.Windows.Forms.RichTextBox();
-            this.comboBox_tipo = new System.Windows.Forms.ComboBox();
             this.lbl_idiomas = new System.Windows.Forms.Label();
             this.checkedListBox_idiomas = new System.Windows.Forms.CheckedListBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.lbl_tipo = new System.Windows.Forms.Label();
+            this.comboBox_tipo = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.textBox_id = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.button_agregar = new System.Windows.Forms.Button();
@@ -49,9 +52,6 @@ namespace Ingenieria_Software.Secciones.Empresa
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.label3 = new System.Windows.Forms.Label();
             this.listView1 = new System.Windows.Forms.ListView();
-            this.label4 = new System.Windows.Forms.Label();
-            this.textBox_id = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.LayoutPrincipal.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -92,18 +92,6 @@ namespace Ingenieria_Software.Secciones.Empresa
             this.LayoutPrincipal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
             this.LayoutPrincipal.Size = new System.Drawing.Size(628, 304);
             this.LayoutPrincipal.TabIndex = 0;
-            // 
-            // lbl_tipo
-            // 
-            this.lbl_tipo.AutoSize = true;
-            this.lbl_tipo.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbl_tipo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
-            this.lbl_tipo.Location = new System.Drawing.Point(316, 60);
-            this.lbl_tipo.Name = "lbl_tipo";
-            this.lbl_tipo.Size = new System.Drawing.Size(276, 30);
-            this.lbl_tipo.TabIndex = 0;
-            this.lbl_tipo.Text = "Tipo";
-            this.lbl_tipo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label1
             // 
@@ -161,22 +149,6 @@ namespace Ingenieria_Software.Secciones.Empresa
             this.richTextBox_descripcion.TabIndex = 7;
             this.richTextBox_descripcion.Text = "";
             // 
-            // comboBox_tipo
-            // 
-            this.comboBox_tipo.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.comboBox_tipo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox_tipo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox_tipo.FormattingEnabled = true;
-            this.comboBox_tipo.Items.AddRange(new object[] {
-            "Puestos directivos",
-            "Puestos de mando medio",
-            "Puestos de supervisión, profesionales y técnicos",
-            "Puestos operativos y de apoyo"});
-            this.comboBox_tipo.Location = new System.Drawing.Point(316, 93);
-            this.comboBox_tipo.Name = "comboBox_tipo";
-            this.comboBox_tipo.Size = new System.Drawing.Size(276, 21);
-            this.comboBox_tipo.TabIndex = 9;
-            // 
             // lbl_idiomas
             // 
             this.lbl_idiomas.AutoSize = true;
@@ -208,6 +180,57 @@ namespace Ingenieria_Software.Secciones.Empresa
             this.label2.TabIndex = 11;
             this.label2.Text = "Perfil de la empresa";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lbl_tipo
+            // 
+            this.lbl_tipo.AutoSize = true;
+            this.lbl_tipo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbl_tipo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
+            this.lbl_tipo.Location = new System.Drawing.Point(316, 60);
+            this.lbl_tipo.Name = "lbl_tipo";
+            this.lbl_tipo.Size = new System.Drawing.Size(276, 30);
+            this.lbl_tipo.TabIndex = 0;
+            this.lbl_tipo.Text = "Tipo";
+            this.lbl_tipo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // comboBox_tipo
+            // 
+            this.comboBox_tipo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.comboBox_tipo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox_tipo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboBox_tipo.FormattingEnabled = true;
+            this.comboBox_tipo.Location = new System.Drawing.Point(316, 93);
+            this.comboBox_tipo.Name = "comboBox_tipo";
+            this.comboBox_tipo.Size = new System.Drawing.Size(276, 21);
+            this.comboBox_tipo.TabIndex = 9;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
+            this.label4.Location = new System.Drawing.Point(34, 60);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(276, 30);
+            this.label4.TabIndex = 13;
+            this.label4.Text = "ID";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // textBox_id
+            // 
+            this.textBox_id.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.textBox_id.Location = new System.Drawing.Point(34, 93);
+            this.textBox_id.Name = "textBox_id";
+            this.textBox_id.Size = new System.Drawing.Size(276, 20);
+            this.textBox_id.TabIndex = 14;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.textBox1.Location = new System.Drawing.Point(316, 153);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(276, 20);
+            this.textBox1.TabIndex = 15;
             // 
             // tableLayoutPanel1
             // 
@@ -328,34 +351,6 @@ namespace Ingenieria_Software.Secciones.Empresa
             this.listView1.Size = new System.Drawing.Size(622, 97);
             this.listView1.TabIndex = 1;
             this.listView1.UseCompatibleStateImageBehavior = false;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
-            this.label4.Location = new System.Drawing.Point(34, 60);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(276, 30);
-            this.label4.TabIndex = 13;
-            this.label4.Text = "ID";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // textBox_id
-            // 
-            this.textBox_id.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox_id.Location = new System.Drawing.Point(34, 93);
-            this.textBox_id.Name = "textBox_id";
-            this.textBox_id.Size = new System.Drawing.Size(276, 20);
-            this.textBox_id.TabIndex = 14;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox1.Location = new System.Drawing.Point(316, 153);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(276, 20);
-            this.textBox1.TabIndex = 15;
             // 
             // Perfiles
             // 

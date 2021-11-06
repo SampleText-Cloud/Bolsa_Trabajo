@@ -16,6 +16,7 @@ namespace Ingenieria_Software.Mensajes.Tipos
         {
             InitializeComponent();
             msg.Text = mensaje;
+            CenterToScreen();
         }
 
         private void Button_ok_Click(object sender, EventArgs e)
