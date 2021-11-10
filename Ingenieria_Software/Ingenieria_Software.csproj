@@ -86,6 +86,12 @@
     <Compile Include="Secciones\Empresa\ArchivoMuerto.Designer.cs">
       <DependentUpon>ArchivoMuerto.cs</DependentUpon>
     </Compile>
+    <Compile Include="Secciones\Empresa\Cursos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Secciones\Empresa\Cursos.Designer.cs">
+      <DependentUpon>Cursos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Secciones\Empresa\Horarios.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -179,6 +185,9 @@
     </Compile>
     <EmbeddedResource Include="Secciones\Empresa\ArchivoMuerto.resx">
       <DependentUpon>ArchivoMuerto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Secciones\Empresa\Cursos.resx">
+      <DependentUpon>Cursos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Secciones\Empresa\Horarios.resx">
       <DependentUpon>Horarios.cs</DependentUpon>

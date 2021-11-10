@@ -8,17 +8,15 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Ingenieria_Software.Secciones.Postulantes
+namespace Ingenieria_Software.Secciones.Empresa
 {
-    public partial class Experiencia : Form
+    public partial class Cursos : Form
     {
-        public Experiencia()
+        public Cursos()
         {
             InitializeComponent();
             CenterToScreen();
-          
             new Mensajes.Tipos.MsgBoxOK("Esto aun esta en desarrollo").ShowDialog();
-            
         }
 
         private void Button_agregar_Click(object sender, EventArgs e)

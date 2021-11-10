@@ -103,6 +103,7 @@ namespace Ingenieria_Software.Secciones.Postulantes
             this.button_agregar.TabIndex = 1;
             this.button_agregar.Text = "Insertar";
             this.button_agregar.UseVisualStyleBackColor = true;
+            this.button_agregar.Click += new System.EventHandler(this.Button_agregar_Click);
             // 
             // button_eliminar
             // 

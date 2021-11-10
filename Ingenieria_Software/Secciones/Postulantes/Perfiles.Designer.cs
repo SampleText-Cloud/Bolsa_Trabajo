@@ -44,8 +44,8 @@ namespace Ingenieria_Software.Secciones.Postulantes
             this.lbl_idiomas = new System.Windows.Forms.Label();
             this.checkedListBox_idiomas = new System.Windows.Forms.CheckedListBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.comboBox_escolaridad = new System.Windows.Forms.ComboBox();
+            this.textBox_idExperiencia = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.button_buscar = new System.Windows.Forms.Button();
             this.button_agregar = new System.Windows.Forms.Button();
@@ -91,8 +91,8 @@ namespace Ingenieria_Software.Secciones.Postulantes
             this.LayoutPrincipal.Controls.Add(this.lbl_idiomas, 2, 5);
             this.LayoutPrincipal.Controls.Add(this.checkedListBox_idiomas, 2, 6);
             this.LayoutPrincipal.Controls.Add(this.label4, 1, 5);
-            this.LayoutPrincipal.Controls.Add(this.comboBox1, 1, 6);
-            this.LayoutPrincipal.Controls.Add(this.textBox1, 2, 4);
+            this.LayoutPrincipal.Controls.Add(this.comboBox_escolaridad, 1, 6);
+            this.LayoutPrincipal.Controls.Add(this.textBox_idExperiencia, 2, 4);
             this.LayoutPrincipal.Dock = System.Windows.Forms.DockStyle.Fill;
             this.LayoutPrincipal.Location = new System.Drawing.Point(3, 3);
             this.LayoutPrincipal.Name = "LayoutPrincipal";
@@ -253,30 +253,30 @@ namespace Ingenieria_Software.Secciones.Postulantes
             this.label4.Text = "Escolaridad";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // comboBox1
+            // comboBox_escolaridad
             // 
-            this.comboBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.comboBox_escolaridad.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.comboBox_escolaridad.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox_escolaridad.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboBox_escolaridad.FormattingEnabled = true;
+            this.comboBox_escolaridad.Items.AddRange(new object[] {
             "Educación preescolar",
             "Educación Primaria",
             "Educación secundaria",
             "Educación media superior",
             "Educación superior"});
-            this.comboBox1.Location = new System.Drawing.Point(34, 297);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(279, 21);
-            this.comboBox1.TabIndex = 14;
+            this.comboBox_escolaridad.Location = new System.Drawing.Point(34, 297);
+            this.comboBox_escolaridad.Name = "comboBox_escolaridad";
+            this.comboBox_escolaridad.Size = new System.Drawing.Size(279, 21);
+            this.comboBox_escolaridad.TabIndex = 14;
             // 
-            // textBox1
+            // textBox_idExperiencia
             // 
-            this.textBox1.Location = new System.Drawing.Point(319, 199);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(279, 20);
-            this.textBox1.TabIndex = 15;
-            this.textBox1.Text = " ";
+            this.textBox_idExperiencia.Location = new System.Drawing.Point(319, 199);
+            this.textBox_idExperiencia.Name = "textBox_idExperiencia";
+            this.textBox_idExperiencia.Size = new System.Drawing.Size(279, 20);
+            this.textBox_idExperiencia.TabIndex = 15;
+            this.textBox_idExperiencia.Text = " ";
             // 
             // tableLayoutPanel2
             // 
@@ -385,7 +385,7 @@ namespace Ingenieria_Software.Secciones.Postulantes
         private System.Windows.Forms.TextBox textBox_id;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.ComboBox comboBox_escolaridad;
+        private System.Windows.Forms.TextBox textBox_idExperiencia;
     }
 }
