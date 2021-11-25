@@ -37,9 +37,6 @@ namespace Ingenieria_Software.Secciones.Reclutadores
             this.button_eliminar = new System.Windows.Forms.Button();
             this.button_agregar = new System.Windows.Forms.Button();
             this.layout_datos = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.button_solicitudcheck = new System.Windows.Forms.Button();
-            this.button_solicitud = new System.Windows.Forms.Button();
             this.textBox_correo = new System.Windows.Forms.TextBox();
             this.textBox_apellido_paterno = new System.Windows.Forms.TextBox();
             this.textBox_telefono = new System.Windows.Forms.TextBox();
@@ -73,32 +70,40 @@ namespace Ingenieria_Software.Secciones.Reclutadores
             this.textBox_no_ext = new System.Windows.Forms.TextBox();
             this.lbl_cp = new System.Windows.Forms.Label();
             this.textBox_cp = new System.Windows.Forms.TextBox();
-            this.lbl_documentos = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.textBox_idCandidato = new System.Windows.Forms.TextBox();
-            this.lbl_id = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dateTimePicker_ingreso = new System.Windows.Forms.DateTimePicker();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox_idPerfil = new System.Windows.Forms.TextBox();
-            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
-            this.button_fotocheck = new System.Windows.Forms.Button();
-            this.button_foto = new System.Windows.Forms.Button();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.button_identificacioncheck = new System.Windows.Forms.Button();
-            this.button_identificacion = new System.Windows.Forms.Button();
+            this.textBox_doc_1_nombre = new System.Windows.Forms.TextBox();
+            this.textBox_doc_1 = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.button_antecedentescheck = new System.Windows.Forms.Button();
-            this.button_antecedentes = new System.Windows.Forms.Button();
+            this.textBox_doc_2_nombre = new System.Windows.Forms.TextBox();
+            this.textBox_doc_2 = new System.Windows.Forms.TextBox();
+            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
+            this.textBox_doc_3_nombre = new System.Windows.Forms.TextBox();
+            this.textBox_doc_3 = new System.Windows.Forms.TextBox();
+            this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
+            this.textBox_doc_4_nombre = new System.Windows.Forms.TextBox();
+            this.textBox_doc_4 = new System.Windows.Forms.TextBox();
+            this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
+            this.textBox_doc_5_nombre = new System.Windows.Forms.TextBox();
+            this.textBox_doc_5 = new System.Windows.Forms.TextBox();
+            this.comboBox_perfil = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.lbl_id = new System.Windows.Forms.Label();
+            this.textBox_idCandidato = new System.Windows.Forms.TextBox();
             this.layout_principal.SuspendLayout();
             this.layout_botones.SuspendLayout();
             this.layout_datos.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
-            this.tableLayoutPanel4.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
+            this.tableLayoutPanel4.SuspendLayout();
+            this.tableLayoutPanel5.SuspendLayout();
+            this.tableLayoutPanel6.SuspendLayout();
             this.SuspendLayout();
             // 
             // layout_principal
@@ -203,7 +208,6 @@ namespace Ingenieria_Software.Secciones.Reclutadores
             this.layout_datos.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.layout_datos.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
             this.layout_datos.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
-            this.layout_datos.Controls.Add(this.tableLayoutPanel1, 1, 14);
             this.layout_datos.Controls.Add(this.textBox_correo, 2, 4);
             this.layout_datos.Controls.Add(this.textBox_apellido_paterno, 0, 4);
             this.layout_datos.Controls.Add(this.textBox_telefono, 2, 2);
@@ -237,19 +241,19 @@ namespace Ingenieria_Software.Secciones.Reclutadores
             this.layout_datos.Controls.Add(this.textBox_no_ext, 1, 8);
             this.layout_datos.Controls.Add(this.lbl_cp, 1, 9);
             this.layout_datos.Controls.Add(this.textBox_cp, 1, 10);
-            this.layout_datos.Controls.Add(this.lbl_documentos, 1, 11);
-            this.layout_datos.Controls.Add(this.label6, 1, 13);
-            this.layout_datos.Controls.Add(this.label7, 1, 15);
-            this.layout_datos.Controls.Add(this.label4, 2, 11);
-            this.layout_datos.Controls.Add(this.textBox_idCandidato, 2, 10);
-            this.layout_datos.Controls.Add(this.lbl_id, 2, 9);
             this.layout_datos.Controls.Add(this.label1, 2, 6);
             this.layout_datos.Controls.Add(this.dateTimePicker_ingreso, 2, 7);
-            this.layout_datos.Controls.Add(this.label8, 1, 17);
-            this.layout_datos.Controls.Add(this.textBox_idPerfil, 2, 12);
-            this.layout_datos.Controls.Add(this.tableLayoutPanel4, 1, 12);
-            this.layout_datos.Controls.Add(this.tableLayoutPanel2, 1, 16);
-            this.layout_datos.Controls.Add(this.tableLayoutPanel3, 1, 18);
+            this.layout_datos.Controls.Add(this.label8, 1, 12);
+            this.layout_datos.Controls.Add(this.tableLayoutPanel1, 1, 13);
+            this.layout_datos.Controls.Add(this.tableLayoutPanel2, 1, 14);
+            this.layout_datos.Controls.Add(this.tableLayoutPanel3, 1, 15);
+            this.layout_datos.Controls.Add(this.tableLayoutPanel4, 1, 16);
+            this.layout_datos.Controls.Add(this.tableLayoutPanel5, 1, 17);
+            this.layout_datos.Controls.Add(this.tableLayoutPanel6, 1, 18);
+            this.layout_datos.Controls.Add(this.comboBox_perfil, 2, 10);
+            this.layout_datos.Controls.Add(this.label4, 2, 9);
+            this.layout_datos.Controls.Add(this.lbl_id, 2, 12);
+            this.layout_datos.Controls.Add(this.textBox_idCandidato, 2, 13);
             this.layout_datos.Dock = System.Windows.Forms.DockStyle.Fill;
             this.layout_datos.Location = new System.Drawing.Point(3, 3);
             this.layout_datos.Name = "layout_datos";
@@ -275,46 +279,6 @@ namespace Ingenieria_Software.Secciones.Reclutadores
             this.layout_datos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5.261274F));
             this.layout_datos.Size = new System.Drawing.Size(689, 491);
             this.layout_datos.TabIndex = 1;
-            // 
-            // tableLayoutPanel1
-            // 
-            this.tableLayoutPanel1.ColumnCount = 2;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
-            this.tableLayoutPanel1.Controls.Add(this.button_solicitudcheck, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.button_solicitud, 0, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(229, 350);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(0);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 1;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(225, 25);
-            this.tableLayoutPanel1.TabIndex = 54;
-            // 
-            // button_solicitudcheck
-            // 
-            this.button_solicitudcheck.BackColor = System.Drawing.Color.Red;
-            this.button_solicitudcheck.FlatAppearance.BorderSize = 0;
-            this.button_solicitudcheck.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_solicitudcheck.ForeColor = System.Drawing.Color.Black;
-            this.button_solicitudcheck.Location = new System.Drawing.Point(157, 0);
-            this.button_solicitudcheck.Margin = new System.Windows.Forms.Padding(0);
-            this.button_solicitudcheck.Name = "button_solicitudcheck";
-            this.button_solicitudcheck.Size = new System.Drawing.Size(68, 22);
-            this.button_solicitudcheck.TabIndex = 49;
-            this.button_solicitudcheck.UseVisualStyleBackColor = false;
-            // 
-            // button_solicitud
-            // 
-            this.button_solicitud.Location = new System.Drawing.Point(0, 0);
-            this.button_solicitud.Margin = new System.Windows.Forms.Padding(0);
-            this.button_solicitud.Name = "button_solicitud";
-            this.button_solicitud.Size = new System.Drawing.Size(157, 22);
-            this.button_solicitud.TabIndex = 48;
-            this.button_solicitud.Text = "Seleccionar documentos";
-            this.button_solicitud.UseVisualStyleBackColor = true;
-            this.button_solicitud.Click += new System.EventHandler(this.Button_solicitud_Click);
             // 
             // textBox_correo
             // 
@@ -517,7 +481,7 @@ namespace Ingenieria_Software.Secciones.Reclutadores
             this.dateTimePicker_nacimiento.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateTimePicker_nacimiento.Location = new System.Drawing.Point(3, 353);
             this.dateTimePicker_nacimiento.Name = "dateTimePicker_nacimiento";
-            this.dateTimePicker_nacimiento.Size = new System.Drawing.Size(192, 20);
+            this.dateTimePicker_nacimiento.Size = new System.Drawing.Size(205, 20);
             this.dateTimePicker_nacimiento.TabIndex = 43;
             // 
             // lbl_direccion
@@ -615,63 +579,6 @@ namespace Ingenieria_Software.Secciones.Reclutadores
             this.textBox_cp.Size = new System.Drawing.Size(180, 20);
             this.textBox_cp.TabIndex = 30;
             // 
-            // lbl_documentos
-            // 
-            this.lbl_documentos.AutoSize = true;
-            this.lbl_documentos.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_documentos.Location = new System.Drawing.Point(232, 275);
-            this.lbl_documentos.Name = "lbl_documentos";
-            this.lbl_documentos.Size = new System.Drawing.Size(151, 24);
-            this.lbl_documentos.TabIndex = 32;
-            this.lbl_documentos.Text = "Documento Foto";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(232, 325);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(184, 24);
-            this.label6.TabIndex = 46;
-            this.label6.Text = "Documento Solicitud";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(232, 375);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(222, 24);
-            this.label7.TabIndex = 47;
-            this.label7.Text = "Documento Identificacion";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(461, 275);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(51, 24);
-            this.label4.TabIndex = 44;
-            this.label4.Text = "Perfil";
-            // 
-            // textBox_idCandidato
-            // 
-            this.textBox_idCandidato.Location = new System.Drawing.Point(461, 253);
-            this.textBox_idCandidato.Name = "textBox_idCandidato";
-            this.textBox_idCandidato.Size = new System.Drawing.Size(180, 20);
-            this.textBox_idCandidato.TabIndex = 31;
-            // 
-            // lbl_id
-            // 
-            this.lbl_id.AutoSize = true;
-            this.lbl_id.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_id.Location = new System.Drawing.Point(461, 225);
-            this.lbl_id.Name = "lbl_id";
-            this.lbl_id.Size = new System.Drawing.Size(27, 24);
-            this.lbl_id.TabIndex = 3;
-            this.lbl_id.Text = "ID";
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -696,138 +603,244 @@ namespace Ingenieria_Software.Secciones.Reclutadores
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(232, 425);
+            this.label8.Location = new System.Drawing.Point(232, 300);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(199, 24);
+            this.label8.Size = new System.Drawing.Size(117, 24);
             this.label8.TabIndex = 51;
-            this.label8.Text = "Carta de antecedentes";
+            this.label8.Text = "Documentos";
             // 
-            // textBox_idPerfil
+            // tableLayoutPanel1
             // 
-            this.textBox_idPerfil.Location = new System.Drawing.Point(461, 303);
-            this.textBox_idPerfil.Name = "textBox_idPerfil";
-            this.textBox_idPerfil.Size = new System.Drawing.Size(180, 20);
-            this.textBox_idPerfil.TabIndex = 45;
+            this.tableLayoutPanel1.ColumnCount = 2;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 60F));
+            this.tableLayoutPanel1.Controls.Add(this.label7, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.label6, 0, 0);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(229, 325);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(0);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 1;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(229, 25);
+            this.tableLayoutPanel1.TabIndex = 59;
             // 
-            // tableLayoutPanel4
+            // label7
             // 
-            this.tableLayoutPanel4.ColumnCount = 2;
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
-            this.tableLayoutPanel4.Controls.Add(this.button_fotocheck, 0, 0);
-            this.tableLayoutPanel4.Controls.Add(this.button_foto, 0, 0);
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(229, 300);
-            this.tableLayoutPanel4.Margin = new System.Windows.Forms.Padding(0);
-            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
-            this.tableLayoutPanel4.RowCount = 1;
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(225, 25);
-            this.tableLayoutPanel4.TabIndex = 54;
+            this.label7.AutoSize = true;
+            this.label7.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(94, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(132, 25);
+            this.label7.TabIndex = 59;
+            this.label7.Text = "Documento";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // button_fotocheck
+            // label6
             // 
-            this.button_fotocheck.BackColor = System.Drawing.Color.Red;
-            this.button_fotocheck.Cursor = System.Windows.Forms.Cursors.Default;
-            this.button_fotocheck.FlatAppearance.BorderSize = 0;
-            this.button_fotocheck.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_fotocheck.ForeColor = System.Drawing.Color.Black;
-            this.button_fotocheck.Location = new System.Drawing.Point(157, 0);
-            this.button_fotocheck.Margin = new System.Windows.Forms.Padding(0);
-            this.button_fotocheck.Name = "button_fotocheck";
-            this.button_fotocheck.Size = new System.Drawing.Size(68, 22);
-            this.button_fotocheck.TabIndex = 49;
-            this.button_fotocheck.UseVisualStyleBackColor = false;
-            // 
-            // button_foto
-            // 
-            this.button_foto.Location = new System.Drawing.Point(0, 0);
-            this.button_foto.Margin = new System.Windows.Forms.Padding(0);
-            this.button_foto.Name = "button_foto";
-            this.button_foto.Size = new System.Drawing.Size(157, 22);
-            this.button_foto.TabIndex = 48;
-            this.button_foto.Text = "Seleccionar documentos";
-            this.button_foto.UseVisualStyleBackColor = true;
-            this.button_foto.Click += new System.EventHandler(this.Button_foto_Click);
+            this.label6.AutoSize = true;
+            this.label6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(3, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(85, 25);
+            this.label6.TabIndex = 58;
+            this.label6.Text = "ID";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // tableLayoutPanel2
             // 
             this.tableLayoutPanel2.ColumnCount = 2;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
-            this.tableLayoutPanel2.Controls.Add(this.button_identificacioncheck, 0, 0);
-            this.tableLayoutPanel2.Controls.Add(this.button_identificacion, 0, 0);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(229, 400);
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 60F));
+            this.tableLayoutPanel2.Controls.Add(this.textBox_doc_1_nombre, 1, 0);
+            this.tableLayoutPanel2.Controls.Add(this.textBox_doc_1, 0, 0);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(229, 350);
             this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 1;
+            this.tableLayoutPanel2.RowCount = 2;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(225, 25);
-            this.tableLayoutPanel2.TabIndex = 55;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(229, 25);
+            this.tableLayoutPanel2.TabIndex = 60;
             // 
-            // button_identificacioncheck
+            // textBox_doc_1_nombre
             // 
-            this.button_identificacioncheck.BackColor = System.Drawing.Color.Red;
-            this.button_identificacioncheck.FlatAppearance.BorderSize = 0;
-            this.button_identificacioncheck.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_identificacioncheck.ForeColor = System.Drawing.Color.Black;
-            this.button_identificacioncheck.Location = new System.Drawing.Point(157, 0);
-            this.button_identificacioncheck.Margin = new System.Windows.Forms.Padding(0);
-            this.button_identificacioncheck.Name = "button_identificacioncheck";
-            this.button_identificacioncheck.Size = new System.Drawing.Size(68, 22);
-            this.button_identificacioncheck.TabIndex = 49;
-            this.button_identificacioncheck.UseVisualStyleBackColor = false;
+            this.textBox_doc_1_nombre.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.textBox_doc_1_nombre.Location = new System.Drawing.Point(94, 3);
+            this.textBox_doc_1_nombre.Name = "textBox_doc_1_nombre";
+            this.textBox_doc_1_nombre.Size = new System.Drawing.Size(132, 20);
+            this.textBox_doc_1_nombre.TabIndex = 1;
             // 
-            // button_identificacion
+            // textBox_doc_1
             // 
-            this.button_identificacion.Location = new System.Drawing.Point(0, 0);
-            this.button_identificacion.Margin = new System.Windows.Forms.Padding(0);
-            this.button_identificacion.Name = "button_identificacion";
-            this.button_identificacion.Size = new System.Drawing.Size(157, 22);
-            this.button_identificacion.TabIndex = 48;
-            this.button_identificacion.Text = "Seleccionar documentos";
-            this.button_identificacion.UseVisualStyleBackColor = true;
-            this.button_identificacion.Click += new System.EventHandler(this.Button_identificacion_Click);
+            this.textBox_doc_1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.textBox_doc_1.Location = new System.Drawing.Point(3, 3);
+            this.textBox_doc_1.Name = "textBox_doc_1";
+            this.textBox_doc_1.Size = new System.Drawing.Size(85, 20);
+            this.textBox_doc_1.TabIndex = 0;
             // 
             // tableLayoutPanel3
             // 
             this.tableLayoutPanel3.ColumnCount = 2;
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
-            this.tableLayoutPanel3.Controls.Add(this.button_antecedentescheck, 0, 0);
-            this.tableLayoutPanel3.Controls.Add(this.button_antecedentes, 0, 0);
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(229, 450);
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 60F));
+            this.tableLayoutPanel3.Controls.Add(this.textBox_doc_2_nombre, 1, 0);
+            this.tableLayoutPanel3.Controls.Add(this.textBox_doc_2, 0, 0);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(229, 375);
             this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(225, 25);
-            this.tableLayoutPanel3.TabIndex = 56;
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(229, 25);
+            this.tableLayoutPanel3.TabIndex = 61;
             // 
-            // button_antecedentescheck
+            // textBox_doc_2_nombre
             // 
-            this.button_antecedentescheck.BackColor = System.Drawing.Color.Red;
-            this.button_antecedentescheck.FlatAppearance.BorderSize = 0;
-            this.button_antecedentescheck.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_antecedentescheck.ForeColor = System.Drawing.Color.Black;
-            this.button_antecedentescheck.Location = new System.Drawing.Point(157, 0);
-            this.button_antecedentescheck.Margin = new System.Windows.Forms.Padding(0);
-            this.button_antecedentescheck.Name = "button_antecedentescheck";
-            this.button_antecedentescheck.Size = new System.Drawing.Size(68, 22);
-            this.button_antecedentescheck.TabIndex = 49;
-            this.button_antecedentescheck.UseVisualStyleBackColor = false;
+            this.textBox_doc_2_nombre.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.textBox_doc_2_nombre.Location = new System.Drawing.Point(94, 3);
+            this.textBox_doc_2_nombre.Name = "textBox_doc_2_nombre";
+            this.textBox_doc_2_nombre.Size = new System.Drawing.Size(132, 20);
+            this.textBox_doc_2_nombre.TabIndex = 3;
             // 
-            // button_antecedentes
+            // textBox_doc_2
             // 
-            this.button_antecedentes.Location = new System.Drawing.Point(0, 0);
-            this.button_antecedentes.Margin = new System.Windows.Forms.Padding(0);
-            this.button_antecedentes.Name = "button_antecedentes";
-            this.button_antecedentes.Size = new System.Drawing.Size(157, 22);
-            this.button_antecedentes.TabIndex = 48;
-            this.button_antecedentes.Text = "Seleccionar documentos";
-            this.button_antecedentes.UseVisualStyleBackColor = true;
-            this.button_antecedentes.Click += new System.EventHandler(this.Button_antecedentes_Click);
+            this.textBox_doc_2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.textBox_doc_2.Location = new System.Drawing.Point(3, 3);
+            this.textBox_doc_2.Name = "textBox_doc_2";
+            this.textBox_doc_2.Size = new System.Drawing.Size(85, 20);
+            this.textBox_doc_2.TabIndex = 2;
+            // 
+            // tableLayoutPanel4
+            // 
+            this.tableLayoutPanel4.ColumnCount = 2;
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 60F));
+            this.tableLayoutPanel4.Controls.Add(this.textBox_doc_3_nombre, 0, 0);
+            this.tableLayoutPanel4.Controls.Add(this.textBox_doc_3, 0, 0);
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(229, 400);
+            this.tableLayoutPanel4.Margin = new System.Windows.Forms.Padding(0);
+            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
+            this.tableLayoutPanel4.RowCount = 1;
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(229, 25);
+            this.tableLayoutPanel4.TabIndex = 62;
+            // 
+            // textBox_doc_3_nombre
+            // 
+            this.textBox_doc_3_nombre.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.textBox_doc_3_nombre.Location = new System.Drawing.Point(94, 3);
+            this.textBox_doc_3_nombre.Name = "textBox_doc_3_nombre";
+            this.textBox_doc_3_nombre.Size = new System.Drawing.Size(132, 20);
+            this.textBox_doc_3_nombre.TabIndex = 2;
+            // 
+            // textBox_doc_3
+            // 
+            this.textBox_doc_3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.textBox_doc_3.Location = new System.Drawing.Point(3, 3);
+            this.textBox_doc_3.Name = "textBox_doc_3";
+            this.textBox_doc_3.Size = new System.Drawing.Size(85, 20);
+            this.textBox_doc_3.TabIndex = 1;
+            // 
+            // tableLayoutPanel5
+            // 
+            this.tableLayoutPanel5.ColumnCount = 2;
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 60F));
+            this.tableLayoutPanel5.Controls.Add(this.textBox_doc_4_nombre, 0, 0);
+            this.tableLayoutPanel5.Controls.Add(this.textBox_doc_4, 0, 0);
+            this.tableLayoutPanel5.Location = new System.Drawing.Point(229, 425);
+            this.tableLayoutPanel5.Margin = new System.Windows.Forms.Padding(0);
+            this.tableLayoutPanel5.Name = "tableLayoutPanel5";
+            this.tableLayoutPanel5.RowCount = 1;
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(229, 25);
+            this.tableLayoutPanel5.TabIndex = 63;
+            // 
+            // textBox_doc_4_nombre
+            // 
+            this.textBox_doc_4_nombre.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.textBox_doc_4_nombre.Location = new System.Drawing.Point(94, 3);
+            this.textBox_doc_4_nombre.Name = "textBox_doc_4_nombre";
+            this.textBox_doc_4_nombre.Size = new System.Drawing.Size(132, 20);
+            this.textBox_doc_4_nombre.TabIndex = 2;
+            // 
+            // textBox_doc_4
+            // 
+            this.textBox_doc_4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.textBox_doc_4.Location = new System.Drawing.Point(3, 3);
+            this.textBox_doc_4.Name = "textBox_doc_4";
+            this.textBox_doc_4.Size = new System.Drawing.Size(85, 20);
+            this.textBox_doc_4.TabIndex = 1;
+            // 
+            // tableLayoutPanel6
+            // 
+            this.tableLayoutPanel6.ColumnCount = 2;
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40F));
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 60F));
+            this.tableLayoutPanel6.Controls.Add(this.textBox_doc_5_nombre, 0, 0);
+            this.tableLayoutPanel6.Controls.Add(this.textBox_doc_5, 0, 0);
+            this.tableLayoutPanel6.Location = new System.Drawing.Point(229, 450);
+            this.tableLayoutPanel6.Margin = new System.Windows.Forms.Padding(0);
+            this.tableLayoutPanel6.Name = "tableLayoutPanel6";
+            this.tableLayoutPanel6.RowCount = 1;
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(229, 25);
+            this.tableLayoutPanel6.TabIndex = 64;
+            // 
+            // textBox_doc_5_nombre
+            // 
+            this.textBox_doc_5_nombre.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.textBox_doc_5_nombre.Location = new System.Drawing.Point(94, 3);
+            this.textBox_doc_5_nombre.Name = "textBox_doc_5_nombre";
+            this.textBox_doc_5_nombre.Size = new System.Drawing.Size(132, 20);
+            this.textBox_doc_5_nombre.TabIndex = 2;
+            // 
+            // textBox_doc_5
+            // 
+            this.textBox_doc_5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.textBox_doc_5.Location = new System.Drawing.Point(3, 3);
+            this.textBox_doc_5.Name = "textBox_doc_5";
+            this.textBox_doc_5.Size = new System.Drawing.Size(85, 20);
+            this.textBox_doc_5.TabIndex = 1;
+            // 
+            // comboBox_perfil
+            // 
+            this.comboBox_perfil.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox_perfil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboBox_perfil.FormattingEnabled = true;
+            this.comboBox_perfil.Location = new System.Drawing.Point(461, 253);
+            this.comboBox_perfil.Name = "comboBox_perfil";
+            this.comboBox_perfil.Size = new System.Drawing.Size(223, 21);
+            this.comboBox_perfil.TabIndex = 57;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(461, 225);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(51, 24);
+            this.label4.TabIndex = 44;
+            this.label4.Text = "Perfil";
+            // 
+            // lbl_id
+            // 
+            this.lbl_id.AutoSize = true;
+            this.lbl_id.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_id.Location = new System.Drawing.Point(461, 300);
+            this.lbl_id.Name = "lbl_id";
+            this.lbl_id.Size = new System.Drawing.Size(27, 24);
+            this.lbl_id.TabIndex = 3;
+            this.lbl_id.Text = "ID";
+            // 
+            // textBox_idCandidato
+            // 
+            this.textBox_idCandidato.Location = new System.Drawing.Point(461, 328);
+            this.textBox_idCandidato.Name = "textBox_idCandidato";
+            this.textBox_idCandidato.Size = new System.Drawing.Size(180, 20);
+            this.textBox_idCandidato.TabIndex = 31;
             // 
             // Administrador
             // 
@@ -845,9 +858,17 @@ namespace Ingenieria_Software.Secciones.Reclutadores
             this.layout_datos.ResumeLayout(false);
             this.layout_datos.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
-            this.tableLayoutPanel4.ResumeLayout(false);
+            this.tableLayoutPanel1.PerformLayout();
             this.tableLayoutPanel2.ResumeLayout(false);
+            this.tableLayoutPanel2.PerformLayout();
             this.tableLayoutPanel3.ResumeLayout(false);
+            this.tableLayoutPanel3.PerformLayout();
+            this.tableLayoutPanel4.ResumeLayout(false);
+            this.tableLayoutPanel4.PerformLayout();
+            this.tableLayoutPanel5.ResumeLayout(false);
+            this.tableLayoutPanel5.PerformLayout();
+            this.tableLayoutPanel6.ResumeLayout(false);
+            this.tableLayoutPanel6.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -885,7 +906,6 @@ namespace Ingenieria_Software.Secciones.Reclutadores
         private System.Windows.Forms.TextBox textBox_rfc;
         private System.Windows.Forms.TextBox textBox_cp;
         private System.Windows.Forms.TextBox textBox_idCandidato;
-        private System.Windows.Forms.Label lbl_documentos;
         private System.Windows.Forms.TableLayoutPanel layout_botones;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button_buscar;
@@ -900,22 +920,26 @@ namespace Ingenieria_Software.Secciones.Reclutadores
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DateTimePicker dateTimePicker_nacimiento;
-        private System.Windows.Forms.TextBox textBox_idPerfil;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.Button button_solicitudcheck;
-        private System.Windows.Forms.Button button_solicitud;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
-        private System.Windows.Forms.Button button_fotocheck;
-        private System.Windows.Forms.Button button_foto;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
-        private System.Windows.Forms.Button button_identificacioncheck;
-        private System.Windows.Forms.Button button_identificacion;
+        private System.Windows.Forms.TextBox textBox_doc_1_nombre;
+        private System.Windows.Forms.TextBox textBox_doc_1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
-        private System.Windows.Forms.Button button_antecedentescheck;
-        private System.Windows.Forms.Button button_antecedentes;
+        private System.Windows.Forms.TextBox textBox_doc_2_nombre;
+        private System.Windows.Forms.TextBox textBox_doc_2;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
+        private System.Windows.Forms.TextBox textBox_doc_3_nombre;
+        private System.Windows.Forms.TextBox textBox_doc_3;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
+        private System.Windows.Forms.TextBox textBox_doc_4_nombre;
+        private System.Windows.Forms.TextBox textBox_doc_4;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel6;
+        private System.Windows.Forms.TextBox textBox_doc_5_nombre;
+        private System.Windows.Forms.TextBox textBox_doc_5;
+        private System.Windows.Forms.ComboBox comboBox_perfil;
     }
 }

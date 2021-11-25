@@ -203,6 +203,18 @@ namespace Ingenieria_Software
         {
             try
             {
+                new Secciones.Empresa.Documentos().ShowDialog();
+            }
+            catch (Exception msg)
+            {
+                new Mensajes.Tipos.MsgBoxOK(msg.ToString()).ShowDialog();
+            }
+        }
+
+        private void CursosToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            try
+            {
                 new Secciones.Empresa.Cursos().ShowDialog();
             }
             catch (Exception msg)

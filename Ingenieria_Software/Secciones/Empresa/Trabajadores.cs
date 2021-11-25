@@ -99,6 +99,15 @@ namespace Ingenieria_Software.Secciones.Empresa
             ODB.NonQuery(SQL);
             Clipboard.SetText(SQL);
 
+            SQL = String.Format("INSERT INTO `Trabajador-Horario`(`trabajador`, `horario`) VALUES ('{0}','{1}')",
+                                                                  textBox_idCandidato.Text.ToString(),
+                                                                  comboBox_horario.Text.ToString());
+
+
+
+            ODB.NonQuery(SQL);
+
+
 
         }
         private void CreateIfMissing(string path)
@@ -119,7 +128,7 @@ namespace Ingenieria_Software.Secciones.Empresa
             fechaNac = dateTimePicker_nacimiento.Text.ToString();
             sexo = comboBox_sexo.Text.ToString();
             fechaIngreso = dateTimePicker_ingreso.Text.ToString();
-            idPerfil = textBox_idPerfil.Text.ToString();
+            idPerfil = comboBox_perfil.Text.ToString();
             telefono = textBox_telefono.Text.ToString();
             correo = textBox_correo.Text.ToString();
             colonia = textBox_colonia.Text.ToString();
@@ -136,6 +145,9 @@ namespace Ingenieria_Software.Secciones.Empresa
             ODB.NonQuery(SQL);
             clear();
             Clipboard.SetText(SQL);
+
+            SQL = String.Format("DELETE FROM `Trabajador-Horario` WHERE `trabajador` = '{0}'", textBox_idCandidato.Text.ToString());
+            ODB.NonQuery(SQL);
         }
         private void clear()
         {
@@ -197,6 +209,10 @@ namespace Ingenieria_Software.Secciones.Empresa
 
             ODB.NonQuery(SQL);
             Clipboard.SetText(SQL);
+
+
+            SQL = String.Format("UPDATE `Trabajador-Horario` SET `horario`='{0}' WHERE `trabajador` = '{1}'", comboBox_horario.Text.ToString(), textBox_idCandidato.Text.ToString());
+            ODB.NonQuery(SQL);
         }
 
         private void Button_buscar_Click(object sender, EventArgs e)
@@ -216,7 +232,7 @@ namespace Ingenieria_Software.Secciones.Empresa
             dateTimePicker_nacimiento.Value = DateTime.Parse(values[7]);
             comboBox_sexo.Text = values[8];
             dateTimePicker_ingreso.Value = DateTime.Parse(values[9]);
-            textBox_idPerfil.Text = values[10];
+            comboBox_perfil.Text = values[10];
             textBox_telefono.Text = values[11];
             textBox_correo.Text = values[12];
             textBox_colonia.Text = values[13];
@@ -228,6 +244,11 @@ namespace Ingenieria_Software.Secciones.Empresa
             solicitud = values[19];
             foto = values[20];
             identificacion = values[21];
+
+            SQL = String.Format("SELECT `horario` FROM `Trabajador-Horario` WHERE `trabajador` = '{0}'", textBox_idCandidato.Text.ToString());
+            ODB.SetCommand(SQL);
+            string[] campos = ODB.GetMultiCampos(1);
+            textBox_nombre.Text = campos[0];
 
         }
 
@@ -285,6 +306,29 @@ namespace Ingenieria_Software.Secciones.Empresa
                 if (nac != null && nac != "")
                 {
                     comboBox_nacionalidad.Items.Add(nac);
+                }
+            }
+
+
+            ODB.SetCommand("SELECT * FROM `Horario`");
+            string[] horarios = ODB.GetMultiId();
+
+            foreach (string nac in horarios)
+            {
+                if (nac != null && nac != "")
+                {
+                    comboBox_horario.Items.Add(nac);
+                }
+            }
+
+            ODB.SetCommand("SELECT * FROM `Puesto_Tipo`");
+            string[] puestos = ODB.GetMultiId();
+
+            foreach (string nac in puestos)
+            {
+                if (nac != null && nac != "")
+                {
+                    comboBox_perfil.Items.Add(nac);
                 }
             }
         }

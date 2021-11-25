@@ -135,117 +135,9 @@ namespace Ingenieria_Software.Secciones.Reclutadores
 
         }
         
-        private void Button_antecedentes_Click(object sender, EventArgs e)
-        {
-
-            var fileContent = string.Empty;
-            var filePath = string.Empty;
-
-            using (OpenFileDialog openFileDialog = new OpenFileDialog())
-            {
-                openFileDialog.InitialDirectory = "c:\\";
-                openFileDialog.Filter = "txt files (*.pdf)|*.pdf|All files (*.*)|*.*";
-                openFileDialog.FilterIndex = 2;
-                openFileDialog.RestoreDirectory = true;
-
-                if (openFileDialog.ShowDialog() == DialogResult.OK)
-                {
-                    //Get the path of specified file
-                    filePath = openFileDialog.FileName;
-
-                    //Read the contents of the file into a stream
-                    var fileStream = openFileDialog.OpenFile();
-
-                    using (StreamReader reader = new StreamReader(fileStream))
-                    {
-                        fileContent = reader.ReadToEnd();
-                    }
-                }
-            }
-            if (filePath != null && filePath != "")
-            {
-                antecedentes = Path.GetFileName(filePath);
-                new Mensajes.Tipos.MsgBoxOK(filePath).ShowDialog();
-                button_antecedentescheck.BackColor = Color.Green;
-            }
-        }
-
-        private void Button_identificacion_Click(object sender, EventArgs e)
-        {
-
-            var fileContent = string.Empty;
-            var filePath = string.Empty;
-
-            using (OpenFileDialog openFileDialog = new OpenFileDialog())
-            {
-                openFileDialog.InitialDirectory = "c:\\";
-                openFileDialog.Filter = "txt files (*.pdf)|*.pdf|All files (*.*)|*.*";
-                openFileDialog.FilterIndex = 2;
-                openFileDialog.RestoreDirectory = true;
-
-                if (openFileDialog.ShowDialog() == DialogResult.OK)
-                {
-                    //Get the path of specified file
-                    filePath = openFileDialog.FileName;
-
-                    //Read the contents of the file into a stream
-                    var fileStream = openFileDialog.OpenFile();
-
-                    using (StreamReader reader = new StreamReader(fileStream))
-                    {
-                        fileContent = reader.ReadToEnd();
-                    }
-                }
-            }
-            if (filePath != null && filePath != "")
-            {
-                identificacion = Path.GetFileName(filePath);
-                new Mensajes.Tipos.MsgBoxOK(filePath).ShowDialog();
-                button_identificacioncheck.BackColor = Color.Green;
-            }
-        }
-
-        private void Button_solicitud_Click(object sender, EventArgs e)
-        {
-
-            var fileContent = string.Empty;
-            var filePath = string.Empty;
-
-            using (OpenFileDialog openFileDialog = new OpenFileDialog())
-            {
-                openFileDialog.InitialDirectory = "c:\\";
-                openFileDialog.Filter = "txt files (*.pdf)|*.pdf|All files (*.*)|*.*";
-                openFileDialog.FilterIndex = 2;
-                openFileDialog.RestoreDirectory = true;
-
-                if (openFileDialog.ShowDialog() == DialogResult.OK)
-                {
-                    //Get the path of specified file
-                    filePath = openFileDialog.FileName;
-
-                    //Read the contents of the file into a stream
-                    var fileStream = openFileDialog.OpenFile();
-
-                    using (StreamReader reader = new StreamReader(fileStream))
-                    {
-                        fileContent = reader.ReadToEnd();
-                    }
-                }
-            }
-            if (filePath != null && filePath != "")
-            {
-                solicitud = Path.GetFileName(filePath);
-                new Mensajes.Tipos.MsgBoxOK(filePath).ShowDialog();
-                button_solicitudcheck.BackColor = Color.Green;
-            }
-        }
-
-        private void CreateIfMissing(string path)
-        {
-            bool folderExists = Directory.Exists(path);
-            if (!folderExists)
-                Directory.CreateDirectory(path);
-        }
+       
+     
+  
         private void Administrador_Load(object sender, EventArgs e)
         {
             ODB.SetCommand("SELECT * FROM `Nacionalidad`");
@@ -256,6 +148,17 @@ namespace Ingenieria_Software.Secciones.Reclutadores
                 if(nac != null && nac != "")
                 {
                     comboBox_nacionalidad.Items.Add(nac);
+                }
+            }
+
+            ODB.SetCommand("SELECT * FROM `Puesto_Tipo`");
+            string[] puestos = ODB.GetMultiId();
+
+            foreach (string nac in puestos)
+            {
+                if (nac != null && nac != "")
+                {
+                    comboBox_perfil.Items.Add(nac);
                 }
             }
         }
@@ -290,7 +193,7 @@ namespace Ingenieria_Software.Secciones.Reclutadores
             dateTimePicker_nacimiento.Value = DateTime.Parse(values[7]);
             comboBox_sexo.Text = values[8];
             dateTimePicker_ingreso.Value = DateTime.Parse(values[9]);
-            textBox_idPerfil.Text = values[10];
+            comboBox_perfil.Text = values[10];
             textBox_telefono.Text = values[11];
             textBox_correo.Text = values[12];
             textBox_colonia.Text = values[13];
@@ -298,18 +201,94 @@ namespace Ingenieria_Software.Secciones.Reclutadores
             textBox_no_int.Text = values[15];
             textBox_no_ext.Text = values[16];
             textBox_cp.Text = values[17];
-            antecedentes = values[18];
-            solicitud = values[19];
-            foto = values[20];
-            identificacion = values[21];
+            textBox_doc_1.Text = values[18];
+            textBox_doc_2.Text = values[19];
+            textBox_doc_3.Text = values[20];
+            textBox_doc_4.Text = values[21];
 
+            searchDoc(values);
             
             
         }
 
+        private void searchDoc(string[] values)
+        {
+            if (textBox_doc_1.Text.ToString() != "" && textBox_doc_1.Text.ToString() != null)
+            {
+                string SQL = String.Format("SELECT `documento` FROM `Documentos` WHERE `idDocumento` = '{0}'", textBox_doc_1.Text.ToString());
+                ODB.SetCommand(SQL);
+                string[] campos = ODB.GetMultiCampos(1);
+                textBox_doc_1_nombre.Text = campos[0];
+            }
+
+            if (textBox_doc_2.Text.ToString() != "" && textBox_doc_2.Text.ToString() != null)
+            {
+                string SQL = String.Format("SELECT `documento` FROM `Documentos` WHERE `idDocumento` = '{0}'", textBox_doc_2.Text.ToString());
+                ODB.SetCommand(SQL);
+                string[] campos = ODB.GetMultiCampos(1);
+                textBox_doc_2_nombre.Text = campos[0];
+            }
+
+            if (textBox_doc_3.Text.ToString() != "" && textBox_doc_3.Text.ToString() != null)
+            {
+                string SQL = String.Format("SELECT `documento` FROM `Documentos` WHERE `idDocumento` = '{0}'", textBox_doc_3.Text.ToString());
+                ODB.SetCommand(SQL);
+                string[] campos = ODB.GetMultiCampos(1);
+                textBox_doc_3_nombre.Text = campos[0];
+            }
+
+            if (textBox_doc_4.Text.ToString() != "" && textBox_doc_4.Text.ToString() != null)
+            {
+                string SQL = String.Format("SELECT `documento` FROM `Documentos` WHERE `idDocumento` = '{0}'", textBox_doc_4.Text.ToString());
+                ODB.SetCommand(SQL);
+                string[] campos = ODB.GetMultiCampos(1);
+                textBox_doc_4_nombre.Text = campos[0];
+            }
+
+            if (textBox_doc_5.Text.ToString() != "" && textBox_doc_5.Text.ToString() != null)
+            {
+                string SQL = String.Format("SELECT `documento` FROM `Documentos` WHERE `idDocumento` = '{0}'", textBox_doc_5.Text.ToString());
+                ODB.SetCommand(SQL);
+                string[] campos = ODB.GetMultiCampos(1);
+                textBox_doc_5_nombre.Text = campos[0];
+            }
+        }
+        private void deleteDocs()
+        {
+            if(textBox_doc_1.Text.ToString() != "" && textBox_doc_1.Text.ToString() != null)
+            {
+                string SQL = String.Format("DELETE FROM `Documentos` WHERE `idDocumento` = '{0}'", textBox_doc_1.Text.ToString());
+                ODB.NonQuery(SQL);
+            }
+
+            if (textBox_doc_2.Text.ToString() != "" && textBox_doc_1.Text.ToString() != null)
+            {
+                string SQL = String.Format("DELETE FROM `Documentos` WHERE `idDocumento` = '{0}'", textBox_doc_2.Text.ToString());
+                ODB.NonQuery(SQL);
+            }
+
+            if (textBox_doc_3.Text.ToString() != "" && textBox_doc_1.Text.ToString() != null)
+            {
+                string SQL = String.Format("DELETE FROM `Documentos` WHERE `idDocumento` = '{0}'", textBox_doc_3.Text.ToString());
+                ODB.NonQuery(SQL);
+            }
+
+            if (textBox_doc_4.Text.ToString() != "" && textBox_doc_1.Text.ToString() != null)
+            {
+                string SQL = String.Format("DELETE FROM `Documentos` WHERE `idDocumento` = '{0}'", textBox_doc_4.Text.ToString());
+                ODB.NonQuery(SQL);
+            }
+
+            if (textBox_doc_5.Text.ToString() != "" && textBox_doc_1.Text.ToString() != null)
+            {
+                string SQL = String.Format("DELETE FROM `Documentos` WHERE `idDocumento` = '{0}'", textBox_doc_5.Text.ToString());
+                ODB.NonQuery(SQL);
+            }
+        }
         private void Button_eliminar_Click(object sender, EventArgs e)
         {
             SetValues();
+            deleteDocs();
             string SQL = string.Format("DELETE FROM `Candidato` WHERE `idCandidato` = '{0}';",id);
             ODB.NonQuery(SQL);
             clear();
@@ -338,45 +317,7 @@ namespace Ingenieria_Software.Secciones.Reclutadores
 
         }
 
-        private void Button_foto_Click(object sender, EventArgs e)
-        {
-             
-
-            var fileContent = string.Empty;
-            var filePath = string.Empty;
-
-            using (OpenFileDialog openFileDialog = new OpenFileDialog())
-            {
-                openFileDialog.InitialDirectory = "c:\\";
-                openFileDialog.Filter = "txt files (*.pdf)|*.pdf|All files (*.*)|*.*";
-                openFileDialog.FilterIndex = 2;
-                openFileDialog.RestoreDirectory = true;
-
-                if (openFileDialog.ShowDialog() == DialogResult.OK)
-                {
-                    //Get the path of specified file
-                    filePath = openFileDialog.FileName;
-
-                    //Read the contents of the file into a stream
-                    var fileStream = openFileDialog.OpenFile();
-
-                    using (StreamReader reader = new StreamReader(fileStream))
-                    {
-                        fileContent = reader.ReadToEnd();
-                    }
-                }
-            }
-            if(filePath != null && filePath != "")
-            {
-                foto = Path.GetFileName(filePath);
-                new Mensajes.Tipos.MsgBoxOK(filePath).ShowDialog();
-                button_fotocheck.BackColor = Color.Green;
-            }
-            
-
-            
-
-        }
+        
 
         private void SetValues()
         {
@@ -390,7 +331,7 @@ namespace Ingenieria_Software.Secciones.Reclutadores
             fechaNac = dateTimePicker_nacimiento.Text.ToString();
             sexo = comboBox_sexo.Text.ToString();
             fechaIngreso = dateTimePicker_ingreso.Text.ToString();
-            idPerfil = textBox_idPerfil.Text.ToString();
+            idPerfil = comboBox_perfil.Text.ToString();
             telefono = textBox_telefono.Text.ToString();
             correo = textBox_correo.Text.ToString();
             colonia = textBox_colonia.Text.ToString();
@@ -398,12 +339,55 @@ namespace Ingenieria_Software.Secciones.Reclutadores
             interior = textBox_no_int.Text.ToString();
             exterior = textBox_no_ext.Text.ToString();
             cp = textBox_cp.Text.ToString();
+            antecedentes = textBox_doc_1.Text.ToString();
+            solicitud = textBox_doc_2.Text.ToString();
+            foto = textBox_doc_3.Text.ToString();
+            identificacion = textBox_doc_4.Text.ToString();
+        }
+        private void uploadDocumentos(string id, string nombre)
+        {
+            string SQL = String.Format("INSERT INTO `Documentos`(`idDocumento`, `documento`) VALUES ('{0}','{1}')",
+                                                                    id,
+                                                                    nombre);
+            ODB.NonQuery(SQL);
+        }
+
+        private void setDocumentos()
+        {
+            if(textBox_doc_1.Text.ToString() != "" && textBox_doc_1.Text.ToString() != null)
+            {
+                uploadDocumentos(textBox_doc_1.Text.ToString(), textBox_doc_1_nombre.Text.ToString());
+                antecedentes = textBox_doc_1.Text.ToString();
+            }
+
+            if (textBox_doc_2.Text.ToString() != "" && textBox_doc_2.Text.ToString() != null)
+            {
+                uploadDocumentos(textBox_doc_2.Text.ToString(), textBox_doc_2_nombre.Text.ToString());
+                solicitud = textBox_doc_2.Text.ToString();
+            }
+
+            if (textBox_doc_3.Text.ToString() != "" && textBox_doc_3.Text.ToString() != null)
+            {
+                uploadDocumentos(textBox_doc_3.Text.ToString(), textBox_doc_3_nombre.Text.ToString());
+                foto = textBox_doc_3.Text.ToString();
+            }
+
+            if (textBox_doc_4.Text.ToString() != "" && textBox_doc_4.Text.ToString() != null)
+            {
+                uploadDocumentos(textBox_doc_4.Text.ToString(), textBox_doc_4_nombre.Text.ToString());
+                identificacion = textBox_doc_4.Text.ToString();
+            }
+
+            if (textBox_doc_5.Text.ToString() != "" && textBox_doc_5.Text.ToString() != null)
+            {
+                uploadDocumentos(textBox_doc_5.Text.ToString(), textBox_doc_5_nombre.Text.ToString());
+            }
         }
 
         private void Button_agregar_Click_1(object sender, EventArgs e)
         {
-            CreateIfMissing("C:\\SERVIDOR\\DOCUMENTOS\\" + textBox_idCandidato.Text.ToString());
             SetValues();
+            setDocumentos();
             string SQL = String.Format("INSERT INTO `Candidato`(`idCandidato`, " +
                                                                      "`nombres`, " +
                                                                      "`a_paterno`, " +
@@ -453,7 +437,7 @@ namespace Ingenieria_Software.Secciones.Reclutadores
 
             ODB.NonQuery(SQL);
             Clipboard.SetText(SQL);
-
+            
 
 
 

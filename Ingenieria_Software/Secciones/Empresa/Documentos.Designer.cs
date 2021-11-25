@@ -1,7 +1,7 @@
 ﻿
 namespace Ingenieria_Software.Secciones.Empresa
 {
-    partial class Cursos
+    partial class Documentos
     {
         /// <summary>
         /// Required designer variable.
@@ -59,7 +59,7 @@ namespace Ingenieria_Software.Secciones.Empresa
             this.tableLayoutPanel_main.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel_main.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel_main.Size = new System.Drawing.Size(800, 450);
-            this.tableLayoutPanel_main.TabIndex = 1;
+            this.tableLayoutPanel_main.TabIndex = 0;
             // 
             // tableLayoutPanel2
             // 
@@ -170,7 +170,7 @@ namespace Ingenieria_Software.Secciones.Empresa
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(215, 155);
             this.label1.TabIndex = 15;
-            this.label1.Text = "Curso";
+            this.label1.Text = "Documento";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // textBox_id
@@ -189,14 +189,16 @@ namespace Ingenieria_Software.Secciones.Empresa
             this.textBox_nombre.Size = new System.Drawing.Size(215, 20);
             this.textBox_nombre.TabIndex = 17;
             // 
-            // Cursos
+            // Documentos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.tableLayoutPanel_main);
-            this.Name = "Cursos";
-            this.Text = "Cursos";
+            this.Name = "Documentos";
+            this.ShowIcon = false;
+            this.ShowInTaskbar = false;
+            this.Text = "Documentos";
             this.tableLayoutPanel_main.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
@@ -209,10 +211,10 @@ namespace Ingenieria_Software.Secciones.Empresa
 
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel_main;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
-        private System.Windows.Forms.Button button_buscar;
         private System.Windows.Forms.Button button_agregar;
         private System.Windows.Forms.Button button_eliminar;
         private System.Windows.Forms.Button button_actualizar;
+        private System.Windows.Forms.Button button_buscar;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label1;
