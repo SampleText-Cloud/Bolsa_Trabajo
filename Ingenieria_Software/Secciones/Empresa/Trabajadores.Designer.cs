@@ -79,29 +79,14 @@ namespace Ingenieria_Software.Secciones.Empresa
             this.label6 = new System.Windows.Forms.Label();
             this.comboBox_horario = new System.Windows.Forms.ComboBox();
             this.label_cursos = new System.Windows.Forms.Label();
-            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.textBox_doc_1_nombre = new System.Windows.Forms.TextBox();
-            this.textBox_doc_1 = new System.Windows.Forms.TextBox();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.comboBox_c1 = new System.Windows.Forms.ComboBox();
+            this.comboBox_c2 = new System.Windows.Forms.ComboBox();
+            this.comboBox_c3 = new System.Windows.Forms.ComboBox();
+            this.comboBox_c4 = new System.Windows.Forms.ComboBox();
+            this.comboBox_c5 = new System.Windows.Forms.ComboBox();
             this.layout_principal.SuspendLayout();
             this.layout_datos.SuspendLayout();
             this.layout_botones.SuspendLayout();
-            this.tableLayoutPanel2.SuspendLayout();
-            this.tableLayoutPanel1.SuspendLayout();
-            this.tableLayoutPanel3.SuspendLayout();
-            this.tableLayoutPanel4.SuspendLayout();
-            this.tableLayoutPanel5.SuspendLayout();
             this.SuspendLayout();
             // 
             // layout_principal
@@ -167,11 +152,11 @@ namespace Ingenieria_Software.Secciones.Empresa
             this.layout_datos.Controls.Add(this.label6, 1, 11);
             this.layout_datos.Controls.Add(this.comboBox_horario, 1, 12);
             this.layout_datos.Controls.Add(this.label_cursos, 1, 13);
-            this.layout_datos.Controls.Add(this.tableLayoutPanel2, 1, 14);
-            this.layout_datos.Controls.Add(this.tableLayoutPanel1, 1, 15);
-            this.layout_datos.Controls.Add(this.tableLayoutPanel3, 1, 16);
-            this.layout_datos.Controls.Add(this.tableLayoutPanel4, 1, 17);
-            this.layout_datos.Controls.Add(this.tableLayoutPanel5, 1, 18);
+            this.layout_datos.Controls.Add(this.comboBox_c1, 1, 14);
+            this.layout_datos.Controls.Add(this.comboBox_c2, 1, 15);
+            this.layout_datos.Controls.Add(this.comboBox_c3, 1, 16);
+            this.layout_datos.Controls.Add(this.comboBox_c4, 1, 17);
+            this.layout_datos.Controls.Add(this.comboBox_c5, 1, 18);
             this.layout_datos.Dock = System.Windows.Forms.DockStyle.Fill;
             this.layout_datos.Location = new System.Drawing.Point(3, 3);
             this.layout_datos.Name = "layout_datos";
@@ -665,165 +650,55 @@ namespace Ingenieria_Software.Secciones.Empresa
             this.label_cursos.TabIndex = 61;
             this.label_cursos.Text = "Cursos";
             // 
-            // tableLayoutPanel2
+            // comboBox_c1
             // 
-            this.tableLayoutPanel2.ColumnCount = 2;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 60F));
-            this.tableLayoutPanel2.Controls.Add(this.textBox_doc_1_nombre, 1, 0);
-            this.tableLayoutPanel2.Controls.Add(this.textBox_doc_1, 0, 0);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(246, 364);
-            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(0);
-            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 2;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(229, 25);
-            this.tableLayoutPanel2.TabIndex = 62;
+            this.comboBox_c1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox_c1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboBox_c1.FormattingEnabled = true;
+            this.comboBox_c1.Location = new System.Drawing.Point(249, 367);
+            this.comboBox_c1.Name = "comboBox_c1";
+            this.comboBox_c1.Size = new System.Drawing.Size(223, 21);
+            this.comboBox_c1.TabIndex = 62;
             // 
-            // textBox_doc_1_nombre
+            // comboBox_c2
             // 
-            this.textBox_doc_1_nombre.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox_doc_1_nombre.Location = new System.Drawing.Point(94, 3);
-            this.textBox_doc_1_nombre.Name = "textBox_doc_1_nombre";
-            this.textBox_doc_1_nombre.Size = new System.Drawing.Size(132, 20);
-            this.textBox_doc_1_nombre.TabIndex = 1;
+            this.comboBox_c2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox_c2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboBox_c2.FormattingEnabled = true;
+            this.comboBox_c2.Location = new System.Drawing.Point(249, 393);
+            this.comboBox_c2.Name = "comboBox_c2";
+            this.comboBox_c2.Size = new System.Drawing.Size(223, 21);
+            this.comboBox_c2.TabIndex = 63;
             // 
-            // textBox_doc_1
+            // comboBox_c3
             // 
-            this.textBox_doc_1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox_doc_1.Location = new System.Drawing.Point(3, 3);
-            this.textBox_doc_1.Name = "textBox_doc_1";
-            this.textBox_doc_1.Size = new System.Drawing.Size(85, 20);
-            this.textBox_doc_1.TabIndex = 0;
+            this.comboBox_c3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox_c3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboBox_c3.FormattingEnabled = true;
+            this.comboBox_c3.Location = new System.Drawing.Point(249, 419);
+            this.comboBox_c3.Name = "comboBox_c3";
+            this.comboBox_c3.Size = new System.Drawing.Size(223, 21);
+            this.comboBox_c3.TabIndex = 64;
             // 
-            // tableLayoutPanel1
+            // comboBox_c4
             // 
-            this.tableLayoutPanel1.ColumnCount = 2;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 60F));
-            this.tableLayoutPanel1.Controls.Add(this.textBox1, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.textBox2, 0, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(246, 390);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(0);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 2;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(229, 25);
-            this.tableLayoutPanel1.TabIndex = 63;
+            this.comboBox_c4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox_c4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboBox_c4.FormattingEnabled = true;
+            this.comboBox_c4.Location = new System.Drawing.Point(249, 445);
+            this.comboBox_c4.Name = "comboBox_c4";
+            this.comboBox_c4.Size = new System.Drawing.Size(223, 21);
+            this.comboBox_c4.TabIndex = 65;
             // 
-            // textBox1
+            // comboBox_c5
             // 
-            this.textBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox1.Location = new System.Drawing.Point(94, 3);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(132, 20);
-            this.textBox1.TabIndex = 1;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox2.Location = new System.Drawing.Point(3, 3);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(85, 20);
-            this.textBox2.TabIndex = 0;
-            // 
-            // tableLayoutPanel3
-            // 
-            this.tableLayoutPanel3.ColumnCount = 2;
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 60F));
-            this.tableLayoutPanel3.Controls.Add(this.textBox3, 1, 0);
-            this.tableLayoutPanel3.Controls.Add(this.textBox4, 0, 0);
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(246, 416);
-            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(0);
-            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
-            this.tableLayoutPanel3.RowCount = 2;
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(229, 25);
-            this.tableLayoutPanel3.TabIndex = 64;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox3.Location = new System.Drawing.Point(94, 3);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(132, 20);
-            this.textBox3.TabIndex = 1;
-            // 
-            // textBox4
-            // 
-            this.textBox4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox4.Location = new System.Drawing.Point(3, 3);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(85, 20);
-            this.textBox4.TabIndex = 0;
-            // 
-            // tableLayoutPanel4
-            // 
-            this.tableLayoutPanel4.ColumnCount = 2;
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 60F));
-            this.tableLayoutPanel4.Controls.Add(this.textBox5, 1, 0);
-            this.tableLayoutPanel4.Controls.Add(this.textBox6, 0, 0);
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(246, 442);
-            this.tableLayoutPanel4.Margin = new System.Windows.Forms.Padding(0);
-            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
-            this.tableLayoutPanel4.RowCount = 2;
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(229, 25);
-            this.tableLayoutPanel4.TabIndex = 65;
-            // 
-            // textBox5
-            // 
-            this.textBox5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox5.Location = new System.Drawing.Point(94, 3);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(132, 20);
-            this.textBox5.TabIndex = 1;
-            // 
-            // textBox6
-            // 
-            this.textBox6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox6.Location = new System.Drawing.Point(3, 3);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(85, 20);
-            this.textBox6.TabIndex = 0;
-            // 
-            // tableLayoutPanel5
-            // 
-            this.tableLayoutPanel5.ColumnCount = 2;
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40F));
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 60F));
-            this.tableLayoutPanel5.Controls.Add(this.textBox7, 1, 0);
-            this.tableLayoutPanel5.Controls.Add(this.textBox8, 0, 0);
-            this.tableLayoutPanel5.Location = new System.Drawing.Point(246, 468);
-            this.tableLayoutPanel5.Margin = new System.Windows.Forms.Padding(0);
-            this.tableLayoutPanel5.Name = "tableLayoutPanel5";
-            this.tableLayoutPanel5.RowCount = 2;
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(229, 25);
-            this.tableLayoutPanel5.TabIndex = 66;
-            // 
-            // textBox7
-            // 
-            this.textBox7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox7.Location = new System.Drawing.Point(94, 3);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(132, 20);
-            this.textBox7.TabIndex = 1;
-            // 
-            // textBox8
-            // 
-            this.textBox8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox8.Location = new System.Drawing.Point(3, 3);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(85, 20);
-            this.textBox8.TabIndex = 0;
+            this.comboBox_c5.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox_c5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboBox_c5.FormattingEnabled = true;
+            this.comboBox_c5.Location = new System.Drawing.Point(249, 471);
+            this.comboBox_c5.Name = "comboBox_c5";
+            this.comboBox_c5.Size = new System.Drawing.Size(223, 21);
+            this.comboBox_c5.TabIndex = 66;
             // 
             // Trabajadores
             // 
@@ -840,16 +715,6 @@ namespace Ingenieria_Software.Secciones.Empresa
             this.layout_datos.ResumeLayout(false);
             this.layout_datos.PerformLayout();
             this.layout_botones.ResumeLayout(false);
-            this.tableLayoutPanel2.ResumeLayout(false);
-            this.tableLayoutPanel2.PerformLayout();
-            this.tableLayoutPanel1.ResumeLayout(false);
-            this.tableLayoutPanel1.PerformLayout();
-            this.tableLayoutPanel3.ResumeLayout(false);
-            this.tableLayoutPanel3.PerformLayout();
-            this.tableLayoutPanel4.ResumeLayout(false);
-            this.tableLayoutPanel4.PerformLayout();
-            this.tableLayoutPanel5.ResumeLayout(false);
-            this.tableLayoutPanel5.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -906,20 +771,10 @@ namespace Ingenieria_Software.Secciones.Empresa
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ComboBox comboBox_horario;
         private System.Windows.Forms.Label label_cursos;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
-        private System.Windows.Forms.TextBox textBox_doc_1_nombre;
-        private System.Windows.Forms.TextBox textBox_doc_1;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.ComboBox comboBox_c1;
+        private System.Windows.Forms.ComboBox comboBox_c2;
+        private System.Windows.Forms.ComboBox comboBox_c3;
+        private System.Windows.Forms.ComboBox comboBox_c4;
+        private System.Windows.Forms.ComboBox comboBox_c5;
     }
 }

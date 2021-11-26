@@ -31,21 +31,21 @@ namespace Ingenieria_Software.Secciones.Empresa
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.LayoutPrincipal = new System.Windows.Forms.TableLayoutPanel();
+            this.listView1 = new System.Windows.Forms.ListView();
+            this.label_horariosDisponibles = new System.Windows.Forms.Label();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.comboBox_entrada = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.comboBox_salida = new System.Windows.Forms.ComboBox();
-            this.listView1 = new System.Windows.Forms.ListView();
-            this.label_horariosDisponibles = new System.Windows.Forms.Label();
-            this.label_horario = new System.Windows.Forms.Label();
-            this.lable_nombreHorario = new System.Windows.Forms.Label();
             this.textBox_idioma = new System.Windows.Forms.TextBox();
+            this.lable_nombreHorario = new System.Windows.Forms.Label();
+            this.label_horario = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.textBox_id = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.button_agregar = new System.Windows.Forms.Button();
             this.button_eliminar = new System.Windows.Forms.Button();
             this.button_actualizar = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBox_id = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.LayoutPrincipal.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
@@ -97,6 +97,31 @@ namespace Ingenieria_Software.Secciones.Empresa
             this.LayoutPrincipal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 4.999833F));
             this.LayoutPrincipal.Size = new System.Drawing.Size(634, 444);
             this.LayoutPrincipal.TabIndex = 0;
+            // 
+            // listView1
+            // 
+            this.listView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.listView1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
+            this.listView1.HideSelection = false;
+            this.listView1.Location = new System.Drawing.Point(34, 333);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(564, 82);
+            this.listView1.TabIndex = 1;
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listView1.View = System.Windows.Forms.View.SmallIcon;
+            this.listView1.Click += new System.EventHandler(this.ListView1_Click);
+            // 
+            // label_horariosDisponibles
+            // 
+            this.label_horariosDisponibles.AutoSize = true;
+            this.label_horariosDisponibles.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label_horariosDisponibles.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
+            this.label_horariosDisponibles.Location = new System.Drawing.Point(34, 286);
+            this.label_horariosDisponibles.Name = "label_horariosDisponibles";
+            this.label_horariosDisponibles.Size = new System.Drawing.Size(564, 44);
+            this.label_horariosDisponibles.TabIndex = 2;
+            this.label_horariosDisponibles.Text = "Horarios Disponibles";
+            this.label_horariosDisponibles.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // tableLayoutPanel3
             // 
@@ -253,41 +278,13 @@ namespace Ingenieria_Software.Secciones.Empresa
             this.comboBox_salida.Size = new System.Drawing.Size(221, 32);
             this.comboBox_salida.TabIndex = 1;
             // 
-            // listView1
+            // textBox_idioma
             // 
-            this.listView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.listView1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(34, 333);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(564, 82);
-            this.listView1.TabIndex = 1;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.SmallIcon;
-            this.listView1.Click += new System.EventHandler(this.ListView1_Click);
-            // 
-            // label_horariosDisponibles
-            // 
-            this.label_horariosDisponibles.AutoSize = true;
-            this.label_horariosDisponibles.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label_horariosDisponibles.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
-            this.label_horariosDisponibles.Location = new System.Drawing.Point(34, 286);
-            this.label_horariosDisponibles.Name = "label_horariosDisponibles";
-            this.label_horariosDisponibles.Size = new System.Drawing.Size(564, 44);
-            this.label_horariosDisponibles.TabIndex = 2;
-            this.label_horariosDisponibles.Text = "Horarios Disponibles";
-            this.label_horariosDisponibles.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label_horario
-            // 
-            this.label_horario.AutoSize = true;
-            this.label_horario.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
-            this.label_horario.Location = new System.Drawing.Point(34, 22);
-            this.label_horario.Name = "label_horario";
-            this.label_horario.Size = new System.Drawing.Size(229, 24);
-            this.label_horario.TabIndex = 3;
-            this.label_horario.Text = "Administrador de Horarios";
-            this.label_horario.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.textBox_idioma.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
+            this.textBox_idioma.Location = new System.Drawing.Point(34, 201);
+            this.textBox_idioma.Name = "textBox_idioma";
+            this.textBox_idioma.Size = new System.Drawing.Size(564, 29);
+            this.textBox_idioma.TabIndex = 5;
             // 
             // lable_nombreHorario
             // 
@@ -300,13 +297,35 @@ namespace Ingenieria_Software.Secciones.Empresa
             this.lable_nombreHorario.Text = "Nombre";
             this.lable_nombreHorario.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // textBox_idioma
+            // label_horario
             // 
-            this.textBox_idioma.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
-            this.textBox_idioma.Location = new System.Drawing.Point(34, 201);
-            this.textBox_idioma.Name = "textBox_idioma";
-            this.textBox_idioma.Size = new System.Drawing.Size(564, 29);
-            this.textBox_idioma.TabIndex = 5;
+            this.label_horario.AutoSize = true;
+            this.label_horario.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
+            this.label_horario.Location = new System.Drawing.Point(34, 22);
+            this.label_horario.Name = "label_horario";
+            this.label_horario.Size = new System.Drawing.Size(229, 24);
+            this.label_horario.TabIndex = 3;
+            this.label_horario.Text = "Administrador de Horarios";
+            this.label_horario.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
+            this.label2.Location = new System.Drawing.Point(34, 66);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(94, 24);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "ID Horario";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // textBox_id
+            // 
+            this.textBox_id.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
+            this.textBox_id.Location = new System.Drawing.Point(34, 113);
+            this.textBox_id.Name = "textBox_id";
+            this.textBox_id.Size = new System.Drawing.Size(564, 29);
+            this.textBox_id.TabIndex = 7;
             // 
             // tableLayoutPanel2
             // 
@@ -325,6 +344,7 @@ namespace Ingenieria_Software.Secciones.Empresa
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(154, 444);
             this.tableLayoutPanel2.TabIndex = 1;
+            this.tableLayoutPanel2.Paint += new System.Windows.Forms.PaintEventHandler(this.TableLayoutPanel2_Paint);
             // 
             // button_agregar
             // 
@@ -361,25 +381,6 @@ namespace Ingenieria_Software.Secciones.Empresa
             this.button_actualizar.Text = "Actualizar";
             this.button_actualizar.UseVisualStyleBackColor = true;
             this.button_actualizar.Click += new System.EventHandler(this.Button_actualizar_Click);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
-            this.label2.Location = new System.Drawing.Point(34, 66);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(94, 24);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "ID Horario";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // textBox_id
-            // 
-            this.textBox_id.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
-            this.textBox_id.Location = new System.Drawing.Point(34, 113);
-            this.textBox_id.Name = "textBox_id";
-            this.textBox_id.Size = new System.Drawing.Size(564, 29);
-            this.textBox_id.TabIndex = 7;
             // 
             // Horarios
             // 

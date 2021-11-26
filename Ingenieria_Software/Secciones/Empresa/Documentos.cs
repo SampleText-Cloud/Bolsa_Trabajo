@@ -16,7 +16,6 @@ namespace Ingenieria_Software.Secciones.Empresa
         {
             InitializeComponent();
             CenterToScreen();
-            new Mensajes.Tipos.MsgBoxOK("Esto aun esta en desarrollo").ShowDialog();
         }
 
         private void Button_agregar_Click(object sender, EventArgs e)

@@ -36,7 +36,6 @@ namespace Ingenieria_Software.Secciones.Empresa
 
         private void Horarios_Load(object sender, EventArgs e)
         {
-
         }
 
         private void Button_agregar_Click(object sender, EventArgs e)
@@ -101,6 +100,11 @@ namespace Ingenieria_Software.Secciones.Empresa
             ODB.NonQuery(SQL);
 
             updateLista();
+        }
+
+        private void TableLayoutPanel2_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

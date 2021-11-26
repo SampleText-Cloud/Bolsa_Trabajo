@@ -37,7 +37,12 @@ namespace Ingenieria_Software.Secciones.Empresa
                calle,
                interior,
                exterior,
-               cp;
+               cp,
+               curso1,
+               curso2,
+               curso3,
+               curso4,
+               curso5;
 
         public Trabajadores()
         {
@@ -45,10 +50,90 @@ namespace Ingenieria_Software.Secciones.Empresa
             CenterToScreen();
         }
 
+        private void updateLosCursos()
+        {
+            if (comboBox_c1.Text.ToString() != "" && comboBox_c1.Text.ToString() != null)
+            {
+                updateCurso(textBox_idCandidato.Text.ToString(), comboBox_c1.Text.ToString(), curso1);
+            }
+
+            if (comboBox_c2.Text.ToString() != "" && comboBox_c2.Text.ToString() != null)
+            {
+                updateCurso(textBox_idCandidato.Text.ToString(), comboBox_c2.Text.ToString(), curso2);
+            }
+
+            if (comboBox_c3.Text.ToString() != "" && comboBox_c3.Text.ToString() != null)
+            {
+                updateCurso(textBox_idCandidato.Text.ToString(), comboBox_c3.Text.ToString(), curso3);
+            }
+
+            if (comboBox_c4.Text.ToString() != "" && comboBox_c4.Text.ToString() != null)
+            {
+                updateCurso(textBox_idCandidato.Text.ToString(), comboBox_c4.Text.ToString(), curso4);
+            }
+
+            if (comboBox_c5.Text.ToString() != "" && comboBox_c5.Text.ToString() != null)
+            {
+                updateCurso(textBox_idCandidato.Text.ToString(), comboBox_c5.Text.ToString(), curso5);
+            }
+        }
+
+        private void updateCurso(string id, string nombre, string curso)
+        {
+            string SQL = String.Format("UPDATE `Trabajador-Curso` SET `curso`='{0}' WHERE `trabajador` = '{1}' AND `curso` = '{2}'",
+                                                                    nombre,
+                                                                    id,
+                                                                    curso);
+            Clipboard.SetText(SQL);
+            ODB.NonQuery(SQL);
+        }
+       
+
+        private void uploadCursos(string id, string nombre)
+        {
+            string SQL = String.Format("INSERT INTO `Trabajador-Curso`(`trabajador`, `curso`) VALUES ('{0}','{1}')",
+                                                                    id,
+                                                                    nombre);
+            ODB.NonQuery(SQL);
+        }
+        private void setCursos()
+        {
+            if(comboBox_c1.Text.ToString() != "" && comboBox_c1.Text.ToString() != null)
+            {
+                uploadCursos(textBox_idCandidato.Text.ToString(), comboBox_c1.Text.ToString());
+                curso1 = comboBox_c1.Text.ToString();
+            }
+
+            if (comboBox_c2.Text.ToString() != "" && comboBox_c2.Text.ToString() != null)
+            {
+                uploadCursos(textBox_idCandidato.Text.ToString(), comboBox_c2.Text.ToString());
+                curso2 = comboBox_c2.Text.ToString();
+            }
+
+            if (comboBox_c3.Text.ToString() != "" && comboBox_c3.Text.ToString() != null)
+            {
+                uploadCursos(textBox_idCandidato.Text.ToString(), comboBox_c3.Text.ToString());
+                curso3 = comboBox_c3.Text.ToString();
+            }
+
+            if (comboBox_c4.Text.ToString() != "" && comboBox_c4.Text.ToString() != null)
+            {
+                uploadCursos(textBox_idCandidato.Text.ToString(), comboBox_c4.Text.ToString());
+                curso4 = comboBox_c4.Text.ToString();
+            }
+
+            if (comboBox_c5.Text.ToString() != "" && comboBox_c5.Text.ToString() != null)
+            {
+                uploadCursos(textBox_idCandidato.Text.ToString(), comboBox_c5.Text.ToString());
+                curso5 = comboBox_c5.Text.ToString();
+            }
+        }
+   
         private void Button_agregar_Click(object sender, EventArgs e)
         {
             CreateIfMissing("C:\\SERVIDOR\\DOCUMENTOS\\" + textBox_idCandidato.Text.ToString());
             SetValues();
+            setCursos();
             string SQL = String.Format("INSERT INTO `Trabajadores`(`idTrabajador`, " +
                                                                      "`nombres`, " +
                                                                      "`a_paterno`, " +
@@ -143,11 +228,19 @@ namespace Ingenieria_Software.Secciones.Empresa
             SetValues();
             string SQL = string.Format("DELETE FROM `Trabajadores` WHERE `idTrabajador` = '{0}';", id);
             ODB.NonQuery(SQL);
-            clear();
+  
             Clipboard.SetText(SQL);
+            
 
             SQL = String.Format("DELETE FROM `Trabajador-Horario` WHERE `trabajador` = '{0}'", textBox_idCandidato.Text.ToString());
             ODB.NonQuery(SQL);
+            clear();
+
+            SQL = String.Format("DELETE FROM `Trabajador-Curso` WHERE `trabajador` = '{0}'", textBox_idCandidato.Text.ToString());
+            ODB.NonQuery(SQL);
+            clear();
+
+
         }
         private void clear()
         {
@@ -155,6 +248,9 @@ namespace Ingenieria_Software.Secciones.Empresa
             {
                 var.Text = "";
             }
+
+            comboBox_horario.Text = "";
+            comboBox_perfil.Text = "";
         }
 
         private void Button_actualizar_Click(object sender, EventArgs e)
@@ -213,6 +309,8 @@ namespace Ingenieria_Software.Secciones.Empresa
 
             SQL = String.Format("UPDATE `Trabajador-Horario` SET `horario`='{0}' WHERE `trabajador` = '{1}'", comboBox_horario.Text.ToString(), textBox_idCandidato.Text.ToString());
             ODB.NonQuery(SQL);
+
+            updateLosCursos();
         }
 
         private void Button_buscar_Click(object sender, EventArgs e)
@@ -248,10 +346,40 @@ namespace Ingenieria_Software.Secciones.Empresa
             SQL = String.Format("SELECT `horario` FROM `Trabajador-Horario` WHERE `trabajador` = '{0}'", textBox_idCandidato.Text.ToString());
             ODB.SetCommand(SQL);
             string[] campos = ODB.GetMultiCampos(1);
-            textBox_nombre.Text = campos[0];
+            comboBox_horario.Text = campos[0];
+
+           SQL = String.Format("SELECT `curso` FROM `Trabajador-Curso` WHERE `trabajador` = '{0}'", textBox_idCandidato.Text.ToString());
+            ODB.SetCommand(SQL);
+            Clipboard.SetText(SQL);
+            string[] campos2 = ODB.GetMultiDatos();
+            string[] agregados = new string[5];
+            int i=0;
+            foreach(string var in campos2)
+            {
+                if(var != "" && var != null)
+                {
+                    agregados[i] = var;
+                    i++;
+                }
+            }
+            setValuesForCursos(agregados);
 
         }
+        private void setValuesForCursos(string[] items)
+        {
+            comboBox_c1.Text = items[0];
+            comboBox_c2.Text = items[1];
+            comboBox_c3.Text = items[2];
+            comboBox_c4.Text = items[3];
+            comboBox_c5.Text = items[4];
 
+            curso1 = items[0];
+            curso2 = items[1];
+            curso3 = items[2];
+            curso4 = items[3];
+            curso5 = items[4];
+
+        }
         private void Button1_Click(object sender, EventArgs e)
         {
             DialogResult result = new Mensajes.Tipos.Conversion("CANDIDATO","ARCHIVO MUERTO").ShowDialog();
@@ -329,6 +457,26 @@ namespace Ingenieria_Software.Secciones.Empresa
                 if (nac != null && nac != "")
                 {
                     comboBox_perfil.Items.Add(nac);
+                }
+            }
+            comboBox_c1.Items.Add("");
+            comboBox_c2.Items.Add("");
+            comboBox_c3.Items.Add("");
+            comboBox_c4.Items.Add("");
+            comboBox_c5.Items.Add("");
+
+            ODB.SetCommand("SELECT * FROM `Cursos`");
+            string[] Cursos = ODB.GetMultiId();
+
+            foreach (string nac in Cursos)
+            {
+                if (nac != null && nac != "")
+                {
+                    comboBox_c1.Items.Add(nac);
+                    comboBox_c2.Items.Add(nac);
+                    comboBox_c3.Items.Add(nac);
+                    comboBox_c4.Items.Add(nac);
+                    comboBox_c5.Items.Add(nac);
                 }
             }
         }

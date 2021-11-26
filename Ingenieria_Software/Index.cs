@@ -222,5 +222,17 @@ namespace Ingenieria_Software
                 new Mensajes.Tipos.MsgBoxOK(msg.ToString()).ShowDialog();
             }
         }
+
+        private void ReportesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                new Reportes.Reportes().ShowDialog();
+            }
+            catch (Exception msg)
+            {
+                new Mensajes.Tipos.MsgBoxOK(msg.ToString()).ShowDialog();
+            }
+        }
     }
 }

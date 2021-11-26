@@ -93,8 +93,67 @@ namespace Ingenieria_Software
             return row;
 
         }
+
+        public static string[,] GetReporte1()
+        {
+
+            string[,] row = new string[500,100];
+            try
+            {
+                OpenConexion();
+                reader = commandDatabase.ExecuteReader();
+                if (reader.HasRows)
+                {
+                    int i = 0;
+                    while (reader.Read())
+                    {
+                        row[i ,0] = reader.GetString(0);
+                        row[i, 1] = reader.GetString(1);
+                        row[i, 2] = reader.GetString(2);
+                        row[i, 3] = reader.GetString(3);
+                        row[i, 4] = reader.GetString(4);
+
+                        row[i, 5] = reader.GetString(5);
+                        row[i, 6] = reader.GetString(6);
+                        row[i, 7] = reader.GetString(7);
+                        row[i, 8] = reader.GetString(8);
+                        row[i, 9] = reader.GetString(9);
+
+                        row[i, 10] = reader.GetString(10);
+                        row[i, 11] = reader.GetString(11);
+                        row[i, 12] = reader.GetString(12);
+                        row[i, 13] = reader.GetString(13);
+                        row[i, 14] = reader.GetString(14);
+
+                        row[i, 15] = reader.GetString(15);
+                        row[i, 16] = reader.GetString(16);
+                        row[i, 17] = reader.GetString(17);
+                        row[i, 18] = reader.GetString(18);
+                        row[i, 19] = reader.GetString(19);
+
+                        row[i, 20] = reader.GetString(20);
+                        row[i, 21] = reader.GetString(21);
+
+                        i++;
+                    }
+
+
+                }
+            }
+            catch (Exception ex)
+            {
+                new Mensajes.Tipos.MsgBoxOK(ex.ToString()).ShowDialog();
+            }
+            finally
+            {
+                CloseConection();
+            }
+            return row;
+        }
+
         public static string[] GetMultiId()
         {
+            
             string[] row = new string[500];
             try
             {
@@ -122,7 +181,38 @@ namespace Ingenieria_Software
             }
             return row;
         }
-        
+
+        public static string[] GetMultiDatos()
+        {
+
+            string[] row = new string[500];
+            try
+            {
+                OpenConexion();
+                reader = commandDatabase.ExecuteReader();
+                if (reader.HasRows)
+                {
+                    int i = 0;
+                    while (reader.Read())
+                    {
+                        row[i] = reader.GetString(0);
+                        i++;
+                    }
+
+
+                }
+            }
+            catch (Exception ex)
+            {
+                new Mensajes.Tipos.MsgBoxOK(ex.ToString()).ShowDialog();
+            }
+            finally
+            {
+                CloseConection();
+            }
+            return row;
+        }
+
 
         public static string[] GetMultiIdType()
         {

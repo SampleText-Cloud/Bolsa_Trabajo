@@ -15,6 +15,7 @@ namespace Ingenieria_Software.Secciones.Empresa
         public Cursos()
         {
             InitializeComponent();
+            CenterToScreen();
         }
 
         private void Button_agregar_Click(object sender, EventArgs e)

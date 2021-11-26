@@ -91,7 +91,7 @@ namespace Ingenieria_Software.Secciones.Empresa
             dateTimePicker_nacimiento.Value = DateTime.Parse(values[7]);
             comboBox_sexo.Text = values[8];
             dateTimePicker_ingreso.Value = DateTime.Parse(values[9]);
-            textBox_idPerfil.Text = values[10];
+            comboBox_perfil.Text = values[10];
             textBox_telefono.Text = values[11];
             textBox_correo.Text = values[12];
             textBox_colonia.Text = values[13];
@@ -199,7 +199,7 @@ namespace Ingenieria_Software.Secciones.Empresa
             fechaNac = dateTimePicker_nacimiento.Text.ToString();
             sexo = comboBox_sexo.Text.ToString();
             fechaIngreso = dateTimePicker_ingreso.Text.ToString();
-            idPerfil = textBox_idPerfil.Text.ToString();
+            idPerfil = comboBox_perfil.Text.ToString();
             telefono = textBox_telefono.Text.ToString();
             correo = textBox_correo.Text.ToString();
             colonia = textBox_colonia.Text.ToString();
@@ -275,6 +275,17 @@ namespace Ingenieria_Software.Secciones.Empresa
                 if (nac != null && nac != "")
                 {
                     comboBox_nacionalidad.Items.Add(nac);
+                }
+            }
+
+            ODB.SetCommand("SELECT * FROM `Puesto_Tipo`");
+            string[] perfiles = ODB.GetMultiId();
+
+            foreach (string nac in perfiles)
+            {
+                if (nac != null && nac != "")
+                {
+                    comboBox_perfil.Items.Add(nac);
                 }
             }
         }
