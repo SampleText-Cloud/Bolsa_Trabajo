@@ -64,17 +64,11 @@ namespace Ingenieria_Software.Secciones.Empresa
             this.textBox_no_ext = new System.Windows.Forms.TextBox();
             this.lbl_cp = new System.Windows.Forms.Label();
             this.textBox_cp = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.textBox_idCandidato = new System.Windows.Forms.TextBox();
-            this.lbl_id = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dateTimePicker_ingreso = new System.Windows.Forms.DateTimePicker();
-            this.layout_botones = new System.Windows.Forms.TableLayoutPanel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button_buscar = new System.Windows.Forms.Button();
-            this.button_actualizar = new System.Windows.Forms.Button();
-            this.button_eliminar = new System.Windows.Forms.Button();
-            this.button_agregar = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.lbl_id = new System.Windows.Forms.Label();
+            this.textBox_idCandidato = new System.Windows.Forms.TextBox();
             this.comboBox_perfil = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.comboBox_horario = new System.Windows.Forms.ComboBox();
@@ -84,6 +78,12 @@ namespace Ingenieria_Software.Secciones.Empresa
             this.comboBox_c3 = new System.Windows.Forms.ComboBox();
             this.comboBox_c4 = new System.Windows.Forms.ComboBox();
             this.comboBox_c5 = new System.Windows.Forms.ComboBox();
+            this.layout_botones = new System.Windows.Forms.TableLayoutPanel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button_buscar = new System.Windows.Forms.Button();
+            this.button_actualizar = new System.Windows.Forms.Button();
+            this.button_eliminar = new System.Windows.Forms.Button();
+            this.button_agregar = new System.Windows.Forms.Button();
             this.layout_principal.SuspendLayout();
             this.layout_datos.SuspendLayout();
             this.layout_botones.SuspendLayout();
@@ -482,33 +482,6 @@ namespace Ingenieria_Software.Secciones.Empresa
             this.textBox_cp.Size = new System.Drawing.Size(180, 20);
             this.textBox_cp.TabIndex = 30;
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(496, 234);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(51, 24);
-            this.label4.TabIndex = 44;
-            this.label4.Text = "Perfil";
-            // 
-            // textBox_idCandidato
-            // 
-            this.textBox_idCandidato.Location = new System.Drawing.Point(496, 315);
-            this.textBox_idCandidato.Name = "textBox_idCandidato";
-            this.textBox_idCandidato.Size = new System.Drawing.Size(180, 20);
-            this.textBox_idCandidato.TabIndex = 31;
-            // 
-            // lbl_id
-            // 
-            this.lbl_id.AutoSize = true;
-            this.lbl_id.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_id.Location = new System.Drawing.Point(496, 286);
-            this.lbl_id.Name = "lbl_id";
-            this.lbl_id.Size = new System.Drawing.Size(27, 24);
-            this.lbl_id.TabIndex = 3;
-            this.lbl_id.Text = "ID";
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -528,87 +501,32 @@ namespace Ingenieria_Software.Secciones.Empresa
             this.dateTimePicker_ingreso.Size = new System.Drawing.Size(192, 20);
             this.dateTimePicker_ingreso.TabIndex = 35;
             // 
-            // layout_botones
+            // label4
             // 
-            this.layout_botones.ColumnCount = 1;
-            this.layout_botones.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.layout_botones.Controls.Add(this.button1, 0, 4);
-            this.layout_botones.Controls.Add(this.button_buscar, 0, 3);
-            this.layout_botones.Controls.Add(this.button_actualizar, 0, 2);
-            this.layout_botones.Controls.Add(this.button_eliminar, 0, 1);
-            this.layout_botones.Controls.Add(this.button_agregar, 0, 0);
-            this.layout_botones.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.layout_botones.Location = new System.Drawing.Point(750, 3);
-            this.layout_botones.Name = "layout_botones";
-            this.layout_botones.RowCount = 5;
-            this.layout_botones.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.layout_botones.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.layout_botones.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.layout_botones.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.layout_botones.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.layout_botones.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.layout_botones.Size = new System.Drawing.Size(244, 499);
-            this.layout_botones.TabIndex = 0;
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(496, 234);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(51, 24);
+            this.label4.TabIndex = 44;
+            this.label4.Text = "Perfil";
             // 
-            // button1
+            // lbl_id
             // 
-            this.button1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button1.Location = new System.Drawing.Point(0, 396);
-            this.button1.Margin = new System.Windows.Forms.Padding(0);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(244, 103);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Convertir a";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.Button1_Click);
+            this.lbl_id.AutoSize = true;
+            this.lbl_id.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_id.Location = new System.Drawing.Point(496, 286);
+            this.lbl_id.Name = "lbl_id";
+            this.lbl_id.Size = new System.Drawing.Size(27, 24);
+            this.lbl_id.TabIndex = 3;
+            this.lbl_id.Text = "ID";
             // 
-            // button_buscar
+            // textBox_idCandidato
             // 
-            this.button_buscar.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button_buscar.Location = new System.Drawing.Point(0, 297);
-            this.button_buscar.Margin = new System.Windows.Forms.Padding(0);
-            this.button_buscar.Name = "button_buscar";
-            this.button_buscar.Size = new System.Drawing.Size(244, 99);
-            this.button_buscar.TabIndex = 3;
-            this.button_buscar.Text = "Buscar";
-            this.button_buscar.UseVisualStyleBackColor = true;
-            this.button_buscar.Click += new System.EventHandler(this.Button_buscar_Click);
-            // 
-            // button_actualizar
-            // 
-            this.button_actualizar.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button_actualizar.Location = new System.Drawing.Point(0, 198);
-            this.button_actualizar.Margin = new System.Windows.Forms.Padding(0);
-            this.button_actualizar.Name = "button_actualizar";
-            this.button_actualizar.Size = new System.Drawing.Size(244, 99);
-            this.button_actualizar.TabIndex = 2;
-            this.button_actualizar.Text = "Actualizar";
-            this.button_actualizar.UseVisualStyleBackColor = true;
-            this.button_actualizar.Click += new System.EventHandler(this.Button_actualizar_Click);
-            // 
-            // button_eliminar
-            // 
-            this.button_eliminar.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button_eliminar.Location = new System.Drawing.Point(0, 99);
-            this.button_eliminar.Margin = new System.Windows.Forms.Padding(0);
-            this.button_eliminar.Name = "button_eliminar";
-            this.button_eliminar.Size = new System.Drawing.Size(244, 99);
-            this.button_eliminar.TabIndex = 1;
-            this.button_eliminar.Text = "Eliminar";
-            this.button_eliminar.UseVisualStyleBackColor = true;
-            this.button_eliminar.Click += new System.EventHandler(this.Button_eliminar_Click);
-            // 
-            // button_agregar
-            // 
-            this.button_agregar.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button_agregar.Location = new System.Drawing.Point(0, 0);
-            this.button_agregar.Margin = new System.Windows.Forms.Padding(0);
-            this.button_agregar.Name = "button_agregar";
-            this.button_agregar.Size = new System.Drawing.Size(244, 99);
-            this.button_agregar.TabIndex = 0;
-            this.button_agregar.Text = "Insertar";
-            this.button_agregar.UseVisualStyleBackColor = true;
-            this.button_agregar.Click += new System.EventHandler(this.Button_agregar_Click);
+            this.textBox_idCandidato.Location = new System.Drawing.Point(496, 315);
+            this.textBox_idCandidato.Name = "textBox_idCandidato";
+            this.textBox_idCandidato.Size = new System.Drawing.Size(180, 20);
+            this.textBox_idCandidato.TabIndex = 31;
             // 
             // comboBox_perfil
             // 
@@ -699,6 +617,88 @@ namespace Ingenieria_Software.Secciones.Empresa
             this.comboBox_c5.Name = "comboBox_c5";
             this.comboBox_c5.Size = new System.Drawing.Size(223, 21);
             this.comboBox_c5.TabIndex = 66;
+            // 
+            // layout_botones
+            // 
+            this.layout_botones.ColumnCount = 1;
+            this.layout_botones.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.layout_botones.Controls.Add(this.button1, 0, 4);
+            this.layout_botones.Controls.Add(this.button_buscar, 0, 3);
+            this.layout_botones.Controls.Add(this.button_actualizar, 0, 2);
+            this.layout_botones.Controls.Add(this.button_eliminar, 0, 1);
+            this.layout_botones.Controls.Add(this.button_agregar, 0, 0);
+            this.layout_botones.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.layout_botones.Location = new System.Drawing.Point(750, 3);
+            this.layout_botones.Name = "layout_botones";
+            this.layout_botones.RowCount = 5;
+            this.layout_botones.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.layout_botones.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.layout_botones.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.layout_botones.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.layout_botones.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.layout_botones.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.layout_botones.Size = new System.Drawing.Size(244, 499);
+            this.layout_botones.TabIndex = 0;
+            // 
+            // button1
+            // 
+            this.button1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button1.Location = new System.Drawing.Point(0, 396);
+            this.button1.Margin = new System.Windows.Forms.Padding(0);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(244, 103);
+            this.button1.TabIndex = 4;
+            this.button1.Text = "Convertir a";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.Button1_Click);
+            // 
+            // button_buscar
+            // 
+            this.button_buscar.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button_buscar.Location = new System.Drawing.Point(0, 297);
+            this.button_buscar.Margin = new System.Windows.Forms.Padding(0);
+            this.button_buscar.Name = "button_buscar";
+            this.button_buscar.Size = new System.Drawing.Size(244, 99);
+            this.button_buscar.TabIndex = 3;
+            this.button_buscar.Text = "Buscar";
+            this.button_buscar.UseVisualStyleBackColor = true;
+            this.button_buscar.Click += new System.EventHandler(this.Button_buscar_Click);
+            // 
+            // button_actualizar
+            // 
+            this.button_actualizar.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button_actualizar.Location = new System.Drawing.Point(0, 198);
+            this.button_actualizar.Margin = new System.Windows.Forms.Padding(0);
+            this.button_actualizar.Name = "button_actualizar";
+            this.button_actualizar.Size = new System.Drawing.Size(244, 99);
+            this.button_actualizar.TabIndex = 2;
+            this.button_actualizar.Text = "Actualizar";
+            this.button_actualizar.UseVisualStyleBackColor = true;
+            this.button_actualizar.Click += new System.EventHandler(this.Button_actualizar_Click);
+            // 
+            // button_eliminar
+            // 
+            this.button_eliminar.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button_eliminar.Location = new System.Drawing.Point(0, 99);
+            this.button_eliminar.Margin = new System.Windows.Forms.Padding(0);
+            this.button_eliminar.Name = "button_eliminar";
+            this.button_eliminar.Size = new System.Drawing.Size(244, 99);
+            this.button_eliminar.TabIndex = 1;
+            this.button_eliminar.Text = "Eliminar";
+            this.button_eliminar.UseVisualStyleBackColor = true;
+            this.button_eliminar.Click += new System.EventHandler(this.Button_eliminar_Click);
+            // 
+            // button_agregar
+            // 
+            this.button_agregar.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button_agregar.Location = new System.Drawing.Point(0, 0);
+            this.button_agregar.Margin = new System.Windows.Forms.Padding(0);
+            this.button_agregar.Name = "button_agregar";
+            this.button_agregar.Size = new System.Drawing.Size(244, 99);
+            this.button_agregar.TabIndex = 0;
+            this.button_agregar.Text = "Insertar";
+            this.button_agregar.UseVisualStyleBackColor = true;
+            this.button_agregar.Click += new System.EventHandler(this.Button_agregar_Click);
             // 
             // Trabajadores
             // 

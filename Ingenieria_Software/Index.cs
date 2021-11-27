@@ -225,9 +225,38 @@ namespace Ingenieria_Software
 
         private void ReportesToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            
+        }
+
+        private void ReportePostulantesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
             try
             {
-                new Reportes.Reportes().ShowDialog();
+                new Reportes.ReporteCandidatos().ShowDialog();
+            }
+            catch (Exception msg)
+            {
+                new Mensajes.Tipos.MsgBoxOK(msg.ToString()).ShowDialog();
+            }
+        }
+
+        private void ReporteTrabajadoresToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                new Reportes.ReporteTrabajadores().ShowDialog();
+            }
+            catch (Exception msg)
+            {
+                new Mensajes.Tipos.MsgBoxOK(msg.ToString()).ShowDialog();
+            }
+        }
+
+        private void ReporteArchivoMuertoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                new Reportes.ReporteArchivoMuerto().ShowDialog();
             }
             catch (Exception msg)
             {

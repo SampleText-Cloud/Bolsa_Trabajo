@@ -122,17 +122,6 @@ namespace Ingenieria_Software
                         row[i, 10] = reader.GetString(10);
                         row[i, 11] = reader.GetString(11);
                         row[i, 12] = reader.GetString(12);
-                        row[i, 13] = reader.GetString(13);
-                        row[i, 14] = reader.GetString(14);
-
-                        row[i, 15] = reader.GetString(15);
-                        row[i, 16] = reader.GetString(16);
-                        row[i, 17] = reader.GetString(17);
-                        row[i, 18] = reader.GetString(18);
-                        row[i, 19] = reader.GetString(19);
-
-                        row[i, 20] = reader.GetString(20);
-                        row[i, 21] = reader.GetString(21);
 
                         i++;
                     }

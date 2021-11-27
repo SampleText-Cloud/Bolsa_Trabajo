@@ -49,13 +49,16 @@ namespace Ingenieria_Software
             this.puestoToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.cursosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cursosToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.reportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.acercaDeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ácercaDeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.lbl_date = new System.Windows.Forms.Label();
             this.lbl_empresa = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.reportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.reportePostulantesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.reporteTrabajadoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.reporteArchivoMuertoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -124,28 +127,28 @@ namespace Ingenieria_Software
             // horariosToolStripMenuItem
             // 
             this.horariosToolStripMenuItem.Name = "horariosToolStripMenuItem";
-            this.horariosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.horariosToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
             this.horariosToolStripMenuItem.Text = "Horarios";
             this.horariosToolStripMenuItem.Click += new System.EventHandler(this.HorariosToolStripMenuItem_Click);
             // 
             // perfilesToolStripMenuItem
             // 
             this.perfilesToolStripMenuItem.Name = "perfilesToolStripMenuItem";
-            this.perfilesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.perfilesToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
             this.perfilesToolStripMenuItem.Text = "Perfiles";
             this.perfilesToolStripMenuItem.Click += new System.EventHandler(this.PerfilesToolStripMenuItem_Click);
             // 
             // archivoMuertoToolStripMenuItem
             // 
             this.archivoMuertoToolStripMenuItem.Name = "archivoMuertoToolStripMenuItem";
-            this.archivoMuertoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.archivoMuertoToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
             this.archivoMuertoToolStripMenuItem.Text = "Archivo Muerto";
             this.archivoMuertoToolStripMenuItem.Click += new System.EventHandler(this.ArchivoMuertoToolStripMenuItem_Click);
             // 
             // trabajadoresToolStripMenuItem
             // 
             this.trabajadoresToolStripMenuItem.Name = "trabajadoresToolStripMenuItem";
-            this.trabajadoresToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.trabajadoresToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
             this.trabajadoresToolStripMenuItem.Text = "Trabajadores";
             this.trabajadoresToolStripMenuItem.Click += new System.EventHandler(this.TrabajadoresToolStripMenuItem_Click);
             // 
@@ -154,7 +157,7 @@ namespace Ingenieria_Software
             this.habilidadesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.idiomasToolStripMenuItem});
             this.habilidadesToolStripMenuItem.Name = "habilidadesToolStripMenuItem";
-            this.habilidadesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.habilidadesToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
             this.habilidadesToolStripMenuItem.Text = "Habilidades";
             this.habilidadesToolStripMenuItem.Click += new System.EventHandler(this.HabilidadesToolStripMenuItem_Click);
             // 
@@ -168,7 +171,7 @@ namespace Ingenieria_Software
             // nacionalidadesToolStripMenuItem
             // 
             this.nacionalidadesToolStripMenuItem.Name = "nacionalidadesToolStripMenuItem";
-            this.nacionalidadesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.nacionalidadesToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
             this.nacionalidadesToolStripMenuItem.Text = "Nacionalidades";
             this.nacionalidadesToolStripMenuItem.Click += new System.EventHandler(this.NacionalidadesToolStripMenuItem_Click);
             // 
@@ -178,7 +181,7 @@ namespace Ingenieria_Software
             this.tipoToolStripMenuItem,
             this.puestoToolStripMenuItem1});
             this.puestoToolStripMenuItem.Name = "puestoToolStripMenuItem";
-            this.puestoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.puestoToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
             this.puestoToolStripMenuItem.Text = "Puesto";
             // 
             // tipoToolStripMenuItem
@@ -198,16 +201,27 @@ namespace Ingenieria_Software
             // cursosToolStripMenuItem
             // 
             this.cursosToolStripMenuItem.Name = "cursosToolStripMenuItem";
-            this.cursosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.cursosToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
             this.cursosToolStripMenuItem.Text = "Documentos";
             this.cursosToolStripMenuItem.Click += new System.EventHandler(this.CursosToolStripMenuItem_Click);
             // 
             // cursosToolStripMenuItem1
             // 
             this.cursosToolStripMenuItem1.Name = "cursosToolStripMenuItem1";
-            this.cursosToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.cursosToolStripMenuItem1.Size = new System.Drawing.Size(157, 22);
             this.cursosToolStripMenuItem1.Text = "Cursos";
             this.cursosToolStripMenuItem1.Click += new System.EventHandler(this.CursosToolStripMenuItem1_Click);
+            // 
+            // reportesToolStripMenuItem
+            // 
+            this.reportesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.reportePostulantesToolStripMenuItem,
+            this.reporteTrabajadoresToolStripMenuItem,
+            this.reporteArchivoMuertoToolStripMenuItem});
+            this.reportesToolStripMenuItem.Name = "reportesToolStripMenuItem";
+            this.reportesToolStripMenuItem.Size = new System.Drawing.Size(65, 20);
+            this.reportesToolStripMenuItem.Text = "Reportes";
+            this.reportesToolStripMenuItem.Click += new System.EventHandler(this.ReportesToolStripMenuItem_Click);
             // 
             // acercaDeToolStripMenuItem
             // 
@@ -274,12 +288,26 @@ namespace Ingenieria_Software
             // 
             this.timer1.Tick += new System.EventHandler(this.Timer1_Tick);
             // 
-            // reportesToolStripMenuItem
+            // reportePostulantesToolStripMenuItem
             // 
-            this.reportesToolStripMenuItem.Name = "reportesToolStripMenuItem";
-            this.reportesToolStripMenuItem.Size = new System.Drawing.Size(65, 20);
-            this.reportesToolStripMenuItem.Text = "Reportes";
-            this.reportesToolStripMenuItem.Click += new System.EventHandler(this.ReportesToolStripMenuItem_Click);
+            this.reportePostulantesToolStripMenuItem.Name = "reportePostulantesToolStripMenuItem";
+            this.reportePostulantesToolStripMenuItem.Size = new System.Drawing.Size(201, 22);
+            this.reportePostulantesToolStripMenuItem.Text = "Reporte Postulantes";
+            this.reportePostulantesToolStripMenuItem.Click += new System.EventHandler(this.ReportePostulantesToolStripMenuItem_Click);
+            // 
+            // reporteTrabajadoresToolStripMenuItem
+            // 
+            this.reporteTrabajadoresToolStripMenuItem.Name = "reporteTrabajadoresToolStripMenuItem";
+            this.reporteTrabajadoresToolStripMenuItem.Size = new System.Drawing.Size(201, 22);
+            this.reporteTrabajadoresToolStripMenuItem.Text = "Reporte Trabajadores";
+            this.reporteTrabajadoresToolStripMenuItem.Click += new System.EventHandler(this.ReporteTrabajadoresToolStripMenuItem_Click);
+            // 
+            // reporteArchivoMuertoToolStripMenuItem
+            // 
+            this.reporteArchivoMuertoToolStripMenuItem.Name = "reporteArchivoMuertoToolStripMenuItem";
+            this.reporteArchivoMuertoToolStripMenuItem.Size = new System.Drawing.Size(201, 22);
+            this.reporteArchivoMuertoToolStripMenuItem.Text = "Reporte Archivo Muerto";
+            this.reporteArchivoMuertoToolStripMenuItem.Click += new System.EventHandler(this.ReporteArchivoMuertoToolStripMenuItem_Click);
             // 
             // Index
             // 
@@ -329,5 +357,8 @@ namespace Ingenieria_Software
         private System.Windows.Forms.ToolStripMenuItem cursosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cursosToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem reportesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem reportePostulantesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem reporteTrabajadoresToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem reporteArchivoMuertoToolStripMenuItem;
     }
 }
